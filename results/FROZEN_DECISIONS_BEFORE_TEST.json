@@ -1,0 +1,21 @@
+{
+  "selected_input_gain": 1,
+  "selected_seed_by_arm_validation_only": {
+    "full": 777,
+    "avgpool": 42,
+    "haar": 42,
+    "dbwfb2": 42
+  },
+  "seeds_reported": [
+    42,
+    100,
+    123,
+    777,
+    2024
+  ],
+  "split_seed": 20260821,
+  "board500_seed": 20260822,
+  "equivalence_margin_pp": 1.0,
+  "alpha": 0.05,
+  "note": "All choices frozen before independent test evaluation."
+}

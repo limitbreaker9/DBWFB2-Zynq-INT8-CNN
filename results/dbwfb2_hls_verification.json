@@ -1,0 +1,85 @@
+{
+  "images": 3200,
+  "correct": 2488,
+  "accuracy_percent": 77.75,
+  "python_reference_matches": 3200,
+  "python_reference_agreement_percent": 100.0,
+  "c_simulation_errors": 0,
+  "synthesis_estimate": {
+    "tool_version": "2025.2 (Build 6295257 on Nov 14 2025)",
+    "target_device": "xc7z020-clg484-1",
+    "latency_cycles": 6329660,
+    "latency_ns_reported": 63300000.0,
+    "nominal_latency_ms_at_100mhz": 63.2966,
+    "resource_estimate": {
+      "bram": 70,
+      "dsp": 4,
+      "ff": 5037,
+      "lut": 6131
+    }
+  },
+  "confusion_matrix": [
+    [
+      664,
+      34,
+      34,
+      68
+    ],
+    [
+      116,
+      555,
+      44,
+      85
+    ],
+    [
+      38,
+      11,
+      741,
+      10
+    ],
+    [
+      204,
+      37,
+      31,
+      528
+    ]
+  ],
+  "class_metrics": [
+    {
+      "class_id": 0,
+      "class_name": "airplane",
+      "correct": 664,
+      "support": 800,
+      "precision": 0.649706457925636,
+      "recall": 0.83,
+      "f1": 0.7288693743139407
+    },
+    {
+      "class_id": 1,
+      "class_name": "car",
+      "correct": 555,
+      "support": 800,
+      "precision": 0.8712715855572999,
+      "recall": 0.69375,
+      "f1": 0.7724425887265136
+    },
+    {
+      "class_id": 2,
+      "class_name": "dog",
+      "correct": 741,
+      "support": 800,
+      "precision": 0.8717647058823529,
+      "recall": 0.92625,
+      "f1": 0.8981818181818182
+    },
+    {
+      "class_id": 3,
+      "class_name": "ship",
+      "correct": 528,
+      "support": 800,
+      "precision": 0.76410998552822,
+      "recall": 0.66,
+      "f1": 0.7082494969818913
+    }
+  ]
+}

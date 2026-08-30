@@ -1,0 +1,5 @@
+scope,metric,dbwfb2,avgpool,unit,source,interpretation
+preprocessing_controller,hierarchical_dynamic_power,0.008,0.001,W,hardware/vivado/*/documentation/power_hierarchy.png,Vivado post-route hierarchical estimate
+whole_implemented_system,dynamic_power,1.741,1.737,W,hardware/vivado/*/reports/PL_wrapper_power_routed.rpt,Vivado post-route estimate
+whole_implemented_system,device_static_power,0.154,0.154,W,hardware/vivado/*/reports/PL_wrapper_power_routed.rpt,Vivado post-route estimate
+whole_implemented_system,total_on_chip_power,1.894,1.891,W,hardware/vivado/*/reports/PL_wrapper_power_routed.rpt,Vivado post-route estimate; not physical board measurement

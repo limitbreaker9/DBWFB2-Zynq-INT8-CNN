@@ -1,0 +1,7 @@
+scope,end_to_end_us,row_write_us,row_pl_wall_us,row_read_us,column_reorder_write_us,column_pl_wall_us,column_read_us,quantize_pack_us,cache_flush_us,cnn_setup_us,cnn_start_done_us,residual_us
+full3200_part0,78750,7239,485,3700,3580,242,1849,243,12,0,61332,68
+full3200_part1,78742,7238,484,3695,3580,242,1849,243,12,0,61332,67
+full3200_part2,78750,7239,486,3700,3580,242,1849,243,12,0,61332,67
+full3200_part3,78750,7239,485,3700,3580,242,1849,243,12,0,61332,68
+board500,78751,7242,484,3699,3580,241,1849,244,12,0,61332,68
+full3200_four_part_mean,78748.0,7238.75,485.0,3698.75,3580.0,242.0,1849.0,243.0,12.0,0.0,61332.0,67.5

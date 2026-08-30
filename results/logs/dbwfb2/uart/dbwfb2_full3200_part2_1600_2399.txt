@@ -1,0 +1,1688 @@
+
+============================================================
+ DBWFB2 INT8 CNN FPGA RUN
+ Raw 128x128 -> DBWFB2 RTL -> PS decimation -> INT8 CNN
+ Images            : 800
+ Input gain        : 1
+ CNN C1_SHIFT      : 9  (compiled inside revised HLS IP)
+ CNN C2_SHIFT      : 8  (compiled inside revised HLS IP)
+ Test scope        : full independent 3200-image test
+ Current part      : 2 / 3
+ Global test range : 1600 .. 2399
+============================================================
+[   1/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1600,3,3,3,3
+[   2/ 800] true=car      sw_ref=airplane sw_alt=ship      -> airplane [true:FAIL | SW:MATCH | ALT:MISMATCH]
+PRED,1601,1,0,3,0
+[   3/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1602,3,3,3,3
+[   4/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1603,2,2,2,2
+[   5/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1604,0,0,0,0
+[   6/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1605,1,1,1,1
+[   7/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1606,1,1,1,1
+[   8/ 800] true=ship     sw_ref=car      sw_alt=car       -> car      [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1607,3,1,1,1
+[   9/ 800] true=car      sw_ref=ship     sw_alt=ship      -> ship     [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1608,1,3,3,3
+[  10/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1609,1,1,1,1
+[  11/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1610,2,2,2,2
+[  12/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1611,1,1,1,1
+[  13/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1612,2,2,2,2
+[  14/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1613,0,0,0,0
+[  15/ 800] true=ship     sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1614,3,0,0,0
+[  16/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1615,0,0,0,0
+[  17/ 800] true=car      sw_ref=airplane sw_alt=dog       -> dog      [true:FAIL | SW:MISMATCH | ALT:MATCH]
+PRED,1616,1,0,2,2
+[  18/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1617,3,3,3,3
+[  19/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1618,1,1,1,1
+[  20/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1619,3,3,3,3
+[  21/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1620,0,0,0,0
+[  22/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1621,1,1,1,1
+[  23/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1622,0,0,0,0
+[  24/ 800] true=car      sw_ref=dog      sw_alt=dog       -> dog      [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1623,1,2,2,2
+[  25/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1624,1,1,1,1
+[  26/ 800] true=car      sw_ref=ship     sw_alt=ship      -> ship     [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1625,1,3,3,3
+[  27/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1626,0,0,0,0
+[  28/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1627,3,3,3,3
+[  29/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1628,0,0,0,0
+[  30/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1629,0,0,0,0
+[  31/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1630,0,0,0,0
+[  32/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1631,3,3,3,3
+[  33/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1632,0,0,0,0
+[  34/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1633,0,0,0,0
+[  35/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1634,3,3,3,3
+[  36/ 800] true=airplane sw_ref=ship     sw_alt=airplane  -> airplane [true:PASS | SW:MISMATCH | ALT:MATCH]
+PRED,1635,0,3,0,0
+[  37/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1636,3,3,3,3
+[  38/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1637,0,0,0,0
+[  39/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1638,2,2,2,2
+[  40/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1639,2,2,2,2
+[  41/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1640,1,1,1,1
+[  42/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1641,1,1,1,1
+[  43/ 800] true=airplane sw_ref=ship     sw_alt=ship      -> ship     [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1642,0,3,3,3
+[  44/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1643,2,2,2,2
+[  45/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1644,2,2,2,2
+[  46/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1645,3,3,3,3
+[  47/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1646,1,1,1,1
+[  48/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1647,3,3,3,3
+[  49/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1648,3,3,3,3
+[  50/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1649,1,1,1,1
+[  51/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1650,3,3,3,3
+[  52/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1651,3,3,3,3
+[  53/ 800] true=airplane sw_ref=dog      sw_alt=dog       -> dog      [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1652,0,2,2,2
+[  54/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1653,0,0,0,0
+[  55/ 800] true=car      sw_ref=car      sw_alt=ship      -> car      [true:PASS | SW:MATCH | ALT:MISMATCH]
+PRED,1654,1,1,3,1
+[  56/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1655,0,0,0,0
+[  57/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1656,1,1,1,1
+[  58/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1657,0,0,0,0
+[  59/ 800] true=car      sw_ref=dog      sw_alt=dog       -> dog      [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1658,1,2,2,2
+[  60/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1659,2,2,2,2
+[  61/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1660,2,2,2,2
+[  62/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1661,0,0,0,0
+[  63/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1662,3,3,3,3
+[  64/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1663,2,2,2,2
+[  65/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1664,3,3,3,3
+[  66/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1665,3,3,3,3
+[  67/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1666,3,3,3,3
+[  68/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1667,3,3,3,3
+[  69/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1668,0,0,0,0
+[  70/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1669,0,0,0,0
+[  71/ 800] true=dog      sw_ref=airplane sw_alt=airplane  -> dog      [true:PASS | SW:MISMATCH | ALT:MISMATCH]
+PRED,1670,2,0,0,2
+[  72/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1671,0,0,0,0
+[  73/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1672,3,3,3,3
+[  74/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1673,0,0,0,0
+[  75/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1674,1,1,1,1
+[  76/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> airplane [true:FAIL | SW:MISMATCH | ALT:MISMATCH]
+PRED,1675,2,2,2,0
+[  77/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1676,2,2,2,2
+[  78/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1677,1,1,1,1
+[  79/ 800] true=airplane sw_ref=car      sw_alt=car       -> car      [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1678,0,1,1,1
+[  80/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1679,0,0,0,0
+[  81/ 800] true=car      sw_ref=dog      sw_alt=dog       -> car      [true:PASS | SW:MISMATCH | ALT:MISMATCH]
+PRED,1680,1,2,2,1
+[  82/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1681,3,3,3,3
+[  83/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1682,3,3,3,3
+[  84/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1683,2,2,2,2
+[  85/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1684,2,2,2,2
+[  86/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1685,1,1,1,1
+[  87/ 800] true=car      sw_ref=airplane sw_alt=car       -> car      [true:PASS | SW:MISMATCH | ALT:MATCH]
+PRED,1686,1,0,1,1
+[  88/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1687,0,0,0,0
+[  89/ 800] true=car      sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1688,1,0,0,0
+[  90/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1689,3,3,3,3
+[  91/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1690,0,0,0,0
+[  92/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1691,1,1,1,1
+[  93/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1692,1,1,1,1
+[  94/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1693,0,0,0,0
+[  95/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1694,3,3,3,3
+[  96/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1695,1,1,1,1
+[  97/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1696,3,3,3,3
+[  98/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1697,3,3,3,3
+[  99/ 800] true=car      sw_ref=airplane sw_alt=car       -> airplane [true:FAIL | SW:MATCH | ALT:MISMATCH]
+PRED,1698,1,0,1,0
+[ 100/ 800] true=ship     sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1699,3,0,0,0
+[ 101/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1700,2,2,2,2
+[ 102/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1701,3,3,3,3
+[ 103/ 800] true=ship     sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1702,3,0,0,0
+[ 104/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1703,3,3,3,3
+[ 105/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1704,2,2,2,2
+[ 106/ 800] true=car      sw_ref=airplane sw_alt=airplane  -> ship     [true:FAIL | SW:MISMATCH | ALT:MISMATCH]
+PRED,1705,1,0,0,3
+[ 107/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1706,3,3,3,3
+[ 108/ 800] true=car      sw_ref=airplane sw_alt=airplane  -> ship     [true:FAIL | SW:MISMATCH | ALT:MISMATCH]
+PRED,1707,1,0,0,3
+[ 109/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1708,0,0,0,0
+[ 110/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1709,3,3,3,3
+[ 111/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1710,2,2,2,2
+[ 112/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1711,2,2,2,2
+[ 113/ 800] true=ship     sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1712,3,0,0,0
+[ 114/ 800] true=ship     sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1713,3,0,0,0
+[ 115/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1714,1,1,1,1
+[ 116/ 800] true=car      sw_ref=ship     sw_alt=ship      -> ship     [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1715,1,3,3,3
+[ 117/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1716,0,0,0,0
+[ 118/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1717,1,1,1,1
+[ 119/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1718,1,1,1,1
+[ 120/ 800] true=ship     sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1719,3,0,0,0
+[ 121/ 800] true=ship     sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1720,3,0,0,0
+[ 122/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> ship     [true:FAIL | SW:MISMATCH | ALT:MISMATCH]
+PRED,1721,0,0,0,3
+[ 123/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1722,3,3,3,3
+[ 124/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1723,3,3,3,3
+[ 125/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1724,0,0,0,0
+[ 126/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1725,1,1,1,1
+[ 127/ 800] true=car      sw_ref=dog      sw_alt=dog       -> dog      [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1726,1,2,2,2
+[ 128/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1727,3,3,3,3
+[ 129/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1728,0,0,0,0
+[ 130/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1729,1,1,1,1
+[ 131/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> dog      [true:FAIL | SW:MISMATCH | ALT:MISMATCH]
+PRED,1730,0,0,0,2
+[ 132/ 800] true=car      sw_ref=ship     sw_alt=ship      -> ship     [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1731,1,3,3,3
+[ 133/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1732,1,1,1,1
+[ 134/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1733,2,2,2,2
+[ 135/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1734,0,0,0,0
+[ 136/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1735,2,2,2,2
+[ 137/ 800] true=car      sw_ref=car      sw_alt=car       -> airplane [true:FAIL | SW:MISMATCH | ALT:MISMATCH]
+PRED,1736,1,1,1,0
+[ 138/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1737,2,2,2,2
+[ 139/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1738,2,2,2,2
+[ 140/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> airplane [true:FAIL | SW:MISMATCH | ALT:MISMATCH]
+PRED,1739,3,3,3,0
+[ 141/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1740,0,0,0,0
+[ 142/ 800] true=car      sw_ref=dog      sw_alt=dog       -> dog      [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1741,1,2,2,2
+[ 143/ 800] true=ship     sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1742,3,0,0,0
+[ 144/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1743,0,0,0,0
+[ 145/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1744,1,1,1,1
+[ 146/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1745,1,1,1,1
+[ 147/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1746,1,1,1,1
+[ 148/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1747,1,1,1,1
+[ 149/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1748,2,2,2,2
+[ 150/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1749,1,1,1,1
+[ 151/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1750,0,0,0,0
+[ 152/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1751,0,0,0,0
+[ 153/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1752,2,2,2,2
+[ 154/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1753,3,3,3,3
+[ 155/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1754,0,0,0,0
+[ 156/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1755,2,2,2,2
+[ 157/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1756,0,0,0,0
+[ 158/ 800] true=car      sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1757,1,0,0,0
+[ 159/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1758,2,2,2,2
+[ 160/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1759,0,0,0,0
+[ 161/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1760,0,0,0,0
+[ 162/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1761,2,2,2,2
+[ 163/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1762,2,2,2,2
+[ 164/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1763,1,1,1,1
+[ 165/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1764,0,0,0,0
+[ 166/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1765,2,2,2,2
+[ 167/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1766,3,3,3,3
+[ 168/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1767,0,0,0,0
+[ 169/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1768,0,0,0,0
+[ 170/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1769,3,3,3,3
+[ 171/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1770,0,0,0,0
+[ 172/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1771,0,0,0,0
+[ 173/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1772,0,0,0,0
+[ 174/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1773,0,0,0,0
+[ 175/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1774,2,2,2,2
+[ 176/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1775,3,3,3,3
+[ 177/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> dog      [true:FAIL | SW:MISMATCH | ALT:MISMATCH]
+PRED,1776,0,0,0,2
+[ 178/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1777,0,0,0,0
+[ 179/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1778,0,0,0,0
+[ 180/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1779,1,1,1,1
+[ 181/ 800] true=ship     sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1780,3,0,0,0
+[ 182/ 800] true=car      sw_ref=dog      sw_alt=dog       -> dog      [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1781,1,2,2,2
+[ 183/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1782,2,2,2,2
+[ 184/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1783,1,1,1,1
+[ 185/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1784,3,3,3,3
+[ 186/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1785,2,2,2,2
+[ 187/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1786,2,2,2,2
+[ 188/ 800] true=ship     sw_ref=dog      sw_alt=dog       -> dog      [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1787,3,2,2,2
+[ 189/ 800] true=airplane sw_ref=car      sw_alt=car       -> car      [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1788,0,1,1,1
+[ 190/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> airplane [true:FAIL | SW:MISMATCH | ALT:MISMATCH]
+PRED,1789,2,2,2,0
+[ 191/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1790,0,0,0,0
+[ 192/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1791,0,0,0,0
+[ 193/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1792,2,2,2,2
+[ 194/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1793,1,1,1,1
+[ 195/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1794,0,0,0,0
+[ 196/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1795,1,1,1,1
+[ 197/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1796,2,2,2,2
+[ 198/ 800] true=car      sw_ref=ship     sw_alt=ship      -> ship     [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1797,1,3,3,3
+[ 199/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1798,0,0,0,0
+[ 200/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1799,3,3,3,3
+[ 201/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1800,2,2,2,2
+[ 202/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1801,1,1,1,1
+[ 203/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1802,0,0,0,0
+[ 204/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1803,2,2,2,2
+[ 205/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1804,2,2,2,2
+[ 206/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1805,2,2,2,2
+[ 207/ 800] true=airplane sw_ref=ship     sw_alt=ship      -> ship     [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1806,0,3,3,3
+[ 208/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1807,0,0,0,0
+[ 209/ 800] true=ship     sw_ref=dog      sw_alt=dog       -> dog      [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1808,3,2,2,2
+[ 210/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1809,0,0,0,0
+[ 211/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1810,1,1,1,1
+[ 212/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1811,0,0,0,0
+[ 213/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1812,1,1,1,1
+[ 214/ 800] true=ship     sw_ref=dog      sw_alt=dog       -> ship     [true:PASS | SW:MISMATCH | ALT:MISMATCH]
+PRED,1813,3,2,2,3
+[ 215/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1814,1,1,1,1
+[ 216/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1815,2,2,2,2
+[ 217/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1816,2,2,2,2
+[ 218/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1817,0,0,0,0
+[ 219/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1818,3,3,3,3
+[ 220/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1819,1,1,1,1
+[ 221/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1820,1,1,1,1
+[ 222/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1821,0,0,0,0
+[ 223/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1822,0,0,0,0
+[ 224/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1823,0,0,0,0
+[ 225/ 800] true=ship     sw_ref=car      sw_alt=car       -> car      [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1824,3,1,1,1
+[ 226/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1825,3,3,3,3
+[ 227/ 800] true=car      sw_ref=ship     sw_alt=ship      -> ship     [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1826,1,3,3,3
+[ 228/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1827,0,0,0,0
+[ 229/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1828,2,2,2,2
+[ 230/ 800] true=ship     sw_ref=car      sw_alt=car       -> airplane [true:FAIL | SW:MISMATCH | ALT:MISMATCH]
+PRED,1829,3,1,1,0
+[ 231/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1830,3,3,3,3
+[ 232/ 800] true=airplane sw_ref=car      sw_alt=car       -> car      [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1831,0,1,1,1
+[ 233/ 800] true=car      sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1832,1,0,0,0
+[ 234/ 800] true=ship     sw_ref=car      sw_alt=car       -> car      [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1833,3,1,1,1
+[ 235/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1834,3,3,3,3
+[ 236/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1835,0,0,0,0
+[ 237/ 800] true=ship     sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1836,3,0,0,0
+[ 238/ 800] true=ship     sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1837,3,0,0,0
+[ 239/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1838,3,3,3,3
+[ 240/ 800] true=ship     sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1839,3,0,0,0
+[ 241/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1840,0,0,0,0
+[ 242/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1841,0,0,0,0
+[ 243/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1842,2,2,2,2
+[ 244/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1843,0,0,0,0
+[ 245/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1844,3,3,3,3
+[ 246/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1845,0,0,0,0
+[ 247/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1846,2,2,2,2
+[ 248/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1847,1,1,1,1
+[ 249/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1848,1,1,1,1
+[ 250/ 800] true=ship     sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1849,3,0,0,0
+[ 251/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1850,0,0,0,0
+[ 252/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1851,0,0,0,0
+[ 253/ 800] true=car      sw_ref=ship     sw_alt=ship      -> dog      [true:FAIL | SW:MISMATCH | ALT:MISMATCH]
+PRED,1852,1,3,3,2
+[ 254/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1853,3,3,3,3
+[ 255/ 800] true=car      sw_ref=airplane sw_alt=airplane  -> car      [true:PASS | SW:MISMATCH | ALT:MISMATCH]
+PRED,1854,1,0,0,1
+[ 256/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1855,1,1,1,1
+[ 257/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1856,1,1,1,1
+[ 258/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1857,2,2,2,2
+[ 259/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1858,1,1,1,1
+[ 260/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1859,1,1,1,1
+[ 261/ 800] true=car      sw_ref=dog      sw_alt=dog       -> dog      [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1860,1,2,2,2
+[ 262/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1861,0,0,0,0
+[ 263/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1862,3,3,3,3
+[ 264/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1863,2,2,2,2
+[ 265/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1864,3,3,3,3
+[ 266/ 800] true=ship     sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1865,3,0,0,0
+[ 267/ 800] true=car      sw_ref=ship     sw_alt=ship      -> car      [true:PASS | SW:MISMATCH | ALT:MISMATCH]
+PRED,1866,1,3,3,1
+[ 268/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1867,2,2,2,2
+[ 269/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1868,0,0,0,0
+[ 270/ 800] true=airplane sw_ref=ship     sw_alt=ship      -> ship     [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1869,0,3,3,3
+[ 271/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1870,2,2,2,2
+[ 272/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1871,0,0,0,0
+[ 273/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1872,3,3,3,3
+[ 274/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1873,0,0,0,0
+[ 275/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1874,0,0,0,0
+[ 276/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1875,3,3,3,3
+[ 277/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1876,3,3,3,3
+[ 278/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1877,0,0,0,0
+[ 279/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1878,1,1,1,1
+[ 280/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1879,3,3,3,3
+[ 281/ 800] true=dog      sw_ref=airplane sw_alt=airplane  -> dog      [true:PASS | SW:MISMATCH | ALT:MISMATCH]
+PRED,1880,2,0,0,2
+[ 282/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1881,2,2,2,2
+[ 283/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1882,3,3,3,3
+[ 284/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1883,0,0,0,0
+[ 285/ 800] true=dog      sw_ref=car      sw_alt=car       -> car      [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1884,2,1,1,1
+[ 286/ 800] true=airplane sw_ref=car      sw_alt=car       -> car      [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1885,0,1,1,1
+[ 287/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1886,1,1,1,1
+[ 288/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1887,2,2,2,2
+[ 289/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1888,1,1,1,1
+[ 290/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1889,2,2,2,2
+[ 291/ 800] true=ship     sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1890,3,0,0,0
+[ 292/ 800] true=dog      sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1891,2,0,0,0
+[ 293/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1892,2,2,2,2
+[ 294/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1893,1,1,1,1
+[ 295/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1894,0,0,0,0
+[ 296/ 800] true=ship     sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1895,3,0,0,0
+[ 297/ 800] true=car      sw_ref=ship     sw_alt=ship      -> car      [true:PASS | SW:MISMATCH | ALT:MISMATCH]
+PRED,1896,1,3,3,1
+[ 298/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1897,2,2,2,2
+[ 299/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1898,2,2,2,2
+[ 300/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1899,1,1,1,1
+[ 301/ 800] true=ship     sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1900,3,0,0,0
+[ 302/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1901,3,3,3,3
+[ 303/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1902,2,2,2,2
+[ 304/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1903,0,0,0,0
+[ 305/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1904,2,2,2,2
+[ 306/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1905,2,2,2,2
+[ 307/ 800] true=airplane sw_ref=ship     sw_alt=ship      -> ship     [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1906,0,3,3,3
+[ 308/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1907,1,1,1,1
+[ 309/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1908,2,2,2,2
+[ 310/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1909,2,2,2,2
+[ 311/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1910,2,2,2,2
+[ 312/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1911,3,3,3,3
+[ 313/ 800] true=ship     sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1912,3,0,0,0
+[ 314/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1913,1,1,1,1
+[ 315/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1914,2,2,2,2
+[ 316/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1915,0,0,0,0
+[ 317/ 800] true=dog      sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1916,2,0,0,0
+[ 318/ 800] true=ship     sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1917,3,0,0,0
+[ 319/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1918,1,1,1,1
+[ 320/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1919,0,0,0,0
+[ 321/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1920,0,0,0,0
+[ 322/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1921,2,2,2,2
+[ 323/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1922,1,1,1,1
+[ 324/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1923,2,2,2,2
+[ 325/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1924,1,1,1,1
+[ 326/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1925,0,0,0,0
+[ 327/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1926,0,0,0,0
+[ 328/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1927,0,0,0,0
+[ 329/ 800] true=airplane sw_ref=ship     sw_alt=ship      -> ship     [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1928,0,3,3,3
+[ 330/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1929,3,3,3,3
+[ 331/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1930,1,1,1,1
+[ 332/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1931,2,2,2,2
+[ 333/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1932,1,1,1,1
+[ 334/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1933,2,2,2,2
+[ 335/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1934,0,0,0,0
+[ 336/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1935,2,2,2,2
+[ 337/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1936,2,2,2,2
+[ 338/ 800] true=car      sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1937,1,0,0,0
+[ 339/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1938,2,2,2,2
+[ 340/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1939,3,3,3,3
+[ 341/ 800] true=airplane sw_ref=car      sw_alt=car       -> car      [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1940,0,1,1,1
+[ 342/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1941,2,2,2,2
+[ 343/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1942,2,2,2,2
+[ 344/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1943,1,1,1,1
+[ 345/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1944,1,1,1,1
+[ 346/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1945,1,1,1,1
+[ 347/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1946,3,3,3,3
+[ 348/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1947,2,2,2,2
+[ 349/ 800] true=airplane sw_ref=ship     sw_alt=ship      -> ship     [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1948,0,3,3,3
+[ 350/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1949,0,0,0,0
+[ 351/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1950,0,0,0,0
+[ 352/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1951,2,2,2,2
+[ 353/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1952,2,2,2,2
+[ 354/ 800] true=car      sw_ref=ship     sw_alt=ship      -> ship     [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1953,1,3,3,3
+[ 355/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1954,1,1,1,1
+[ 356/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1955,2,2,2,2
+[ 357/ 800] true=ship     sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1956,3,0,0,0
+[ 358/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1957,2,2,2,2
+[ 359/ 800] true=car      sw_ref=car      sw_alt=car       -> ship     [true:FAIL | SW:MISMATCH | ALT:MISMATCH]
+PRED,1958,1,1,1,3
+[ 360/ 800] true=car      sw_ref=dog      sw_alt=dog       -> dog      [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1959,1,2,2,2
+[ 361/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1960,1,1,1,1
+[ 362/ 800] true=ship     sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1961,3,0,0,0
+[ 363/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1962,0,0,0,0
+[ 364/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1963,0,0,0,0
+[ 365/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1964,0,0,0,0
+[ 366/ 800] true=ship     sw_ref=car      sw_alt=car       -> car      [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1965,3,1,1,1
+[ 367/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1966,0,0,0,0
+[ 368/ 800] true=ship     sw_ref=car      sw_alt=car       -> car      [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1967,3,1,1,1
+[ 369/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1968,0,0,0,0
+[ 370/ 800] true=ship     sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1969,3,0,0,0
+[ 371/ 800] true=ship     sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1970,3,0,0,0
+[ 372/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1971,0,0,0,0
+[ 373/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1972,1,1,1,1
+[ 374/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1973,2,2,2,2
+[ 375/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1974,1,1,1,1
+[ 376/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1975,2,2,2,2
+[ 377/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1976,0,0,0,0
+[ 378/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1977,0,0,0,0
+[ 379/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1978,1,1,1,1
+[ 380/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1979,1,1,1,1
+[ 381/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1980,2,2,2,2
+[ 382/ 800] true=ship     sw_ref=airplane sw_alt=airplane  -> ship     [true:PASS | SW:MISMATCH | ALT:MISMATCH]
+PRED,1981,3,0,0,3
+[ 383/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1982,0,0,0,0
+[ 384/ 800] true=airplane sw_ref=ship     sw_alt=ship      -> airplane [true:PASS | SW:MISMATCH | ALT:MISMATCH]
+PRED,1983,0,3,3,0
+[ 385/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> dog      [true:FAIL | SW:MISMATCH | ALT:MISMATCH]
+PRED,1984,3,3,3,2
+[ 386/ 800] true=car      sw_ref=dog      sw_alt=dog       -> dog      [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1985,1,2,2,2
+[ 387/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1986,1,1,1,1
+[ 388/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1987,3,3,3,3
+[ 389/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1988,3,3,3,3
+[ 390/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1989,3,3,3,3
+[ 391/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1990,1,1,1,1
+[ 392/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1991,0,0,0,0
+[ 393/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1992,2,2,2,2
+[ 394/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1993,0,0,0,0
+[ 395/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1994,1,1,1,1
+[ 396/ 800] true=ship     sw_ref=car      sw_alt=car       -> car      [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1995,3,1,1,1
+[ 397/ 800] true=ship     sw_ref=dog      sw_alt=dog       -> dog      [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1996,3,2,2,2
+[ 398/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> airplane [true:FAIL | SW:MISMATCH | ALT:MISMATCH]
+PRED,1997,3,3,3,0
+[ 399/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,1998,2,2,2,2
+[ 400/ 800] true=ship     sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,1999,3,0,0,0
+[ 401/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2000,0,0,0,0
+[ 402/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2001,3,3,3,3
+[ 403/ 800] true=car      sw_ref=ship     sw_alt=ship      -> car      [true:PASS | SW:MISMATCH | ALT:MISMATCH]
+PRED,2002,1,3,3,1
+[ 404/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2003,0,0,0,0
+[ 405/ 800] true=airplane sw_ref=dog      sw_alt=dog       -> dog      [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2004,0,2,2,2
+[ 406/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2005,0,0,0,0
+[ 407/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2006,2,2,2,2
+[ 408/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2007,3,3,3,3
+[ 409/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2008,3,3,3,3
+[ 410/ 800] true=car      sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2009,1,0,0,0
+[ 411/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2010,3,3,3,3
+[ 412/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2011,0,0,0,0
+[ 413/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2012,2,2,2,2
+[ 414/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2013,2,2,2,2
+[ 415/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2014,3,3,3,3
+[ 416/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2015,1,1,1,1
+[ 417/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2016,2,2,2,2
+[ 418/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2017,2,2,2,2
+[ 419/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2018,2,2,2,2
+[ 420/ 800] true=ship     sw_ref=airplane sw_alt=ship      -> ship     [true:PASS | SW:MISMATCH | ALT:MATCH]
+PRED,2019,3,0,3,3
+[ 421/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2020,3,3,3,3
+[ 422/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2021,0,0,0,0
+[ 423/ 800] true=ship     sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2022,3,0,0,0
+[ 424/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2023,0,0,0,0
+[ 425/ 800] true=dog      sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2024,2,0,0,0
+[ 426/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2025,3,3,3,3
+[ 427/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2026,3,3,3,3
+[ 428/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2027,0,0,0,0
+[ 429/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2028,0,0,0,0
+[ 430/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2029,2,2,2,2
+[ 431/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2030,3,3,3,3
+[ 432/ 800] true=dog      sw_ref=car      sw_alt=car       -> car      [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2031,2,1,1,1
+[ 433/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2032,1,1,1,1
+[ 434/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2033,0,0,0,0
+[ 435/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2034,2,2,2,2
+[ 436/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2035,0,0,0,0
+[ 437/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2036,0,0,0,0
+[ 438/ 800] true=airplane sw_ref=airplane sw_alt=dog       -> airplane [true:PASS | SW:MATCH | ALT:MISMATCH]
+PRED,2037,0,0,2,0
+[ 439/ 800] true=ship     sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2038,3,0,0,0
+[ 440/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2039,2,2,2,2
+[ 441/ 800] true=ship     sw_ref=car      sw_alt=car       -> car      [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2040,3,1,1,1
+[ 442/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2041,1,1,1,1
+[ 443/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2042,1,1,1,1
+[ 444/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2043,0,0,0,0
+[ 445/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2044,2,2,2,2
+[ 446/ 800] true=car      sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2045,1,0,0,0
+[ 447/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2046,3,3,3,3
+[ 448/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> airplane [true:FAIL | SW:MISMATCH | ALT:MISMATCH]
+PRED,2047,3,3,3,0
+[ 449/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2048,1,1,1,1
+[ 450/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2049,2,2,2,2
+[ 451/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2050,1,1,1,1
+[ 452/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2051,0,0,0,0
+[ 453/ 800] true=dog      sw_ref=airplane sw_alt=airplane  -> dog      [true:PASS | SW:MISMATCH | ALT:MISMATCH]
+PRED,2052,2,0,0,2
+[ 454/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2053,1,1,1,1
+[ 455/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2054,2,2,2,2
+[ 456/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2055,1,1,1,1
+[ 457/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2056,1,1,1,1
+[ 458/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2057,0,0,0,0
+[ 459/ 800] true=car      sw_ref=dog      sw_alt=dog       -> dog      [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2058,1,2,2,2
+[ 460/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2059,2,2,2,2
+[ 461/ 800] true=ship     sw_ref=dog      sw_alt=dog       -> dog      [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2060,3,2,2,2
+[ 462/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2061,2,2,2,2
+[ 463/ 800] true=ship     sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2062,3,0,0,0
+[ 464/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2063,1,1,1,1
+[ 465/ 800] true=car      sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2064,1,0,0,0
+[ 466/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2065,1,1,1,1
+[ 467/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2066,3,3,3,3
+[ 468/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2067,1,1,1,1
+[ 469/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2068,1,1,1,1
+[ 470/ 800] true=airplane sw_ref=ship     sw_alt=ship      -> car      [true:FAIL | SW:MISMATCH | ALT:MISMATCH]
+PRED,2069,0,3,3,1
+[ 471/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2070,2,2,2,2
+[ 472/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2071,2,2,2,2
+[ 473/ 800] true=car      sw_ref=dog      sw_alt=dog       -> dog      [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2072,1,2,2,2
+[ 474/ 800] true=airplane sw_ref=car      sw_alt=car       -> car      [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2073,0,1,1,1
+[ 475/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2074,2,2,2,2
+[ 476/ 800] true=airplane sw_ref=ship     sw_alt=ship      -> ship     [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2075,0,3,3,3
+[ 477/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2076,1,1,1,1
+[ 478/ 800] true=airplane sw_ref=dog      sw_alt=dog       -> dog      [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2077,0,2,2,2
+[ 479/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2078,2,2,2,2
+[ 480/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2079,1,1,1,1
+[ 481/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2080,3,3,3,3
+[ 482/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2081,2,2,2,2
+[ 483/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2082,0,0,0,0
+[ 484/ 800] true=car      sw_ref=ship     sw_alt=ship      -> ship     [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2083,1,3,3,3
+[ 485/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2084,2,2,2,2
+[ 486/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2085,2,2,2,2
+[ 487/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2086,0,0,0,0
+[ 488/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2087,0,0,0,0
+[ 489/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2088,2,2,2,2
+[ 490/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2089,3,3,3,3
+[ 491/ 800] true=dog      sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2090,2,0,0,0
+[ 492/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2091,0,0,0,0
+[ 493/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2092,1,1,1,1
+[ 494/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2093,3,3,3,3
+[ 495/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2094,3,3,3,3
+[ 496/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2095,0,0,0,0
+[ 497/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2096,2,2,2,2
+[ 498/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2097,1,1,1,1
+[ 499/ 800] true=dog      sw_ref=car      sw_alt=car       -> car      [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2098,2,1,1,1
+[ 500/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2099,1,1,1,1
+[ 501/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2100,0,0,0,0
+[ 502/ 800] true=dog      sw_ref=ship     sw_alt=ship      -> ship     [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2101,2,3,3,3
+[ 503/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2102,2,2,2,2
+[ 504/ 800] true=ship     sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2103,3,0,0,0
+[ 505/ 800] true=car      sw_ref=dog      sw_alt=dog       -> dog      [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2104,1,2,2,2
+[ 506/ 800] true=airplane sw_ref=dog      sw_alt=dog       -> dog      [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2105,0,2,2,2
+[ 507/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2106,3,3,3,3
+[ 508/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2107,0,0,0,0
+[ 509/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2108,0,0,0,0
+[ 510/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2109,1,1,1,1
+[ 511/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2110,2,2,2,2
+[ 512/ 800] true=airplane sw_ref=dog      sw_alt=dog       -> dog      [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2111,0,2,2,2
+[ 513/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2112,0,0,0,0
+[ 514/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2113,0,0,0,0
+[ 515/ 800] true=ship     sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2114,3,0,0,0
+[ 516/ 800] true=car      sw_ref=ship     sw_alt=ship      -> car      [true:PASS | SW:MISMATCH | ALT:MISMATCH]
+PRED,2115,1,3,3,1
+[ 517/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2116,1,1,1,1
+[ 518/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2117,2,2,2,2
+[ 519/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2118,3,3,3,3
+[ 520/ 800] true=ship     sw_ref=airplane sw_alt=ship      -> airplane [true:FAIL | SW:MATCH | ALT:MISMATCH]
+PRED,2119,3,0,3,0
+[ 521/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2120,1,1,1,1
+[ 522/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2121,3,3,3,3
+[ 523/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2122,1,1,1,1
+[ 524/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2123,2,2,2,2
+[ 525/ 800] true=car      sw_ref=dog      sw_alt=dog       -> car      [true:PASS | SW:MISMATCH | ALT:MISMATCH]
+PRED,2124,1,2,2,1
+[ 526/ 800] true=airplane sw_ref=ship     sw_alt=ship      -> ship     [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2125,0,3,3,3
+[ 527/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2126,2,2,2,2
+[ 528/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2127,1,1,1,1
+[ 529/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2128,0,0,0,0
+[ 530/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2129,2,2,2,2
+[ 531/ 800] true=car      sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2130,1,0,0,0
+[ 532/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2131,2,2,2,2
+[ 533/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2132,1,1,1,1
+[ 534/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2133,1,1,1,1
+[ 535/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2134,0,0,0,0
+[ 536/ 800] true=airplane sw_ref=ship     sw_alt=ship      -> airplane [true:PASS | SW:MISMATCH | ALT:MISMATCH]
+PRED,2135,0,3,3,0
+[ 537/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2136,1,1,1,1
+[ 538/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2137,1,1,1,1
+[ 539/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2138,1,1,1,1
+[ 540/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2139,0,0,0,0
+[ 541/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2140,3,3,3,3
+[ 542/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2141,0,0,0,0
+[ 543/ 800] true=ship     sw_ref=car      sw_alt=car       -> car      [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2142,3,1,1,1
+[ 544/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> airplane [true:FAIL | SW:MISMATCH | ALT:MISMATCH]
+PRED,2143,3,3,3,0
+[ 545/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2144,2,2,2,2
+[ 546/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2145,0,0,0,0
+[ 547/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2146,0,0,0,0
+[ 548/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2147,1,1,1,1
+[ 549/ 800] true=car      sw_ref=car      sw_alt=car       -> dog      [true:FAIL | SW:MISMATCH | ALT:MISMATCH]
+PRED,2148,1,1,1,2
+[ 550/ 800] true=dog      sw_ref=car      sw_alt=car       -> car      [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2149,2,1,1,1
+[ 551/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2150,2,2,2,2
+[ 552/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2151,1,1,1,1
+[ 553/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2152,1,1,1,1
+[ 554/ 800] true=car      sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2153,1,0,0,0
+[ 555/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2154,3,3,3,3
+[ 556/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2155,0,0,0,0
+[ 557/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2156,1,1,1,1
+[ 558/ 800] true=airplane sw_ref=ship     sw_alt=ship      -> ship     [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2157,0,3,3,3
+[ 559/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2158,3,3,3,3
+[ 560/ 800] true=ship     sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2159,3,0,0,0
+[ 561/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2160,3,3,3,3
+[ 562/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2161,3,3,3,3
+[ 563/ 800] true=car      sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2162,1,0,0,0
+[ 564/ 800] true=car      sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2163,1,0,0,0
+[ 565/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2164,3,3,3,3
+[ 566/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2165,0,0,0,0
+[ 567/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2166,2,2,2,2
+[ 568/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2167,3,3,3,3
+[ 569/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2168,2,2,2,2
+[ 570/ 800] true=ship     sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2169,3,0,0,0
+[ 571/ 800] true=dog      sw_ref=ship     sw_alt=ship      -> ship     [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2170,2,3,3,3
+[ 572/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2171,2,2,2,2
+[ 573/ 800] true=car      sw_ref=dog      sw_alt=dog       -> dog      [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2172,1,2,2,2
+[ 574/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2173,3,3,3,3
+[ 575/ 800] true=ship     sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2174,3,0,0,0
+[ 576/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2175,2,2,2,2
+[ 577/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2176,1,1,1,1
+[ 578/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2177,0,0,0,0
+[ 579/ 800] true=airplane sw_ref=car      sw_alt=car       -> dog      [true:FAIL | SW:MISMATCH | ALT:MISMATCH]
+PRED,2178,0,1,1,2
+[ 580/ 800] true=ship     sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2179,3,0,0,0
+[ 581/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2180,0,0,0,0
+[ 582/ 800] true=ship     sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2181,3,0,0,0
+[ 583/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2182,0,0,0,0
+[ 584/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2183,2,2,2,2
+[ 585/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2184,2,2,2,2
+[ 586/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2185,0,0,0,0
+[ 587/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2186,0,0,0,0
+[ 588/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2187,3,3,3,3
+[ 589/ 800] true=ship     sw_ref=car      sw_alt=car       -> car      [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2188,3,1,1,1
+[ 590/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2189,2,2,2,2
+[ 591/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2190,3,3,3,3
+[ 592/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2191,2,2,2,2
+[ 593/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2192,0,0,0,0
+[ 594/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2193,2,2,2,2
+[ 595/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2194,2,2,2,2
+[ 596/ 800] true=dog      sw_ref=airplane sw_alt=airplane  -> ship     [true:FAIL | SW:MISMATCH | ALT:MISMATCH]
+PRED,2195,2,0,0,3
+[ 597/ 800] true=dog      sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2196,2,0,0,0
+[ 598/ 800] true=car      sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2197,1,0,0,0
+[ 599/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2198,0,0,0,0
+[ 600/ 800] true=ship     sw_ref=car      sw_alt=car       -> car      [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2199,3,1,1,1
+[ 601/ 800] true=car      sw_ref=car      sw_alt=car       -> airplane [true:FAIL | SW:MISMATCH | ALT:MISMATCH]
+PRED,2200,1,1,1,0
+[ 602/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2201,0,0,0,0
+[ 603/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2202,2,2,2,2
+[ 604/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2203,1,1,1,1
+[ 605/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2204,2,2,2,2
+[ 606/ 800] true=car      sw_ref=car      sw_alt=ship      -> ship     [true:FAIL | SW:MISMATCH | ALT:MATCH]
+PRED,2205,1,1,3,3
+[ 607/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2206,2,2,2,2
+[ 608/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2207,2,2,2,2
+[ 609/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2208,2,2,2,2
+[ 610/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2209,3,3,3,3
+[ 611/ 800] true=car      sw_ref=ship     sw_alt=ship      -> ship     [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2210,1,3,3,3
+[ 612/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2211,1,1,1,1
+[ 613/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2212,2,2,2,2
+[ 614/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2213,2,2,2,2
+[ 615/ 800] true=car      sw_ref=ship     sw_alt=ship      -> ship     [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2214,1,3,3,3
+[ 616/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2215,1,1,1,1
+[ 617/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2216,1,1,1,1
+[ 618/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2217,2,2,2,2
+[ 619/ 800] true=ship     sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2218,3,0,0,0
+[ 620/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2219,0,0,0,0
+[ 621/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2220,1,1,1,1
+[ 622/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2221,2,2,2,2
+[ 623/ 800] true=ship     sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2222,3,0,0,0
+[ 624/ 800] true=car      sw_ref=ship     sw_alt=ship      -> ship     [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2223,1,3,3,3
+[ 625/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2224,0,0,0,0
+[ 626/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> ship     [true:FAIL | SW:MISMATCH | ALT:MISMATCH]
+PRED,2225,0,0,0,3
+[ 627/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2226,0,0,0,0
+[ 628/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2227,2,2,2,2
+[ 629/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2228,2,2,2,2
+[ 630/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2229,1,1,1,1
+[ 631/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2230,3,3,3,3
+[ 632/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2231,3,3,3,3
+[ 633/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> airplane [true:FAIL | SW:MISMATCH | ALT:MISMATCH]
+PRED,2232,3,3,3,0
+[ 634/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2233,2,2,2,2
+[ 635/ 800] true=airplane sw_ref=ship     sw_alt=ship      -> ship     [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2234,0,3,3,3
+[ 636/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2235,2,2,2,2
+[ 637/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2236,3,3,3,3
+[ 638/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2237,3,3,3,3
+[ 639/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2238,1,1,1,1
+[ 640/ 800] true=airplane sw_ref=ship     sw_alt=ship      -> ship     [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2239,0,3,3,3
+[ 641/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2240,1,1,1,1
+[ 642/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2241,0,0,0,0
+[ 643/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2242,1,1,1,1
+[ 644/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2243,3,3,3,3
+[ 645/ 800] true=airplane sw_ref=dog      sw_alt=dog       -> dog      [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2244,0,2,2,2
+[ 646/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2245,0,0,0,0
+[ 647/ 800] true=ship     sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2246,3,0,0,0
+[ 648/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2247,1,1,1,1
+[ 649/ 800] true=ship     sw_ref=car      sw_alt=car       -> car      [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2248,3,1,1,1
+[ 650/ 800] true=car      sw_ref=car      sw_alt=car       -> ship     [true:FAIL | SW:MISMATCH | ALT:MISMATCH]
+PRED,2249,1,1,1,3
+[ 651/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2250,2,2,2,2
+[ 652/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2251,0,0,0,0
+[ 653/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2252,2,2,2,2
+[ 654/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2253,2,2,2,2
+[ 655/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2254,3,3,3,3
+[ 656/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2255,0,0,0,0
+[ 657/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2256,3,3,3,3
+[ 658/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2257,2,2,2,2
+[ 659/ 800] true=car      sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2258,1,0,0,0
+[ 660/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2259,2,2,2,2
+[ 661/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2260,2,2,2,2
+[ 662/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2261,3,3,3,3
+[ 663/ 800] true=airplane sw_ref=ship     sw_alt=ship      -> airplane [true:PASS | SW:MISMATCH | ALT:MISMATCH]
+PRED,2262,0,3,3,0
+[ 664/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2263,1,1,1,1
+[ 665/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2264,2,2,2,2
+[ 666/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> dog      [true:FAIL | SW:MISMATCH | ALT:MISMATCH]
+PRED,2265,0,0,0,2
+[ 667/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2266,1,1,1,1
+[ 668/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2267,0,0,0,0
+[ 669/ 800] true=car      sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2268,1,0,0,0
+[ 670/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2269,2,2,2,2
+[ 671/ 800] true=ship     sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2270,3,0,0,0
+[ 672/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2271,2,2,2,2
+[ 673/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2272,3,3,3,3
+[ 674/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2273,2,2,2,2
+[ 675/ 800] true=ship     sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2274,3,0,0,0
+[ 676/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2275,0,0,0,0
+[ 677/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2276,3,3,3,3
+[ 678/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2277,3,3,3,3
+[ 679/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2278,0,0,0,0
+[ 680/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2279,2,2,2,2
+[ 681/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2280,2,2,2,2
+[ 682/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2281,0,0,0,0
+[ 683/ 800] true=ship     sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2282,3,0,0,0
+[ 684/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2283,2,2,2,2
+[ 685/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2284,1,1,1,1
+[ 686/ 800] true=airplane sw_ref=airplane sw_alt=dog       -> airplane [true:PASS | SW:MATCH | ALT:MISMATCH]
+PRED,2285,0,0,2,0
+[ 687/ 800] true=ship     sw_ref=airplane sw_alt=airplane  -> ship     [true:PASS | SW:MISMATCH | ALT:MISMATCH]
+PRED,2286,3,0,0,3
+[ 688/ 800] true=airplane sw_ref=dog      sw_alt=dog       -> dog      [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2287,0,2,2,2
+[ 689/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2288,2,2,2,2
+[ 690/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2289,2,2,2,2
+[ 691/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2290,1,1,1,1
+[ 692/ 800] true=ship     sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2291,3,0,0,0
+[ 693/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2292,2,2,2,2
+[ 694/ 800] true=car      sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2293,1,0,0,0
+[ 695/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2294,0,0,0,0
+[ 696/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2295,2,2,2,2
+[ 697/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2296,0,0,0,0
+[ 698/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2297,0,0,0,0
+[ 699/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2298,2,2,2,2
+[ 700/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2299,2,2,2,2
+[ 701/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2300,0,0,0,0
+[ 702/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2301,2,2,2,2
+[ 703/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2302,2,2,2,2
+[ 704/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2303,3,3,3,3
+[ 705/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2304,1,1,1,1
+[ 706/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2305,2,2,2,2
+[ 707/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2306,3,3,3,3
+[ 708/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2307,1,1,1,1
+[ 709/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2308,3,3,3,3
+[ 710/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2309,0,0,0,0
+[ 711/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2310,2,2,2,2
+[ 712/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2311,3,3,3,3
+[ 713/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2312,1,1,1,1
+[ 714/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2313,1,1,1,1
+[ 715/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2314,2,2,2,2
+[ 716/ 800] true=car      sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2315,1,0,0,0
+[ 717/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2316,2,2,2,2
+[ 718/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2317,0,0,0,0
+[ 719/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2318,1,1,1,1
+[ 720/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2319,2,2,2,2
+[ 721/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2320,0,0,0,0
+[ 722/ 800] true=ship     sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2321,3,0,0,0
+[ 723/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2322,3,3,3,3
+[ 724/ 800] true=car      sw_ref=ship     sw_alt=ship      -> ship     [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2323,1,3,3,3
+[ 725/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2324,3,3,3,3
+[ 726/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2325,0,0,0,0
+[ 727/ 800] true=ship     sw_ref=car      sw_alt=airplane  -> car      [true:FAIL | SW:MATCH | ALT:MISMATCH]
+PRED,2326,3,1,0,1
+[ 728/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2327,2,2,2,2
+[ 729/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2328,2,2,2,2
+[ 730/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2329,0,0,0,0
+[ 731/ 800] true=airplane sw_ref=car      sw_alt=car       -> airplane [true:PASS | SW:MISMATCH | ALT:MISMATCH]
+PRED,2330,0,1,1,0
+[ 732/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2331,1,1,1,1
+[ 733/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2332,0,0,0,0
+[ 734/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2333,2,2,2,2
+[ 735/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2334,2,2,2,2
+[ 736/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2335,1,1,1,1
+[ 737/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2336,2,2,2,2
+[ 738/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2337,0,0,0,0
+[ 739/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2338,3,3,3,3
+[ 740/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2339,2,2,2,2
+[ 741/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2340,2,2,2,2
+[ 742/ 800] true=car      sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2341,1,0,0,0
+[ 743/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2342,1,1,1,1
+[ 744/ 800] true=airplane sw_ref=ship     sw_alt=ship      -> ship     [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2343,0,3,3,3
+[ 745/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2344,3,3,3,3
+[ 746/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2345,0,0,0,0
+[ 747/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2346,1,1,1,1
+[ 748/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2347,0,0,0,0
+[ 749/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2348,0,0,0,0
+[ 750/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2349,2,2,2,2
+[ 751/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2350,0,0,0,0
+[ 752/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2351,3,3,3,3
+[ 753/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2352,0,0,0,0
+[ 754/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2353,3,3,3,3
+[ 755/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2354,0,0,0,0
+[ 756/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2355,3,3,3,3
+[ 757/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2356,0,0,0,0
+[ 758/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2357,2,2,2,2
+[ 759/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2358,2,2,2,2
+[ 760/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2359,0,0,0,0
+[ 761/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2360,3,3,3,3
+[ 762/ 800] true=ship     sw_ref=ship     sw_alt=airplane  -> airplane [true:FAIL | SW:MISMATCH | ALT:MATCH]
+PRED,2361,3,3,0,0
+[ 763/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2362,2,2,2,2
+[ 764/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> car      [true:FAIL | SW:MISMATCH | ALT:MISMATCH]
+PRED,2363,3,3,3,1
+[ 765/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2364,2,2,2,2
+[ 766/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2365,1,1,1,1
+[ 767/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2366,1,1,1,1
+[ 768/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2367,3,3,3,3
+[ 769/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2368,1,1,1,1
+[ 770/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2369,0,0,0,0
+[ 771/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2370,3,3,3,3
+[ 772/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2371,2,2,2,2
+[ 773/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2372,0,0,0,0
+[ 774/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2373,1,1,1,1
+[ 775/ 800] true=car      sw_ref=dog      sw_alt=dog       -> ship     [true:FAIL | SW:MISMATCH | ALT:MISMATCH]
+PRED,2374,1,2,2,3
+[ 776/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2375,1,1,1,1
+[ 777/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2376,2,2,2,2
+[ 778/ 800] true=car      sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2377,1,0,0,0
+[ 779/ 800] true=car      sw_ref=car      sw_alt=ship      -> car      [true:PASS | SW:MATCH | ALT:MISMATCH]
+PRED,2378,1,1,3,1
+[ 780/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2379,0,0,0,0
+[ 781/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2380,2,2,2,2
+[ 782/ 800] true=airplane sw_ref=airplane sw_alt=airplane  -> airplane [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2381,0,0,0,0
+[ 783/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2382,3,3,3,3
+[ 784/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2383,2,2,2,2
+[ 785/ 800] true=car      sw_ref=airplane sw_alt=airplane  -> car      [true:PASS | SW:MISMATCH | ALT:MISMATCH]
+PRED,2384,1,0,0,1
+[ 786/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2385,3,3,3,3
+[ 787/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2386,3,3,3,3
+[ 788/ 800] true=ship     sw_ref=ship     sw_alt=ship      -> ship     [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2387,3,3,3,3
+[ 789/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2388,2,2,2,2
+[ 790/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2389,2,2,2,2
+[ 791/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2390,2,2,2,2
+[ 792/ 800] true=ship     sw_ref=car      sw_alt=ship      -> ship     [true:PASS | SW:MISMATCH | ALT:MATCH]
+PRED,2391,3,1,3,3
+[ 793/ 800] true=dog      sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2392,2,0,0,0
+[ 794/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2393,1,1,1,1
+[ 795/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2394,2,2,2,2
+[ 796/ 800] true=car      sw_ref=ship     sw_alt=ship      -> ship     [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2395,1,3,3,3
+[ 797/ 800] true=car      sw_ref=car      sw_alt=car       -> car      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2396,1,1,1,1
+[ 798/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2397,2,2,2,2
+[ 799/ 800] true=dog      sw_ref=dog      sw_alt=dog       -> dog      [true:PASS | SW:MATCH | ALT:MATCH]
+PRED,2398,2,2,2,2
+[ 800/ 800] true=dog      sw_ref=airplane sw_alt=airplane  -> airplane [true:FAIL | SW:MATCH | ALT:MATCH]
+PRED,2399,2,0,0,0
+
+============================================================
+ ACCURACY / AGREEMENT SUMMARY
+============================================================
+ Scheduled images : 800
+ Completed images : 800
+ HW errors        : 0
+------------------------------------------------------------
+ airplane   :  176 /  208 =  84.6%
+ car        :  144 /  200 =  72.0%
+ dog        :  185 /  201 =  92.0%
+ ship       :  123 /  191 =  64.3%
+------------------------------------------------------------
+ vs TRUE (all scheduled) :  628 /  800 =  78.5%
+ vs TRUE (completed)     :  628 /  800 =  78.5%
+ vs SW INT8 reference    :  748 /  800 =  93.5%
+ vs ALT RTL-intent ref   :  747 /  800 =  93.3%
+SUMMARY_ACC,800,800,628,748,747,0
+SUMMARY_PART,2,1600,2399,800
+
+============================================================
+ LATENCY SUMMARY (800 successful images)
+============================================================
+------------------------------------------------------------
+ End-to-end                     : 78.75 ms  (78750 us)
+ Throughput                     : 12.6 FPS
+ Accumulated measured time       : 63000 ms
+
+ ROW PASS
+------------------------------------------------------------
+ PS input-BRAM writes           : 7.23 ms  (7239 us)
+ DWT start->done wall time      : 0.48 ms  (486 us)
+ PS stride-2 BRAM reads         : 3.70 ms  (3700 us)
+ Row-pass system total          : 11.42 ms  (11425 us)
+
+ COLUMN PASS
+------------------------------------------------------------
+ PS transpose/reorder + writes  : 3.58 ms  (3580 us)
+ DWT start->done wall time      : 0.24 ms  (242 us)
+ PS stride-2 BRAM reads         : 1.84 ms  (1849 us)
+ Column-pass system total       : 5.67 ms  (5671 us)
+
+ PREPROCESSING TOTAL
+------------------------------------------------------------
+ DBWFB2 system total            : 17.09 ms  (17096 us)
+
+ CNN PATH
+------------------------------------------------------------
+ INT8 quantization + packing    : 0.24 ms  (243 us)
+ D-cache flush                  : 0.01 ms  (12 us)
+ CNN pointer/control setup      : 0.00 ms  (0 us)
+ CNN start->done/result wall    : 61.33 ms  (61332 us)
+ CNN system total               : 61.58 ms  (61587 us)
+
+ TIMING ACCOUNTING
+------------------------------------------------------------
+ Explicitly instrumented sum    : 78.68 ms  (78683 us)
+ Residual timer/control overhead : 0.06 ms  (67 us)
+
+ AVG ARM GLOBAL-TIMER TICKS (NOT PL CYCLES)
+------------------------------------------------------------
+ End-to-end                    : 25593768 GT ticks
+ Row PS writes                 : 2352751 GT ticks
+ Row DWT start->done           : 157951 GT ticks
+ Row PS reads                  : 1202702 GT ticks
+ Col transpose/write           : 1163717 GT ticks
+ Col DWT start->done           : 78682 GT ticks
+ Col PS reads                  : 601161 GT ticks
+ Quantization/packing          : 79052 GT ticks
+ Cache flush                   : 4200 GT ticks
+ CNN setup                     : 312 GT ticks
+ CNN start->done/result        : 19932984 GT ticks
+SUMMARY_TIME_US,78750,7239,486,3700,3580,242,1849,243,12,0,61332,67
+============================================================
+ END OF DBWFB2 INT8 CNN FPGA RUN
+============================================================

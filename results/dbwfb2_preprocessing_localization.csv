@@ -1,0 +1,4 @@
+path,accuracy,input_saturation_fraction,agreement_vs_primary
+rtl_integer_trailing_replicate_PRIMARY,77.75,0.0031621551513671877,1.0
+same_boundary_float_coefficients,77.59375,0.004802017211914062,0.985
+legacy_zero_boundary_float_DIAGNOSTIC,78.65625,0.005090560913085938,0.928125

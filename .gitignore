@@ -1,0 +1,55 @@
+# Vivado generated projects and caches
+.Xil/
+.cache/
+.ipcache/
+.gen/
+.hw/
+.runs/
+.sim/
+.sdk/
+.ip_user_files/
+ip_user_files/
+*.jou
+*.wdb
+*.wcfg
+
+# Vitis generated workspaces and build products
+.metadata/
+.ide/
+**/_ide/
+**/.settings/
+**/Debug/
+**/Release/
+**/build/
+*.elf
+*.o
+*.a
+
+# HLS generated work directories
+.autopilot/
+.debug/
+solution*/impl/
+solution*/sim/
+solution*/csim/
+
+# Python and notebooks
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.bak
+*~
+
+# Local scratch directories
+tmp/
+temp/
+*.tmp
+*.temp

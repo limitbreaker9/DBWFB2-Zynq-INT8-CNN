@@ -1,0 +1,59 @@
+{
+  "experiment": "DBWFB2 full independent FPGA test",
+  "images_scheduled": 3200,
+  "images_completed": 3200,
+  "hardware_errors": 0,
+  "correct": 2497,
+  "accuracy_percent": 78.03125,
+  "python_reference_matches": 3006,
+  "python_reference_agreement_percent": 93.9375,
+  "python_reference_mismatches": 194,
+  "macro_f1_percent": 77.92173848773417,
+  "wilson_95_percent": [
+    76.56357503579166,
+    79.43170510083394
+  ],
+  "global_index_coverage": {
+    "first": 0,
+    "last": 3199,
+    "unique": 3200
+  },
+  "parts": [
+    {
+      "part": 0,
+      "start": 0,
+      "end": 799,
+      "images": 800,
+      "correct": 639,
+      "python_reference_matches": 759,
+      "hardware_errors": 0
+    },
+    {
+      "part": 1,
+      "start": 800,
+      "end": 1599,
+      "images": 800,
+      "correct": 617,
+      "python_reference_matches": 749,
+      "hardware_errors": 0
+    },
+    {
+      "part": 2,
+      "start": 1600,
+      "end": 2399,
+      "images": 800,
+      "correct": 628,
+      "python_reference_matches": 748,
+      "hardware_errors": 0
+    },
+    {
+      "part": 3,
+      "start": 2400,
+      "end": 3199,
+      "images": 800,
+      "correct": 613,
+      "python_reference_matches": 750,
+      "hardware_errors": 0
+    }
+  ]
+}

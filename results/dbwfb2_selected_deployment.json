@@ -1,0 +1,22 @@
+{
+  "arm": "dbwfb2",
+  "selected_seed": 42,
+  "input_gain": 1,
+  "C1_SHIFT": 9,
+  "C2_SHIFT": 8,
+  "preprocessing": {
+    "boundary": "trailing-edge replicate extension",
+    "phase": "causal RTL phase",
+    "decimation": "even-index",
+    "integer_coefficients": [27, -17, -78, 273, 614, 273, -78, -17, 27],
+    "per_pass_arithmetic_shift": 10
+  },
+  "selected_test_images": 3200,
+  "selected_python_true_int8_correct": 2488,
+  "selected_python_true_int8_accuracy_percent": 77.75,
+  "source_files": [
+    "hardware/deployment/dbwfb2/hardware_manifest.json",
+    "results/software_five_seed_results.csv",
+    "results/logs/dbwfb2/hls/dbwfb2_hls_csim_3200.txt"
+  ]
+}

@@ -1,0 +1,2 @@
+#define C1_SHIFT 9
+#define C2_SHIFT 7

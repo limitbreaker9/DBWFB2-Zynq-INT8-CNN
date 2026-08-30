@@ -1,0 +1,14 @@
+{
+  "protocol_version": "STL10_HW_MATCHED_DEPLOYMENT_V1",
+  "arm": "dbwfb2",
+  "selected_seed_frozen_before_test": 42,
+  "input_gain_frozen_before_test": 1,
+  "keras_parameter_count": 5124,
+  "deployed_tensor_storage_bytes": 5088,
+  "bias_dtype": "int32",
+  "weight_dtype": "int8",
+  "batchnorm_stored_separately": false,
+  "C1_SHIFT": 9,
+  "C2_SHIFT": 8,
+  "preprocessing_reference": "RTL structural integer DBWFB2; trailing replicate; >>>10 each pass; even-index decimation"
+}
