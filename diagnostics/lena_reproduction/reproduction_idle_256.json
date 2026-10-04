@@ -1,0 +1,129 @@
+{
+  "method": "Icarus simulation of original RTL and firmware execution order",
+  "input_dimensions": [
+    256,
+    256
+  ],
+  "subband_dimensions": [
+    128,
+    128
+  ],
+  "input_pixel_sha256": "c80eb7fdc5d2dc6e06977661e23bd9f62bff1fe43af068e021f173614cfd882f",
+  "original_file_sha256": {
+    "C:\\Users\\yaduv\\Downloads\\lena_data.h": "7952821bedf902904457845ccbe61b53758fa6757df5b7b53aaf4b092d0eb64f",
+    "C:\\Users\\yaduv\\Downloads\\main.c": "c09bddbb9ce42897df8c2d577669553c28f38dfe39ed29ebf1d6762f3d85315c",
+    "D:\\new_idea_implementation\\final.xpr\\implementation_of_reserach_paper\\implementation_of_reserach_paper.srcs\\sources_1\\imports\\bram_ctrl_conv_wrapper\\dbwfb2_97_bram_ctrl.v": "f7eb16fb1b7820262b981f23112cf2a9dd45f1d01f5f0d05b52abf485af68bd2",
+    "D:\\new_idea_implementation\\final.xpr\\implementation_of_reserach_paper\\implementation_of_reserach_paper.srcs\\sources_1\\imports\\bram_ctrl_conv_wrapper\\dbwfb2_97_conv.v": "b78ad4eb8dd18fff1f5f9af93cc9c6d9ce8cd531d1848f6ddcb0a2e1f41437d8",
+    "D:\\new_idea_implementation\\final.xpr\\implementation_of_reserach_paper\\implementation_of_reserach_paper.srcs\\sources_1\\imports\\bram_ctrl_conv_wrapper\\delay_chain.v": "e5559f0ba748a3754e91a92bc9b9f930064f4999d7e70bc99dd893b0bc5c7a1d",
+    "D:\\new_idea_implementation\\final.xpr\\implementation_of_reserach_paper\\implementation_of_reserach_paper.srcs\\sources_1\\imports\\bram_ctrl_conv_wrapper\\lpf_shiftadd.v": "567405cbd2874c1cb83afa1473ecc5f25d7d67e4e5fae9edf7af32812238beb3",
+    "D:\\new_idea_implementation\\final.xpr\\implementation_of_reserach_paper\\implementation_of_reserach_paper.srcs\\sources_1\\imports\\bram_ctrl_conv_wrapper\\hpf_shiftadd.v": "996a0617ede86d8835ce4ac981df5e692410f2ab2d3f79e176bda33b616ced5f",
+    "D:\\new_idea_implementation\\final.xpr\\implementation_of_reserach_paper\\implementation_of_reserach_paper.srcs\\sources_1\\imports\\bram_ctrl_conv_wrapper\\output_norm.v": "f7a1a2ab472ac0cc3be60b1bf9c9212ed0dad62659bd7b57f4bca31e37ac3440",
+    "D:\\new_idea_implementation\\final.xpr\\implementation_of_reserach_paper\\implementation_of_reserach_paper.srcs\\sources_1\\bd\\PL\\ip\\PL_blk_mem_gen_0_0\\PL_blk_mem_gen_0_0.xci": "e2a387368f0b67c939845a8e27f6db17705575f6a616327af712d0789c2384f0",
+    "D:\\new_idea_implementation\\final.xpr\\implementation_of_reserach_paper\\implementation_of_reserach_paper.srcs\\sources_1\\bd\\PL\\ip\\PL_blk_mem_gen_0_1\\PL_blk_mem_gen_0_1.xci": "f9519199462a1e4bec008f68e190835fbb71e1c5c2c761dc3adfc8b7a003cf9c"
+  },
+  "downloads_header_matches_historical": true,
+  "downloads_firmware_matches_historical": true,
+  "lpf": {
+    "coefficients": [
+      27,
+      -17,
+      -78,
+      273,
+      614,
+      273,
+      -78,
+      -17,
+      27
+    ],
+    "arithmetic_shift": 10
+  },
+  "hpf": {
+    "coefficients": [
+      3,
+      -2,
+      -19,
+      36,
+      -19,
+      -2,
+      3
+    ],
+    "arithmetic_shift": 6
+  },
+  "boundary": "Original controller trailing last-sample replication; BRAM output holds between transactions; original persistent FIR state",
+  "decimation": "Firmware retains even horizontal column addresses and even vertical row addresses; original controller pipe_fill=9",
+  "arithmetic": "Original signed-16 taps, signed-17 symmetric sums, signed-32 shift/add and registers; arithmetic shift then low-16 two's-complement truncation; no rounding or saturation",
+  "bram_settings": {
+    "D:\\new_idea_implementation\\final.xpr\\implementation_of_reserach_paper\\implementation_of_reserach_paper.srcs\\sources_1\\bd\\PL\\ip\\PL_blk_mem_gen_0_0\\PL_blk_mem_gen_0_0.xci": {
+      "READ_LATENCY_B": "1",
+      "Read_Width_B": "32",
+      "Register_PortB_Output_of_Memory_Primitives": "false",
+      "Register_PortB_Output_of_Memory_Core": "false",
+      "Enable_32bit_Address": "true"
+    },
+    "D:\\new_idea_implementation\\final.xpr\\implementation_of_reserach_paper\\implementation_of_reserach_paper.srcs\\sources_1\\bd\\PL\\ip\\PL_blk_mem_gen_0_1\\PL_blk_mem_gen_0_1.xci": {
+      "READ_LATENCY_B": "1",
+      "Read_Width_B": "32",
+      "Register_PortB_Output_of_Memory_Primitives": "false",
+      "Register_PortB_Output_of_Memory_Core": "false",
+      "Enable_32bit_Address": "true"
+    }
+  },
+  "idle_cycles": 256,
+  "input_writes": "One per clock before each transaction; at least 256 idle clocks, no inter-transaction reset",
+  "firmware_sequence": "256 horizontal transactions followed by 128 even columns, each with low-stream then high-stream transaction",
+  "raw_energy_double": {
+    "LL": 282096500.0,
+    "LH": 339463.0,
+    "HL": 935871.0,
+    "HH": 342471.0
+  },
+  "total_energy_double": 283714305.0,
+  "normalized_percent": {
+    "LL": 99.42977672556906,
+    "LH": 0.1196495890469816,
+    "HL": 0.3298638748581958,
+    "HH": 0.12070981052576817
+  },
+  "expected_percent": {
+    "LL": 99.429778,
+    "LH": 0.11965,
+    "HL": 0.329864,
+    "HH": 0.12071
+  },
+  "absolute_percentage_point_difference": {
+    "LL": 1.2744309429990608e-06,
+    "LH": 4.1095301840654574e-07,
+    "HL": 1.2514180419698206e-07,
+    "HH": 1.8947423183202083e-07
+  },
+  "maximum_absolute_percentage_point_difference": 1.2744309429990608e-06,
+  "near_exact_to_six_decimals": false,
+  "matches_manuscript_two_decimal_display": true,
+  "precision_note": "Near-exact, not identical at all six target decimals. No phase, boundary, coefficient, sign, or truncation parameter was fitted to the target percentages.",
+  "simulation_stdout": "PASS: 512 original-RTL transactions; four 128x128 subbands; idle=256\n<simulation-workdir>/lena_tb.sv:105: $finish called at 3999080000 (1ps)\n",
+  "compile_stderr": "",
+  "testbench_sha256": "5a86087699e27d07e0f4386a92fa95f7bdae5255eaa66ab9494933abc52ef529",
+  "script_sha256": "9323c706462f201e96fa32e63951c13263e5393d9acbc209a746e41c10dc84b0",
+  "subbands_sha256": "2f5c6271f62352c80e909cacaf840a45e31533ef1c9483de24d27774541c2399",
+  "compile_command": [
+    "C:\\iverilog\\bin\\iverilog.exe",
+    "-g2012",
+    "-s",
+    "lena_tb",
+    "-o",
+    "<simulation-workdir>\\lena_sim.vvp",
+    "<simulation-workdir>\\lena_tb.sv",
+    "D:\\new_idea_implementation\\final.xpr\\implementation_of_reserach_paper\\implementation_of_reserach_paper.srcs\\sources_1\\imports\\bram_ctrl_conv_wrapper\\dbwfb2_97_bram_ctrl.v",
+    "D:\\new_idea_implementation\\final.xpr\\implementation_of_reserach_paper\\implementation_of_reserach_paper.srcs\\sources_1\\imports\\bram_ctrl_conv_wrapper\\dbwfb2_97_conv.v",
+    "D:\\new_idea_implementation\\final.xpr\\implementation_of_reserach_paper\\implementation_of_reserach_paper.srcs\\sources_1\\imports\\bram_ctrl_conv_wrapper\\delay_chain.v",
+    "D:\\new_idea_implementation\\final.xpr\\implementation_of_reserach_paper\\implementation_of_reserach_paper.srcs\\sources_1\\imports\\bram_ctrl_conv_wrapper\\lpf_shiftadd.v",
+    "D:\\new_idea_implementation\\final.xpr\\implementation_of_reserach_paper\\implementation_of_reserach_paper.srcs\\sources_1\\imports\\bram_ctrl_conv_wrapper\\hpf_shiftadd.v",
+    "D:\\new_idea_implementation\\final.xpr\\implementation_of_reserach_paper\\implementation_of_reserach_paper.srcs\\sources_1\\imports\\bram_ctrl_conv_wrapper\\output_norm.v"
+  ],
+  "run_command": [
+    "C:\\iverilog\\bin\\vvp.exe",
+    "<simulation-workdir>\\lena_sim.vvp",
+    "+idle=256"
+  ],
+  "matches_firmware_five_decimal_display": true
+}

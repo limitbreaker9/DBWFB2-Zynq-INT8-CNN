@@ -1,0 +1,5 @@
+true_class\predicted_class,airplane,car,dog,ship
+airplane,108,3,6,8
+car,17,93,8,7
+dog,5,1,119,0
+ship,26,4,7,88

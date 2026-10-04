@@ -1,0 +1,40 @@
+{
+  "arm": "avgpool",
+  "scope": "four-class STL-10 fixed Board500 independent-test subset",
+  "scheduled": 500,
+  "completed": 500,
+  "hardware_errors": 0,
+  "correct": 416,
+  "accuracy_percent": 83.2,
+  "selected_seed42_software_matches": 498,
+  "selected_seed42_software_agreement_percent": 99.6,
+  "class_correct": {
+    "airplane": 108,
+    "car": 98,
+    "dog": 119,
+    "ship": 91
+  },
+  "class_total": 125,
+  "timing": {
+    "row_write_us": 7241,
+    "row_pl_wall_us": 840,
+    "row_read_us": 3905,
+    "row_pass_us": 11986,
+    "column_reorder_write_us": 3541,
+    "column_pl_wall_us": 419,
+    "column_read_us": 1958,
+    "column_pass_us": 5918,
+    "preprocessing_us": 17904,
+    "quantize_pack_us": 576,
+    "cache_flush_us": 12,
+    "cnn_setup_us": 0,
+    "cnn_start_done_us": 61332,
+    "cnn_system_us": 61920,
+    "explicitly_instrumented_us": 79824,
+    "residual_us": 70,
+    "end_to_end_us": 79894,
+    "throughput_fps": 12.516584474428617
+  },
+  "source_uart": "results/logs/avgpool/uart/avgpool_board500_20261003.txt",
+  "source_uart_sha256": "99e29ba7a1147915d357473f5719fa1657df22bff907ddefebc5f5f05f1a4dde"
+}

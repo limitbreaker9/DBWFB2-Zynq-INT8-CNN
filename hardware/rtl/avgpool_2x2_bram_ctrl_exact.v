@@ -3,7 +3,9 @@
 // Version: exact_v2
 // Purpose: Same-flow 2x2 AvgPool preprocessing controller for Zynq BRAM.
 //
-// The controller explicitly accommodates synchronous BRAM read latency.
+// IMPORTANT:
+//   This version explicitly accommodates synchronous BRAM read latency.
+//   It replaces the earlier experimental AvgPool controller.
 //
 // NUMERICAL OPERATION
 // -------------------

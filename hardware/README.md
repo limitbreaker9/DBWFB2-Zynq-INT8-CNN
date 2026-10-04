@@ -3,7 +3,7 @@
 - `rtl/`: active multiplier-free DBWFB2 and exact 2x2 AvgPool preprocessing RTL.
 - `hls/src/`: canonical CNN accelerator source, interface header, and C-simulation testbench.
 - `hls/dbwfb2/`: final DBWFB2 CNN configuration, weights, full-test vectors, expected predictions, and synthesis report.
-- `hls/avgpool/`: same-CNN synthesis package used in the controlled routed hardware comparison.
+- `hls/avgpool/`: selected AvgPool seed-42 CNN package, shifts 9/7, generated IP and synthesis report.
 - `deployment/`: self-contained weights, shifts, manifests, Board500 inputs, and four-part DBWFB2 full-test inputs.
 - `vivado/`: active block designs, constraints, exported platforms, screenshots, and placed/routed reports.
 

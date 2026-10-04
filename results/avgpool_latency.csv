@@ -1,0 +1,2 @@
+run,end_to_end_us,row_write_us,row_pl_wall_us,row_read_us,col_reorder_write_us,col_pl_wall_us,col_read_us,quant_pack_us,cache_flush_us,cnn_setup_us,cnn_start_done_us,residual_us,preprocessing_us,cnn_system_us,row_pass_us,column_pass_us,explicitly_instrumented_us
+corrected_avgpool_board500_20261003,79894,7241,840,3905,3541,419,1958,576,12,0,61332,70,17904,61920,11986,5918,79824

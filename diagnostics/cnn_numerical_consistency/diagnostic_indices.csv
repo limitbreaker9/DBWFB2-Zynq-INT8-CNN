@@ -1,0 +1,11 @@
+global_index,true_label,python_primary_prediction,fpga_prediction,selection_group
+8,1,3,1,mismatch
+107,0,0,3,mismatch
+844,1,1,3,mismatch
+1670,2,0,2,mismatch
+2408,3,3,2,mismatch
+0,2,0,0,match
+1,0,0,0,match
+813,1,1,1,match
+1603,2,2,2,match
+2400,3,2,2,match

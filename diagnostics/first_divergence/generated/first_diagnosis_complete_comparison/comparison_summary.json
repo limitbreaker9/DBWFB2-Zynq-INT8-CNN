@@ -1,0 +1,1338 @@
+{
+  "uart_trace": "C:\\Users\\yaduv\\Desktop\\log\\first_diagnosis_uart_complete.log",
+  "expected_archive": "C:\\Users\\yaduv\\Desktop\\DBWFB2-Zynq-INT8-CNN\\diagnostics\\first_divergence\\generated\\expected_first_divergence.npz",
+  "images": [
+    {
+      "global_index": 8,
+      "true_label": 1,
+      "python_prediction": 3,
+      "original_logged_fpga_prediction": 1,
+      "diagnostic_fpga_prediction": 1,
+      "stages": {
+        "RAW": {
+          "shape_expected": [
+            128,
+            128
+          ],
+          "shape_actual": [
+            128,
+            128
+          ],
+          "total_elements": 16384,
+          "exact_matches": 16384,
+          "mismatch_count": 0,
+          "match_percent": 100.0,
+          "first_mismatch": null,
+          "expected_at_first": null,
+          "fpga_at_first": null,
+          "max_absolute_error": 0,
+          "mean_absolute_error": 0.0,
+          "plus_one_differences": 0,
+          "minus_one_differences": 0
+        },
+        "ROW": {
+          "shape_expected": [
+            128,
+            64
+          ],
+          "shape_actual": [
+            128,
+            64
+          ],
+          "total_elements": 8192,
+          "exact_matches": 2216,
+          "mismatch_count": 5976,
+          "match_percent": 27.05078125,
+          "first_mismatch": [
+            1,
+            0
+          ],
+          "expected_at_first": 54,
+          "fpga_at_first": 43,
+          "max_absolute_error": 181,
+          "mean_absolute_error": 14.4915771484375,
+          "plus_one_differences": 354,
+          "minus_one_differences": 284,
+          "boundary_mismatch_counts": {
+            "interior": 5594,
+            "right_boundary": 382
+          }
+        },
+        "LL": {
+          "shape_expected": [
+            64,
+            64
+          ],
+          "shape_actual": [
+            64,
+            64
+          ],
+          "total_elements": 4096,
+          "exact_matches": 894,
+          "mismatch_count": 3202,
+          "match_percent": 21.826171875,
+          "first_mismatch": [
+            0,
+            0
+          ],
+          "expected_at_first": 65,
+          "fpga_at_first": 6,
+          "max_absolute_error": 179,
+          "mean_absolute_error": 25.911865234375,
+          "plus_one_differences": 93,
+          "minus_one_differences": 88,
+          "boundary_mismatch_counts": {
+            "interior": 3003,
+            "right_boundary": 199,
+            "bottom_boundary": 0,
+            "corner": 0
+          }
+        },
+        "CNN_INPUT": {
+          "shape_expected": [
+            64,
+            64
+          ],
+          "shape_actual": [
+            64,
+            64
+          ],
+          "total_elements": 4096,
+          "exact_matches": 894,
+          "mismatch_count": 3202,
+          "match_percent": 21.826171875,
+          "first_mismatch": [
+            0,
+            0
+          ],
+          "expected_at_first": -62,
+          "fpga_at_first": -121,
+          "max_absolute_error": 179,
+          "mean_absolute_error": 25.911865234375,
+          "plus_one_differences": 93,
+          "minus_one_differences": 88,
+          "boundary_mismatch_counts": {
+            "interior": 3003,
+            "right_boundary": 199,
+            "bottom_boundary": 0,
+            "corner": 0
+          }
+        }
+      },
+      "clipping": {
+        "python_preclip_min": -128,
+        "python_preclip_max": 124,
+        "python_low_saturation_count": 0,
+        "python_high_saturation_count": 0,
+        "fpga_preclip_min": -128,
+        "fpga_preclip_max": 124,
+        "fpga_low_saturation_count": 0,
+        "fpga_high_saturation_count": 0,
+        "ll_mismatches_hidden_by_clipping": 0,
+        "cnn_input_mismatches_with_either_side_saturated": 0
+      },
+      "first_divergence": "RAW matches, ROW differs: row DBWFB2/boundary/integer-arithmetic path"
+    },
+    {
+      "global_index": 107,
+      "true_label": 0,
+      "python_prediction": 0,
+      "original_logged_fpga_prediction": 3,
+      "diagnostic_fpga_prediction": 3,
+      "stages": {
+        "RAW": {
+          "shape_expected": [
+            128,
+            128
+          ],
+          "shape_actual": [
+            128,
+            128
+          ],
+          "total_elements": 16384,
+          "exact_matches": 16384,
+          "mismatch_count": 0,
+          "match_percent": 100.0,
+          "first_mismatch": null,
+          "expected_at_first": null,
+          "fpga_at_first": null,
+          "max_absolute_error": 0,
+          "mean_absolute_error": 0.0,
+          "plus_one_differences": 0,
+          "minus_one_differences": 0
+        },
+        "ROW": {
+          "shape_expected": [
+            128,
+            64
+          ],
+          "shape_actual": [
+            128,
+            64
+          ],
+          "total_elements": 8192,
+          "exact_matches": 1459,
+          "mismatch_count": 6733,
+          "match_percent": 17.81005859375,
+          "first_mismatch": [
+            6,
+            0
+          ],
+          "expected_at_first": 2,
+          "fpga_at_first": 1,
+          "max_absolute_error": 167,
+          "mean_absolute_error": 6.9224853515625,
+          "plus_one_differences": 955,
+          "minus_one_differences": 722,
+          "boundary_mismatch_counts": {
+            "interior": 6339,
+            "right_boundary": 394
+          }
+        },
+        "LL": {
+          "shape_expected": [
+            64,
+            64
+          ],
+          "shape_actual": [
+            64,
+            64
+          ],
+          "total_elements": 4096,
+          "exact_matches": 236,
+          "mismatch_count": 3860,
+          "match_percent": 5.76171875,
+          "first_mismatch": [
+            0,
+            0
+          ],
+          "expected_at_first": 3,
+          "fpga_at_first": 0,
+          "max_absolute_error": 232,
+          "mean_absolute_error": 25.99658203125,
+          "plus_one_differences": 261,
+          "minus_one_differences": 247,
+          "boundary_mismatch_counts": {
+            "interior": 3388,
+            "right_boundary": 227,
+            "bottom_boundary": 230,
+            "corner": 15
+          }
+        },
+        "CNN_INPUT": {
+          "shape_expected": [
+            64,
+            64
+          ],
+          "shape_actual": [
+            64,
+            64
+          ],
+          "total_elements": 4096,
+          "exact_matches": 236,
+          "mismatch_count": 3860,
+          "match_percent": 5.76171875,
+          "first_mismatch": [
+            0,
+            0
+          ],
+          "expected_at_first": -124,
+          "fpga_at_first": -127,
+          "max_absolute_error": 231,
+          "mean_absolute_error": 25.954833984375,
+          "plus_one_differences": 325,
+          "minus_one_differences": 247,
+          "boundary_mismatch_counts": {
+            "interior": 3388,
+            "right_boundary": 227,
+            "bottom_boundary": 230,
+            "corner": 15
+          }
+        }
+      },
+      "clipping": {
+        "python_preclip_min": -130,
+        "python_preclip_max": 115,
+        "python_low_saturation_count": 70,
+        "python_high_saturation_count": 0,
+        "fpga_preclip_min": -130,
+        "fpga_preclip_max": 115,
+        "fpga_low_saturation_count": 64,
+        "fpga_high_saturation_count": 0,
+        "ll_mismatches_hidden_by_clipping": 0,
+        "cnn_input_mismatches_with_either_side_saturated": 134
+      },
+      "first_divergence": "RAW matches, ROW differs: row DBWFB2/boundary/integer-arithmetic path"
+    },
+    {
+      "global_index": 844,
+      "true_label": 1,
+      "python_prediction": 1,
+      "original_logged_fpga_prediction": 3,
+      "diagnostic_fpga_prediction": 3,
+      "stages": {
+        "RAW": {
+          "shape_expected": [
+            128,
+            128
+          ],
+          "shape_actual": [
+            128,
+            128
+          ],
+          "total_elements": 16384,
+          "exact_matches": 16384,
+          "mismatch_count": 0,
+          "match_percent": 100.0,
+          "first_mismatch": null,
+          "expected_at_first": null,
+          "fpga_at_first": null,
+          "max_absolute_error": 0,
+          "mean_absolute_error": 0.0,
+          "plus_one_differences": 0,
+          "minus_one_differences": 0
+        },
+        "ROW": {
+          "shape_expected": [
+            128,
+            64
+          ],
+          "shape_actual": [
+            128,
+            64
+          ],
+          "total_elements": 8192,
+          "exact_matches": 1139,
+          "mismatch_count": 7053,
+          "match_percent": 13.90380859375,
+          "first_mismatch": [
+            0,
+            0
+          ],
+          "expected_at_first": 70,
+          "fpga_at_first": 52,
+          "max_absolute_error": 145,
+          "mean_absolute_error": 7.516357421875,
+          "plus_one_differences": 952,
+          "minus_one_differences": 879,
+          "boundary_mismatch_counts": {
+            "interior": 6698,
+            "right_boundary": 355
+          }
+        },
+        "LL": {
+          "shape_expected": [
+            64,
+            64
+          ],
+          "shape_actual": [
+            64,
+            64
+          ],
+          "total_elements": 4096,
+          "exact_matches": 209,
+          "mismatch_count": 3887,
+          "match_percent": 5.1025390625,
+          "first_mismatch": [
+            0,
+            0
+          ],
+          "expected_at_first": 74,
+          "fpga_at_first": 52,
+          "max_absolute_error": 154,
+          "mean_absolute_error": 20.5517578125,
+          "plus_one_differences": 181,
+          "minus_one_differences": 206,
+          "boundary_mismatch_counts": {
+            "interior": 3471,
+            "right_boundary": 223,
+            "bottom_boundary": 181,
+            "corner": 12
+          }
+        },
+        "CNN_INPUT": {
+          "shape_expected": [
+            64,
+            64
+          ],
+          "shape_actual": [
+            64,
+            64
+          ],
+          "total_elements": 4096,
+          "exact_matches": 209,
+          "mismatch_count": 3887,
+          "match_percent": 5.1025390625,
+          "first_mismatch": [
+            0,
+            0
+          ],
+          "expected_at_first": -53,
+          "fpga_at_first": -75,
+          "max_absolute_error": 154,
+          "mean_absolute_error": 20.541015625,
+          "plus_one_differences": 181,
+          "minus_one_differences": 206,
+          "boundary_mismatch_counts": {
+            "interior": 3471,
+            "right_boundary": 223,
+            "bottom_boundary": 181,
+            "corner": 12
+          }
+        }
+      },
+      "clipping": {
+        "python_preclip_min": -130,
+        "python_preclip_max": 113,
+        "python_low_saturation_count": 15,
+        "python_high_saturation_count": 0,
+        "fpga_preclip_min": -130,
+        "fpga_preclip_max": 113,
+        "fpga_low_saturation_count": 15,
+        "fpga_high_saturation_count": 0,
+        "ll_mismatches_hidden_by_clipping": 0,
+        "cnn_input_mismatches_with_either_side_saturated": 30
+      },
+      "first_divergence": "RAW matches, ROW differs: row DBWFB2/boundary/integer-arithmetic path"
+    },
+    {
+      "global_index": 1670,
+      "true_label": 2,
+      "python_prediction": 0,
+      "original_logged_fpga_prediction": 2,
+      "diagnostic_fpga_prediction": 2,
+      "stages": {
+        "RAW": {
+          "shape_expected": [
+            128,
+            128
+          ],
+          "shape_actual": [
+            128,
+            128
+          ],
+          "total_elements": 16384,
+          "exact_matches": 16384,
+          "mismatch_count": 0,
+          "match_percent": 100.0,
+          "first_mismatch": null,
+          "expected_at_first": null,
+          "fpga_at_first": null,
+          "max_absolute_error": 0,
+          "mean_absolute_error": 0.0,
+          "plus_one_differences": 0,
+          "minus_one_differences": 0
+        },
+        "ROW": {
+          "shape_expected": [
+            128,
+            64
+          ],
+          "shape_actual": [
+            128,
+            64
+          ],
+          "total_elements": 8192,
+          "exact_matches": 448,
+          "mismatch_count": 7744,
+          "match_percent": 5.46875,
+          "first_mismatch": [
+            0,
+            0
+          ],
+          "expected_at_first": 200,
+          "fpga_at_first": 187,
+          "max_absolute_error": 216,
+          "mean_absolute_error": 15.138916015625,
+          "plus_one_differences": 356,
+          "minus_one_differences": 423,
+          "boundary_mismatch_counts": {
+            "interior": 7281,
+            "right_boundary": 463
+          }
+        },
+        "LL": {
+          "shape_expected": [
+            64,
+            64
+          ],
+          "shape_actual": [
+            64,
+            64
+          ],
+          "total_elements": 4096,
+          "exact_matches": 164,
+          "mismatch_count": 3932,
+          "match_percent": 4.00390625,
+          "first_mismatch": [
+            0,
+            0
+          ],
+          "expected_at_first": 207,
+          "fpga_at_first": 199,
+          "max_absolute_error": 206,
+          "mean_absolute_error": 18.261962890625,
+          "plus_one_differences": 147,
+          "minus_one_differences": 163,
+          "boundary_mismatch_counts": {
+            "interior": 3458,
+            "right_boundary": 225,
+            "bottom_boundary": 233,
+            "corner": 16
+          }
+        },
+        "CNN_INPUT": {
+          "shape_expected": [
+            64,
+            64
+          ],
+          "shape_actual": [
+            64,
+            64
+          ],
+          "total_elements": 4096,
+          "exact_matches": 164,
+          "mismatch_count": 3932,
+          "match_percent": 4.00390625,
+          "first_mismatch": [
+            0,
+            0
+          ],
+          "expected_at_first": 80,
+          "fpga_at_first": 72,
+          "max_absolute_error": 206,
+          "mean_absolute_error": 18.261962890625,
+          "plus_one_differences": 147,
+          "minus_one_differences": 163,
+          "boundary_mismatch_counts": {
+            "interior": 3458,
+            "right_boundary": 225,
+            "bottom_boundary": 233,
+            "corner": 16
+          }
+        }
+      },
+      "clipping": {
+        "python_preclip_min": -128,
+        "python_preclip_max": 101,
+        "python_low_saturation_count": 0,
+        "python_high_saturation_count": 0,
+        "fpga_preclip_min": -128,
+        "fpga_preclip_max": 101,
+        "fpga_low_saturation_count": 0,
+        "fpga_high_saturation_count": 0,
+        "ll_mismatches_hidden_by_clipping": 0,
+        "cnn_input_mismatches_with_either_side_saturated": 0
+      },
+      "first_divergence": "RAW matches, ROW differs: row DBWFB2/boundary/integer-arithmetic path"
+    },
+    {
+      "global_index": 2408,
+      "true_label": 3,
+      "python_prediction": 3,
+      "original_logged_fpga_prediction": 2,
+      "diagnostic_fpga_prediction": 2,
+      "stages": {
+        "RAW": {
+          "shape_expected": [
+            128,
+            128
+          ],
+          "shape_actual": [
+            128,
+            128
+          ],
+          "total_elements": 16384,
+          "exact_matches": 16384,
+          "mismatch_count": 0,
+          "match_percent": 100.0,
+          "first_mismatch": null,
+          "expected_at_first": null,
+          "fpga_at_first": null,
+          "max_absolute_error": 0,
+          "mean_absolute_error": 0.0,
+          "plus_one_differences": 0,
+          "minus_one_differences": 0
+        },
+        "ROW": {
+          "shape_expected": [
+            128,
+            64
+          ],
+          "shape_actual": [
+            128,
+            64
+          ],
+          "total_elements": 8192,
+          "exact_matches": 1395,
+          "mismatch_count": 6797,
+          "match_percent": 17.02880859375,
+          "first_mismatch": [
+            0,
+            0
+          ],
+          "expected_at_first": 0,
+          "fpga_at_first": 42,
+          "max_absolute_error": 160,
+          "mean_absolute_error": 8.720947265625,
+          "plus_one_differences": 876,
+          "minus_one_differences": 1057,
+          "boundary_mismatch_counts": {
+            "interior": 6394,
+            "right_boundary": 403
+          }
+        },
+        "LL": {
+          "shape_expected": [
+            64,
+            64
+          ],
+          "shape_actual": [
+            64,
+            64
+          ],
+          "total_elements": 4096,
+          "exact_matches": 387,
+          "mismatch_count": 3709,
+          "match_percent": 9.4482421875,
+          "first_mismatch": [
+            0,
+            0
+          ],
+          "expected_at_first": 0,
+          "fpga_at_first": 31,
+          "max_absolute_error": 176,
+          "mean_absolute_error": 10.62548828125,
+          "plus_one_differences": 304,
+          "minus_one_differences": 364,
+          "boundary_mismatch_counts": {
+            "interior": 3218,
+            "right_boundary": 238,
+            "bottom_boundary": 237,
+            "corner": 16
+          }
+        },
+        "CNN_INPUT": {
+          "shape_expected": [
+            64,
+            64
+          ],
+          "shape_actual": [
+            64,
+            64
+          ],
+          "total_elements": 4096,
+          "exact_matches": 387,
+          "mismatch_count": 3709,
+          "match_percent": 9.4482421875,
+          "first_mismatch": [
+            0,
+            0
+          ],
+          "expected_at_first": -127,
+          "fpga_at_first": -96,
+          "max_absolute_error": 176,
+          "mean_absolute_error": 10.621337890625,
+          "plus_one_differences": 304,
+          "minus_one_differences": 364,
+          "boundary_mismatch_counts": {
+            "interior": 3218,
+            "right_boundary": 238,
+            "bottom_boundary": 237,
+            "corner": 16
+          }
+        }
+      },
+      "clipping": {
+        "python_preclip_min": -131,
+        "python_preclip_max": 103,
+        "python_low_saturation_count": 13,
+        "python_high_saturation_count": 0,
+        "fpga_preclip_min": -129,
+        "fpga_preclip_max": 103,
+        "fpga_low_saturation_count": 2,
+        "fpga_high_saturation_count": 0,
+        "ll_mismatches_hidden_by_clipping": 0,
+        "cnn_input_mismatches_with_either_side_saturated": 15
+      },
+      "first_divergence": "RAW matches, ROW differs: row DBWFB2/boundary/integer-arithmetic path"
+    },
+    {
+      "global_index": 0,
+      "true_label": 2,
+      "python_prediction": 0,
+      "original_logged_fpga_prediction": 0,
+      "diagnostic_fpga_prediction": 0,
+      "stages": {
+        "RAW": {
+          "shape_expected": [
+            128,
+            128
+          ],
+          "shape_actual": [
+            128,
+            128
+          ],
+          "total_elements": 16384,
+          "exact_matches": 16384,
+          "mismatch_count": 0,
+          "match_percent": 100.0,
+          "first_mismatch": null,
+          "expected_at_first": null,
+          "fpga_at_first": null,
+          "max_absolute_error": 0,
+          "mean_absolute_error": 0.0,
+          "plus_one_differences": 0,
+          "minus_one_differences": 0
+        },
+        "ROW": {
+          "shape_expected": [
+            128,
+            64
+          ],
+          "shape_actual": [
+            128,
+            64
+          ],
+          "total_elements": 8192,
+          "exact_matches": 1895,
+          "mismatch_count": 6297,
+          "match_percent": 23.13232421875,
+          "first_mismatch": [
+            0,
+            0
+          ],
+          "expected_at_first": 181,
+          "fpga_at_first": 147,
+          "max_absolute_error": 142,
+          "mean_absolute_error": 6.96337890625,
+          "plus_one_differences": 968,
+          "minus_one_differences": 1200,
+          "boundary_mismatch_counts": {
+            "interior": 5924,
+            "right_boundary": 373
+          }
+        },
+        "LL": {
+          "shape_expected": [
+            64,
+            64
+          ],
+          "shape_actual": [
+            64,
+            64
+          ],
+          "total_elements": 4096,
+          "exact_matches": 602,
+          "mismatch_count": 3494,
+          "match_percent": 14.697265625,
+          "first_mismatch": [
+            0,
+            0
+          ],
+          "expected_at_first": 180,
+          "fpga_at_first": 157,
+          "max_absolute_error": 145,
+          "mean_absolute_error": 8.125244140625,
+          "plus_one_differences": 381,
+          "minus_one_differences": 590,
+          "boundary_mismatch_counts": {
+            "interior": 3091,
+            "right_boundary": 204,
+            "bottom_boundary": 184,
+            "corner": 15
+          }
+        },
+        "CNN_INPUT": {
+          "shape_expected": [
+            64,
+            64
+          ],
+          "shape_actual": [
+            64,
+            64
+          ],
+          "total_elements": 4096,
+          "exact_matches": 602,
+          "mismatch_count": 3494,
+          "match_percent": 14.697265625,
+          "first_mismatch": [
+            0,
+            0
+          ],
+          "expected_at_first": 53,
+          "fpga_at_first": 30,
+          "max_absolute_error": 145,
+          "mean_absolute_error": 8.125244140625,
+          "plus_one_differences": 381,
+          "minus_one_differences": 590,
+          "boundary_mismatch_counts": {
+            "interior": 3091,
+            "right_boundary": 204,
+            "bottom_boundary": 184,
+            "corner": 15
+          }
+        }
+      },
+      "clipping": {
+        "python_preclip_min": -96,
+        "python_preclip_max": 59,
+        "python_low_saturation_count": 0,
+        "python_high_saturation_count": 0,
+        "fpga_preclip_min": -95,
+        "fpga_preclip_max": 59,
+        "fpga_low_saturation_count": 0,
+        "fpga_high_saturation_count": 0,
+        "ll_mismatches_hidden_by_clipping": 0,
+        "cnn_input_mismatches_with_either_side_saturated": 0
+      },
+      "first_divergence": "RAW matches, ROW differs: row DBWFB2/boundary/integer-arithmetic path"
+    },
+    {
+      "global_index": 1,
+      "true_label": 0,
+      "python_prediction": 0,
+      "original_logged_fpga_prediction": 0,
+      "diagnostic_fpga_prediction": 0,
+      "stages": {
+        "RAW": {
+          "shape_expected": [
+            128,
+            128
+          ],
+          "shape_actual": [
+            128,
+            128
+          ],
+          "total_elements": 16384,
+          "exact_matches": 16384,
+          "mismatch_count": 0,
+          "match_percent": 100.0,
+          "first_mismatch": null,
+          "expected_at_first": null,
+          "fpga_at_first": null,
+          "max_absolute_error": 0,
+          "mean_absolute_error": 0.0,
+          "plus_one_differences": 0,
+          "minus_one_differences": 0
+        },
+        "ROW": {
+          "shape_expected": [
+            128,
+            64
+          ],
+          "shape_actual": [
+            128,
+            64
+          ],
+          "total_elements": 8192,
+          "exact_matches": 1201,
+          "mismatch_count": 6991,
+          "match_percent": 14.66064453125,
+          "first_mismatch": [
+            0,
+            0
+          ],
+          "expected_at_first": 131,
+          "fpga_at_first": 135,
+          "max_absolute_error": 147,
+          "mean_absolute_error": 7.8990478515625,
+          "plus_one_differences": 898,
+          "minus_one_differences": 1057,
+          "boundary_mismatch_counts": {
+            "interior": 6603,
+            "right_boundary": 388
+          }
+        },
+        "LL": {
+          "shape_expected": [
+            64,
+            64
+          ],
+          "shape_actual": [
+            64,
+            64
+          ],
+          "total_elements": 4096,
+          "exact_matches": 257,
+          "mismatch_count": 3839,
+          "match_percent": 6.2744140625,
+          "first_mismatch": [
+            0,
+            0
+          ],
+          "expected_at_first": 130,
+          "fpga_at_first": 118,
+          "max_absolute_error": 148,
+          "mean_absolute_error": 14.760498046875,
+          "plus_one_differences": 261,
+          "minus_one_differences": 209,
+          "boundary_mismatch_counts": {
+            "interior": 3396,
+            "right_boundary": 223,
+            "bottom_boundary": 207,
+            "corner": 13
+          }
+        },
+        "CNN_INPUT": {
+          "shape_expected": [
+            64,
+            64
+          ],
+          "shape_actual": [
+            64,
+            64
+          ],
+          "total_elements": 4096,
+          "exact_matches": 257,
+          "mismatch_count": 3839,
+          "match_percent": 6.2744140625,
+          "first_mismatch": [
+            0,
+            0
+          ],
+          "expected_at_first": 3,
+          "fpga_at_first": -9,
+          "max_absolute_error": 148,
+          "mean_absolute_error": 14.760498046875,
+          "plus_one_differences": 261,
+          "minus_one_differences": 209,
+          "boundary_mismatch_counts": {
+            "interior": 3396,
+            "right_boundary": 223,
+            "bottom_boundary": 207,
+            "corner": 13
+          }
+        }
+      },
+      "clipping": {
+        "python_preclip_min": -114,
+        "python_preclip_max": 72,
+        "python_low_saturation_count": 0,
+        "python_high_saturation_count": 0,
+        "fpga_preclip_min": -114,
+        "fpga_preclip_max": 72,
+        "fpga_low_saturation_count": 0,
+        "fpga_high_saturation_count": 0,
+        "ll_mismatches_hidden_by_clipping": 0,
+        "cnn_input_mismatches_with_either_side_saturated": 0
+      },
+      "first_divergence": "RAW matches, ROW differs: row DBWFB2/boundary/integer-arithmetic path"
+    },
+    {
+      "global_index": 813,
+      "true_label": 1,
+      "python_prediction": 1,
+      "original_logged_fpga_prediction": 1,
+      "diagnostic_fpga_prediction": 1,
+      "stages": {
+        "RAW": {
+          "shape_expected": [
+            128,
+            128
+          ],
+          "shape_actual": [
+            128,
+            128
+          ],
+          "total_elements": 16384,
+          "exact_matches": 16384,
+          "mismatch_count": 0,
+          "match_percent": 100.0,
+          "first_mismatch": null,
+          "expected_at_first": null,
+          "fpga_at_first": null,
+          "max_absolute_error": 0,
+          "mean_absolute_error": 0.0,
+          "plus_one_differences": 0,
+          "minus_one_differences": 0
+        },
+        "ROW": {
+          "shape_expected": [
+            128,
+            64
+          ],
+          "shape_actual": [
+            128,
+            64
+          ],
+          "total_elements": 8192,
+          "exact_matches": 2426,
+          "mismatch_count": 5766,
+          "match_percent": 29.6142578125,
+          "first_mismatch": [
+            0,
+            0
+          ],
+          "expected_at_first": 0,
+          "fpga_at_first": 10,
+          "max_absolute_error": 212,
+          "mean_absolute_error": 15.3089599609375,
+          "plus_one_differences": 497,
+          "minus_one_differences": 472,
+          "boundary_mismatch_counts": {
+            "interior": 5425,
+            "right_boundary": 341
+          }
+        },
+        "LL": {
+          "shape_expected": [
+            64,
+            64
+          ],
+          "shape_actual": [
+            64,
+            64
+          ],
+          "total_elements": 4096,
+          "exact_matches": 585,
+          "mismatch_count": 3511,
+          "match_percent": 14.2822265625,
+          "first_mismatch": [
+            0,
+            0
+          ],
+          "expected_at_first": 15,
+          "fpga_at_first": 5,
+          "max_absolute_error": 218,
+          "mean_absolute_error": 39.4130859375,
+          "plus_one_differences": 144,
+          "minus_one_differences": 94,
+          "boundary_mismatch_counts": {
+            "interior": 3284,
+            "right_boundary": 227,
+            "bottom_boundary": 0,
+            "corner": 0
+          }
+        },
+        "CNN_INPUT": {
+          "shape_expected": [
+            64,
+            64
+          ],
+          "shape_actual": [
+            64,
+            64
+          ],
+          "total_elements": 4096,
+          "exact_matches": 585,
+          "mismatch_count": 3511,
+          "match_percent": 14.2822265625,
+          "first_mismatch": [
+            0,
+            0
+          ],
+          "expected_at_first": -112,
+          "fpga_at_first": -122,
+          "max_absolute_error": 218,
+          "mean_absolute_error": 39.4130859375,
+          "plus_one_differences": 144,
+          "minus_one_differences": 94,
+          "boundary_mismatch_counts": {
+            "interior": 3284,
+            "right_boundary": 227,
+            "bottom_boundary": 0,
+            "corner": 0
+          }
+        }
+      },
+      "clipping": {
+        "python_preclip_min": -127,
+        "python_preclip_max": 117,
+        "python_low_saturation_count": 0,
+        "python_high_saturation_count": 0,
+        "fpga_preclip_min": -127,
+        "fpga_preclip_max": 117,
+        "fpga_low_saturation_count": 0,
+        "fpga_high_saturation_count": 0,
+        "ll_mismatches_hidden_by_clipping": 0,
+        "cnn_input_mismatches_with_either_side_saturated": 0
+      },
+      "first_divergence": "RAW matches, ROW differs: row DBWFB2/boundary/integer-arithmetic path"
+    },
+    {
+      "global_index": 1603,
+      "true_label": 2,
+      "python_prediction": 2,
+      "original_logged_fpga_prediction": 2,
+      "diagnostic_fpga_prediction": 2,
+      "stages": {
+        "RAW": {
+          "shape_expected": [
+            128,
+            128
+          ],
+          "shape_actual": [
+            128,
+            128
+          ],
+          "total_elements": 16384,
+          "exact_matches": 16384,
+          "mismatch_count": 0,
+          "match_percent": 100.0,
+          "first_mismatch": null,
+          "expected_at_first": null,
+          "fpga_at_first": null,
+          "max_absolute_error": 0,
+          "mean_absolute_error": 0.0,
+          "plus_one_differences": 0,
+          "minus_one_differences": 0
+        },
+        "ROW": {
+          "shape_expected": [
+            128,
+            64
+          ],
+          "shape_actual": [
+            128,
+            64
+          ],
+          "total_elements": 8192,
+          "exact_matches": 263,
+          "mismatch_count": 7929,
+          "match_percent": 3.21044921875,
+          "first_mismatch": [
+            0,
+            0
+          ],
+          "expected_at_first": 123,
+          "fpga_at_first": 97,
+          "max_absolute_error": 169,
+          "mean_absolute_error": 17.3668212890625,
+          "plus_one_differences": 272,
+          "minus_one_differences": 291,
+          "boundary_mismatch_counts": {
+            "interior": 7443,
+            "right_boundary": 486
+          }
+        },
+        "LL": {
+          "shape_expected": [
+            64,
+            64
+          ],
+          "shape_actual": [
+            64,
+            64
+          ],
+          "total_elements": 4096,
+          "exact_matches": 119,
+          "mismatch_count": 3977,
+          "match_percent": 2.9052734375,
+          "first_mismatch": [
+            0,
+            0
+          ],
+          "expected_at_first": 115,
+          "fpga_at_first": 107,
+          "max_absolute_error": 169,
+          "mean_absolute_error": 20.90771484375,
+          "plus_one_differences": 98,
+          "minus_one_differences": 101,
+          "boundary_mismatch_counts": {
+            "interior": 3500,
+            "right_boundary": 235,
+            "bottom_boundary": 228,
+            "corner": 14
+          }
+        },
+        "CNN_INPUT": {
+          "shape_expected": [
+            64,
+            64
+          ],
+          "shape_actual": [
+            64,
+            64
+          ],
+          "total_elements": 4096,
+          "exact_matches": 119,
+          "mismatch_count": 3977,
+          "match_percent": 2.9052734375,
+          "first_mismatch": [
+            0,
+            0
+          ],
+          "expected_at_first": -12,
+          "fpga_at_first": -20,
+          "max_absolute_error": 169,
+          "mean_absolute_error": 20.90771484375,
+          "plus_one_differences": 98,
+          "minus_one_differences": 101,
+          "boundary_mismatch_counts": {
+            "interior": 3500,
+            "right_boundary": 235,
+            "bottom_boundary": 228,
+            "corner": 14
+          }
+        }
+      },
+      "clipping": {
+        "python_preclip_min": -120,
+        "python_preclip_max": 87,
+        "python_low_saturation_count": 0,
+        "python_high_saturation_count": 0,
+        "fpga_preclip_min": -120,
+        "fpga_preclip_max": 87,
+        "fpga_low_saturation_count": 0,
+        "fpga_high_saturation_count": 0,
+        "ll_mismatches_hidden_by_clipping": 0,
+        "cnn_input_mismatches_with_either_side_saturated": 0
+      },
+      "first_divergence": "RAW matches, ROW differs: row DBWFB2/boundary/integer-arithmetic path"
+    },
+    {
+      "global_index": 2400,
+      "true_label": 3,
+      "python_prediction": 2,
+      "original_logged_fpga_prediction": 2,
+      "diagnostic_fpga_prediction": 2,
+      "stages": {
+        "RAW": {
+          "shape_expected": [
+            128,
+            128
+          ],
+          "shape_actual": [
+            128,
+            128
+          ],
+          "total_elements": 16384,
+          "exact_matches": 16384,
+          "mismatch_count": 0,
+          "match_percent": 100.0,
+          "first_mismatch": null,
+          "expected_at_first": null,
+          "fpga_at_first": null,
+          "max_absolute_error": 0,
+          "mean_absolute_error": 0.0,
+          "plus_one_differences": 0,
+          "minus_one_differences": 0
+        },
+        "ROW": {
+          "shape_expected": [
+            128,
+            64
+          ],
+          "shape_actual": [
+            128,
+            64
+          ],
+          "total_elements": 8192,
+          "exact_matches": 471,
+          "mismatch_count": 7721,
+          "match_percent": 5.74951171875,
+          "first_mismatch": [
+            0,
+            0
+          ],
+          "expected_at_first": 142,
+          "fpga_at_first": 140,
+          "max_absolute_error": 173,
+          "mean_absolute_error": 19.9580078125,
+          "plus_one_differences": 421,
+          "minus_one_differences": 415,
+          "boundary_mismatch_counts": {
+            "interior": 7264,
+            "right_boundary": 457
+          }
+        },
+        "LL": {
+          "shape_expected": [
+            64,
+            64
+          ],
+          "shape_actual": [
+            64,
+            64
+          ],
+          "total_elements": 4096,
+          "exact_matches": 61,
+          "mismatch_count": 4035,
+          "match_percent": 1.4892578125,
+          "first_mismatch": [
+            0,
+            0
+          ],
+          "expected_at_first": 101,
+          "fpga_at_first": 160,
+          "max_absolute_error": 159,
+          "mean_absolute_error": 25.975341796875,
+          "plus_one_differences": 100,
+          "minus_one_differences": 72,
+          "boundary_mismatch_counts": {
+            "interior": 3547,
+            "right_boundary": 234,
+            "bottom_boundary": 239,
+            "corner": 15
+          }
+        },
+        "CNN_INPUT": {
+          "shape_expected": [
+            64,
+            64
+          ],
+          "shape_actual": [
+            64,
+            64
+          ],
+          "total_elements": 4096,
+          "exact_matches": 61,
+          "mismatch_count": 4035,
+          "match_percent": 1.4892578125,
+          "first_mismatch": [
+            0,
+            0
+          ],
+          "expected_at_first": -26,
+          "fpga_at_first": 33,
+          "max_absolute_error": 159,
+          "mean_absolute_error": 25.975341796875,
+          "plus_one_differences": 100,
+          "minus_one_differences": 72,
+          "boundary_mismatch_counts": {
+            "interior": 3547,
+            "right_boundary": 234,
+            "bottom_boundary": 239,
+            "corner": 15
+          }
+        }
+      },
+      "clipping": {
+        "python_preclip_min": -119,
+        "python_preclip_max": 120,
+        "python_low_saturation_count": 0,
+        "python_high_saturation_count": 0,
+        "fpga_preclip_min": -119,
+        "fpga_preclip_max": 120,
+        "fpga_low_saturation_count": 0,
+        "fpga_high_saturation_count": 0,
+        "ll_mismatches_hidden_by_clipping": 0,
+        "cnn_input_mismatches_with_either_side_saturated": 0
+      },
+      "first_divergence": "RAW matches, ROW differs: row DBWFB2/boundary/integer-arithmetic path"
+    }
+  ],
+  "stage_totals": {
+    "RAW": {
+      "images_present": 10,
+      "exact_matches": 163840,
+      "mismatches": 0
+    },
+    "ROW": {
+      "images_present": 10,
+      "exact_matches": 12913,
+      "mismatches": 69007
+    },
+    "LL": {
+      "images_present": 10,
+      "exact_matches": 3514,
+      "mismatches": 37446
+    },
+    "CNN_INPUT": {
+      "images_present": 10,
+      "exact_matches": 3514,
+      "mismatches": 37446
+    }
+  }
+}

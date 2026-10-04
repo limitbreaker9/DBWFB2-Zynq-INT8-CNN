@@ -1,0 +1,178 @@
+{
+  "generated_utc": "2026-08-31T10:17:04.800297+00:00",
+  "frozen_configuration": {
+    "seed": 42,
+    "input_gain": 1,
+    "C1_SHIFT": 9,
+    "C2_SHIFT": 8,
+    "dbwfb2_integer_coefficients": [
+      27,
+      -17,
+      -78,
+      273,
+      614,
+      273,
+      -78,
+      -17,
+      27
+    ]
+  },
+  "full3200_prediction_validation": {
+    "hardware_equivalent_vs_fpga_matches": 3200,
+    "total": 3200,
+    "hardware_equivalent_correct": 2497,
+    "fpga_correct": 2497,
+    "python_primary_vs_fpga_matches": 3006
+  },
+  "dbwfb2": {
+    "accumulator_dtype": "signed INT32 (verified observed range; no overflow)",
+    "row_accumulator_min": -9619,
+    "row_accumulator_max": 269392,
+    "column_accumulator_min": -9537,
+    "column_accumulator_max": 273891,
+    "combined_accumulator_min": -9619,
+    "combined_accumulator_max": 273891,
+    "right_shift": "arithmetic >>10 before signed-16-bit truncation",
+    "verified_model_prediction_residuals_vs_fpga": 0
+  },
+  "cnn_input": {
+    "definition": "preclip = signed LL - 127 at gain 1; actual clipping is preclip outside [-128,127]",
+    "elements": 13107200,
+    "actually_clipped_low": 21694,
+    "actually_clipped_high": 19077,
+    "actually_clipped_total": 40771,
+    "actually_clipped_fraction": 0.0031105804443359373,
+    "output_equal_minus128": 46674,
+    "output_equal_plus127": 36681,
+    "endpoint_fraction": 0.006359481811523437
+  },
+  "conv1": {
+    "accumulator_dtype": "signed INT32",
+    "shift": "arithmetic >>9",
+    "accumulator_min": -40317,
+    "accumulator_max": 40939,
+    "shifted_min": -79,
+    "shifted_max": 79,
+    "elements": 209715200,
+    "relu_low_clipped_shifted_below_zero": 114639568,
+    "relu_low_clipped_fraction": 0.546644058227539,
+    "high_clipped_shifted_above127": 0,
+    "high_clipped_fraction": 0.0,
+    "output_equal_zero": 133871675,
+    "output_equal_127": 0
+  },
+  "conv2": {
+    "accumulator_dtype": "signed INT32",
+    "shift": "arithmetic >>8",
+    "accumulator_min": -17713,
+    "accumulator_max": 22583,
+    "shifted_min": -70,
+    "shifted_max": 88,
+    "elements": 104857600,
+    "relu_low_clipped_shifted_below_zero": 53347784,
+    "relu_low_clipped_fraction": 0.5087641143798828,
+    "high_clipped_shifted_above127": 0,
+    "high_clipped_fraction": 0.0,
+    "output_equal_zero": 62666963,
+    "output_equal_127": 0
+  },
+  "gap": {
+    "input_shape_per_channel": [
+      16,
+      16
+    ],
+    "sum_dtype": "uint32_t",
+    "sum_min_full3200": 0,
+    "sum_max_full3200": 4158,
+    "shift": "unsigned logical >>8; input is nonnegative UINT8, so exact floor(sum/256)",
+    "shifted_min_full3200": 0,
+    "shifted_max_full3200": 16,
+    "negative_sums_possible": false,
+    "diagnostic10_channel_comparisons": 640,
+    "diagnostic10_mismatches": 0
+  },
+  "dense": {
+    "logit_dtype": "signed INT32",
+    "logit_min_full3200": -9989,
+    "logit_max_full3200": 3482,
+    "instrumented_prediction_mismatches_vs_released_cnn_accel": 0
+  },
+  "board500": {
+    "Python-primary": {
+      "correct": 408,
+      "total": 500,
+      "accuracy": 0.816,
+      "macro_f1": 0.8154337889218619
+    },
+    "Hardware-equivalent software": {
+      "correct": 404,
+      "total": 500,
+      "accuracy": 0.808,
+      "macro_f1": 0.806456559273593
+    },
+    "FPGA": {
+      "correct": 404,
+      "total": 500,
+      "accuracy": 0.808,
+      "macro_f1": 0.806456559273593
+    }
+  },
+  "full3200": {
+    "Python-primary": {
+      "correct": 2488,
+      "total": 3200,
+      "accuracy": 0.7775,
+      "macro_f1": 0.776935819551041
+    },
+    "Hardware-equivalent software": {
+      "correct": 2497,
+      "total": 3200,
+      "accuracy": 0.7803125,
+      "macro_f1": 0.7792173848773416
+    },
+    "FPGA": {
+      "correct": 2497,
+      "total": 3200,
+      "accuracy": 0.7803125,
+      "macro_f1": 0.7792173848773416
+    }
+  },
+  "sources": [
+    {
+      "path": "diagnostics/first_divergence/generated/full3200_variant_analysis/full3200_variant_predictions.csv",
+      "sha256": "3e5c286535742f5001e5735f7ec40de01fba4e2f2623399c37fe1829559b8cf2"
+    },
+    {
+      "path": "diagnostics/first_divergence/generated/full3200_variant_analysis/full3200_variant_analysis.json",
+      "sha256": "a73fae39ae8fb99a35e837c613e5a02df7c34a854f603830984d7d2744ed24b2"
+    },
+    {
+      "path": "results/logs/dbwfb2/uart/dbwfb2_board500.txt",
+      "sha256": "624d465385f90e1aa2f8f78e856228b3659a8b9c2ce83dc42b0e3e561e34a0fa"
+    },
+    {
+      "path": "results/board500_indices.csv",
+      "sha256": "df41c50b4392e52b09e1b1cde25160104588134e451925dafb80c7358bf4356c"
+    },
+    {
+      "path": "results/logs/dbwfb2/hls/dbwfb2_hls_csim_3200.txt",
+      "sha256": "badaa775c6d526c681d8ed8ce67d5978366d2e43301d9cbcf74d97f47f621364"
+    },
+    {
+      "path": "hardware/hls/src/cnn_accel.cpp",
+      "sha256": "2bdf51f487eb89efcca2d444c337912a46d39dc040a24cfc51f62c9c92d897ce"
+    },
+    {
+      "path": "hardware/hls/src/cnn_accel.h",
+      "sha256": "a3cc7511e9b07505f003f9aea6bbf881d4b386679211c28729431df5422027c7"
+    },
+    {
+      "path": "hardware/hls/dbwfb2/weights.h",
+      "sha256": "9d555e43f8c2cefe5fdc33bfe8cc02a870e07608798f5b13c3ac3361175d6a60"
+    },
+    {
+      "path": "diagnostics/cnn_numerical_consistency/cnn_intermediate_trace.cpp",
+      "sha256": "57d9ca9b9efbef75b1ca4f99a6646e751947ddf03b7b6222416aad5041ae7c4b"
+    }
+  ]
+}

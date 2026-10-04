@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'cnn_accel'
 ================================================================
 + General Information: 
-    * Date:           Sun Aug 30 13:02:04 2026
+    * Date:           Sat Oct  3 07:00:38 2026
     * Version:        2025.2 (Build 6295257 on Nov 14 2025)
     * Project:        hls_component
     * Solution:       hls (Vivado IP Flow Target)
@@ -381,8 +381,8 @@
 |   fm3_2_U                               | ram_1p array |           | 4    |      |        | fm3_2    | auto   | 1       | 8, 8192, 1       |
 |   fm3_3_U                               | ram_1p array |           | 4    |      |        | fm3_3    | auto   | 1       | 8, 8192, 1       |
 |   fm4_U                                 | ram_2p array |           | 4    |      | yes    | fm4      | bram   | 1       | 8, 8192, 1       |
-|   c1_b_U                                | rom_1p       |           |      |      | pragma | c1_b     | lutram | 1       | 12, 16, 1        |
-|   c2_b_U                                | rom_1p       |           |      |      | pragma | c2_b     | lutram | 1       | 13, 32, 1        |
+|   c1_b_U                                | rom_1p       |           |      |      | pragma | c1_b     | lutram | 1       | 13, 16, 1        |
+|   c2_b_U                                | rom_1p       |           |      |      | pragma | c2_b     | lutram | 1       | 12, 32, 1        |
 |  + cnn_accel_Pipeline_C1_KY_C1_KX       |              |           | 0    | 0    |        |          |        |         |                  |
 |    c1_w_U                               | rom_1p       |           |      |      | pragma | c1_w     | lutram | 1       | 8, 144, 1        |
 |  + cnn_accel_Pipeline_C2_KY_C2_KX_C2_IC |              |           | 4    | 0    |        |          |        |         |                  |

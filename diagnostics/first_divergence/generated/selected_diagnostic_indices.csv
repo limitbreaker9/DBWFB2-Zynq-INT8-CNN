@@ -1,0 +1,11 @@
+selection_group,global_index,part,local_index,true_label,python_prediction,fpga_prediction,match,source_header,source_log
+mismatch,8,0,8,1,3,1,False,hardware/deployment/dbwfb2/raw3200_parts/test_vectors_raw_3200_part0_dbwfb2.h,results/logs/dbwfb2/uart/dbwfb2_full3200_part0_0000_0799.txt
+mismatch,107,0,107,0,0,3,False,hardware/deployment/dbwfb2/raw3200_parts/test_vectors_raw_3200_part0_dbwfb2.h,results/logs/dbwfb2/uart/dbwfb2_full3200_part0_0000_0799.txt
+mismatch,844,1,44,1,1,3,False,hardware/deployment/dbwfb2/raw3200_parts/test_vectors_raw_3200_part1_dbwfb2.h,results/logs/dbwfb2/uart/dbwfb2_full3200_part1_0800_1599.txt
+mismatch,1670,2,70,2,0,2,False,hardware/deployment/dbwfb2/raw3200_parts/test_vectors_raw_3200_part2_dbwfb2.h,results/logs/dbwfb2/uart/dbwfb2_full3200_part2_1600_2399.txt
+mismatch,2408,3,8,3,3,2,False,hardware/deployment/dbwfb2/raw3200_parts/test_vectors_raw_3200_part3_dbwfb2.h,results/logs/dbwfb2/uart/dbwfb2_full3200_part3_2400_3199.txt
+match,0,0,0,2,0,0,True,hardware/deployment/dbwfb2/raw3200_parts/test_vectors_raw_3200_part0_dbwfb2.h,results/logs/dbwfb2/uart/dbwfb2_full3200_part0_0000_0799.txt
+match,1,0,1,0,0,0,True,hardware/deployment/dbwfb2/raw3200_parts/test_vectors_raw_3200_part0_dbwfb2.h,results/logs/dbwfb2/uart/dbwfb2_full3200_part0_0000_0799.txt
+match,813,1,13,1,1,1,True,hardware/deployment/dbwfb2/raw3200_parts/test_vectors_raw_3200_part1_dbwfb2.h,results/logs/dbwfb2/uart/dbwfb2_full3200_part1_0800_1599.txt
+match,1603,2,3,2,2,2,True,hardware/deployment/dbwfb2/raw3200_parts/test_vectors_raw_3200_part2_dbwfb2.h,results/logs/dbwfb2/uart/dbwfb2_full3200_part2_1600_2399.txt
+match,2400,3,0,3,2,2,True,hardware/deployment/dbwfb2/raw3200_parts/test_vectors_raw_3200_part3_dbwfb2.h,results/logs/dbwfb2/uart/dbwfb2_full3200_part3_2400_3199.txt

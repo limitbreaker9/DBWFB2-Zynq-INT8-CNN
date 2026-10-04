@@ -329,4 +329,3 @@ const int8_t d_w[128] = {
 const int32_t d_b[4] = {
     6, -117, 80, 49
 };
-

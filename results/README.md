@@ -20,5 +20,7 @@
 - `dbwfb2_fpga_confusion_matrix.csv` and `dbwfb2_fpga_class_metrics.csv`: recomputed full-test class results.
 - `dbwfb2_latency.csv`: captured per-run and four-part mean timing fields.
 - `hardware_resource_comparison.csv`, `hardware_timing_comparison.csv`, and `hardware_power_comparison.csv`: current implementation evidence with explicit scopes.
+- `logs/avgpool/uart/avgpool_board500_20261003.txt`: AvgPool Board500 capture associated with the reported bitstream.
+- `avgpool_board500_metrics.json` and `avgpool_latency.csv`: exact counts, class-correct values, and raw integer-microsecond timing for that capture.
 
-The derived DBWFB2 HLS, FPGA, Board500, confusion-matrix, class-metric, timing, and subset-index files use true labels, the primary Python INT8 reference, and final predictions. Captured logs preserve the corresponding experimental prediction and summary records.
+The derived DBWFB2 HLS, FPGA, Board500, confusion-matrix, class-metric, timing, and subset-index files use true labels, the selected seed-42 software reference, and network predictions. Captured logs preserve the corresponding experimental prediction and summary records. `N/A` in AvgPool hierarchy comparison cells indicates that a separate hierarchy report is unavailable for the reported implementation. Development-stage hierarchy values are not substituted for this scope.

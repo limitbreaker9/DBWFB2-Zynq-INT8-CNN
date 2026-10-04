@@ -1,0 +1,372 @@
+{
+  "build_identity": "AvgPool seed-42 gain-1 9/7 implementation, 2026-10-03",
+  "source_project_root": "D:\\Avg_pool_as_preprocessor\\Avg_pool_as_preprocessor",
+  "tool_version": "Vivado and Vitis HLS 2025.2",
+  "device": "xc7z020clg484-1",
+  "configuration": {
+    "arm": "avgpool",
+    "seed": 42,
+    "gain": 1,
+    "C1_SHIFT": 9,
+    "C2_SHIFT": 7,
+    "selected_software_correct": 2558,
+    "selected_software_total": 3200,
+    "selected_software_accuracy_percent": 79.9375
+  },
+  "tensor_fingerprint": "6835b8a8984eb1d4454d8f95bf9ec87731bd1ae98a0975917ef86c4c5d7053e9",
+  "source_artifacts": {
+    "weights": {
+      "path": "D:\\Avg_pool_as_preprocessor\\Avg_pool_as_preprocessor\\hls_component\\weights.h",
+      "sha256": "3d47b7382ad15c7d9f5c68c3198076900cd96a2d0be62bc711c1e3d550dc738a",
+      "modified_local": "2026-08-30T08:59:24.905749",
+      "bytes": 22511
+    },
+    "header": {
+      "path": "D:\\Avg_pool_as_preprocessor\\Avg_pool_as_preprocessor\\hls_component\\cnn_accel.h",
+      "sha256": "342225665dcf4629faca15b5a40a23748c5e47fa219aafd345ee6dd3aebee0e4",
+      "modified_local": "2026-10-02T21:20:35.981190",
+      "bytes": 1798
+    },
+    "cpp": {
+      "path": "D:\\Avg_pool_as_preprocessor\\Avg_pool_as_preprocessor\\hls_component\\cnn_accel.cpp",
+      "sha256": "2bdf51f487eb89efcca2d444c337912a46d39dc040a24cfc51f62c9c92d897ce",
+      "modified_local": "2026-06-17T09:54:23.578605",
+      "bytes": 11120
+    },
+    "component": {
+      "path": "D:\\Avg_pool_as_preprocessor\\Avg_pool_as_preprocessor\\hls_component\\hls_component\\hls\\impl\\ip\\component.xml",
+      "sha256": "c645eba9c67504a4811f4b8716b171fe9f06c690fd2c7305d8a7e47f329b3c82",
+      "modified_local": "2026-10-03T07:01:31.220834",
+      "bytes": 170312
+    },
+    "archive": {
+      "path": "D:\\Avg_pool_as_preprocessor\\Avg_pool_as_preprocessor\\hls_component\\hls_component\\cnn_accel.zip",
+      "sha256": "e9de8ed160cdcb3d9fe2f7864619d171c7033f316caef8d29a355bf77c9d74ce",
+      "modified_local": "2026-10-03T07:01:31.782437",
+      "bytes": 224287
+    },
+    "csynth": {
+      "path": "D:\\Avg_pool_as_preprocessor\\Avg_pool_as_preprocessor\\hls_component\\hls_component\\hls\\syn\\report\\csynth.rpt",
+      "sha256": "db84529c851a719d99eea554903b4322eec059eea0a185ebaaabbd49f08ae6e8",
+      "modified_local": "2026-10-03T07:00:40.189060",
+      "bytes": 60581
+    },
+    "bit": {
+      "path": "D:\\Avg_pool_as_preprocessor\\Avg_pool_as_preprocessor\\Avg_pool_as_preprocessor.runs\\impl_1\\PL_wrapper.bit",
+      "sha256": "1681c4ff3d6763cf23e3d20c2a68659c36e8b0964185630846d43f728e9c3aa4",
+      "modified_local": "2026-10-03T07:09:26.312284",
+      "bytes": 1838596
+    },
+    "xsa": {
+      "path": "D:\\Avg_pool_as_preprocessor\\Avg_pool_as_preprocessor\\PL_wrapper.xsa",
+      "sha256": "be42e42bdb214ba6dbb764d19ab3bef90dd65393f7bdd1ffb11a52dd30a81ef9",
+      "modified_local": "2026-10-03T20:01:09.421032",
+      "bytes": 921264
+    },
+    "utilization": {
+      "path": "D:\\Avg_pool_as_preprocessor\\Avg_pool_as_preprocessor\\Avg_pool_as_preprocessor.runs\\impl_1\\PL_wrapper_utilization_placed.rpt",
+      "sha256": "b9657d7b1d8617039e46967daee09a1f3d088b68d0522840354f9bf686cab2bf",
+      "modified_local": "2026-10-03T07:08:00.755692",
+      "bytes": 12022
+    },
+    "timing": {
+      "path": "D:\\Avg_pool_as_preprocessor\\Avg_pool_as_preprocessor\\Avg_pool_as_preprocessor.runs\\impl_1\\PL_wrapper_timing_summary_routed.rpt",
+      "sha256": "b22d556a73a6fa7343a992364a6eb835370ed44b133e4e31a7630582b44a5e7d",
+      "modified_local": "2026-10-03T07:09:01.968998",
+      "bytes": 293616
+    },
+    "power": {
+      "path": "D:\\Avg_pool_as_preprocessor\\Avg_pool_as_preprocessor\\Avg_pool_as_preprocessor.runs\\impl_1\\PL_wrapper_power_routed.rpt",
+      "sha256": "a7303bedc62844532fab16c68e03b868f9c82dcc88d00a1f718bf6159f3720a3",
+      "modified_local": "2026-10-03T07:09:07.014566",
+      "bytes": 10669
+    },
+    "uart": {
+      "path": "D:\\Avg_pool_as_preprocessor\\Avg_pool_as_preprocessor\\uart_avg.txt",
+      "sha256": "99e29ba7a1147915d357473f5719fa1657df22bff907ddefebc5f5f05f1a4dde",
+      "modified_local": "2026-10-03T22:04:00.869022",
+      "bytes": 51095
+    },
+    "bd": {
+      "path": "D:\\Avg_pool_as_preprocessor\\Avg_pool_as_preprocessor\\Avg_pool_as_preprocessor.srcs\\sources_1\\bd\\PL\\PL.bd",
+      "sha256": "0254fd88a9d143b17a7a1a035fa7f82884f59afc5fa056f16a152471bf089f51",
+      "modified_local": "2026-10-03T07:03:20.880314",
+      "bytes": 81995
+    },
+    "firmware": {
+      "path": "D:\\Avg_pool_as_preprocessor\\Avg_pool_as_preprocessor\\app_component\\src\\main.c",
+      "sha256": "4a1c08ce2e8cc3b29acf05fa996d2593bf46bdd9145e8da7da076c3b3c06168f",
+      "modified_local": "2026-09-01T13:23:36.226126",
+      "bytes": 40371
+    },
+    "tensor_checks": {
+      "c1_w": {
+        "matches_deployment_avgpool": true,
+        "matches_dbwfb2": false
+      },
+      "c1_b": {
+        "matches_deployment_avgpool": true,
+        "matches_dbwfb2": false
+      },
+      "c2_w": {
+        "matches_deployment_avgpool": true,
+        "matches_dbwfb2": false
+      },
+      "c2_b": {
+        "matches_deployment_avgpool": true,
+        "matches_dbwfb2": false
+      },
+      "d_w": {
+        "matches_deployment_avgpool": true,
+        "matches_dbwfb2": false
+      },
+      "d_b": {
+        "matches_deployment_avgpool": true,
+        "matches_dbwfb2": false
+      }
+    },
+    "tensor_fingerprint": "6835b8a8984eb1d4454d8f95bf9ec87731bd1ae98a0975917ef86c4c5d7053e9",
+    "embedded_bitstream": "PL_wrapper.bit",
+    "uart_summary_lines": [
+      " ACCURACY / AGREEMENT SUMMARY",
+      " Scheduled images : 500",
+      " Completed images : 500",
+      " HW errors        : 0",
+      "SUMMARY_ACC_AVGPOOL,500,500,416,498,0",
+      " LATENCY SUMMARY (500 successful images)",
+      " Residual timer/control overhead : 0.07 ms  (70 us)",
+      "SUMMARY_TIME_US,79894,7241,840,3905,3541,419,1958,576,12,0,61332,70"
+    ]
+  },
+  "generated_ip_file_sha256": {
+    "cnn_accel.v": "eb39744fba2756a70c92c36897bef97015a33a3ca5cad37e5743bf34af19728f",
+    "cnn_accel_c1_b_ROM_1P_LUTRAM_1R.dat": "6ebf5d3ed524c949760be661c2acd63e6e4d8ef56bbf066db8f50ff06c2c0eea",
+    "cnn_accel_c1_b_ROM_1P_LUTRAM_1R.v": "ada1ea2c19465e2db53fa67f5b315629d35afbfba7e5f0ef7252f46466ed958f",
+    "cnn_accel_c2_b_ROM_1P_LUTRAM_1R.dat": "364a34b5f366c3be4ed516151c8fd6ab5d88b1812521a1a6e4e7a85e7de0f306",
+    "cnn_accel_c2_b_ROM_1P_LUTRAM_1R.v": "54c5cdc20f778e54a7df3f025a3e69f30ee29843f9d592df788c66bbf6232da0",
+    "cnn_accel_cnn_accel_Pipeline_C1_KY_C1_KX.v": "3cc8aca7ddf67cb777bb3ea4337d6956b7291b501349f3d215a90de7966984cc",
+    "cnn_accel_cnn_accel_Pipeline_C1_KY_C1_KX_c1_w_ROM_1P_LUTRAM_1R.dat": "1ac4eb4a02a30d90e75b222e8704a00f1254508029651ac7abd5b09d6abdb184",
+    "cnn_accel_cnn_accel_Pipeline_C1_KY_C1_KX_c1_w_ROM_1P_LUTRAM_1R.v": "520b33071a31396093996f1fd3d4f351113acb3c8b27e2bdb903b94dd19f9282",
+    "cnn_accel_cnn_accel_Pipeline_C2_KY_C2_KX_C2_IC.v": "d1bc07e7463f816fa7d5d6b7949b76bdda59f7aec0178ee902525756760e14ad",
+    "cnn_accel_cnn_accel_Pipeline_C2_KY_C2_KX_C2_IC_c2_w_ROM_1P_BRAM_1R.dat": "c38f1dcadfd9e161f9d2d455e3fa9e0ccfdef3e5f4c912f6cb0d256872b82d34",
+    "cnn_accel_cnn_accel_Pipeline_C2_KY_C2_KX_C2_IC_c2_w_ROM_1P_BRAM_1R.v": "d150a90718e2fffda1e877ee42e27c6f60096b7cde18262e94fa7cbe05852a41",
+    "cnn_accel_cnn_accel_Pipeline_DN_OC_DN_IC.v": "eeb1f31c8babedb4504ccf015e0d17dc0e1f69b18ad2b489ae8e7e416e9af955",
+    "cnn_accel_cnn_accel_Pipeline_DN_OC_DN_IC_d_w_ROM_1P_LUTRAM_1R.dat": "739c79c1d655fa844e509d2c39b51d33252d53f251dc0b801f780088eb25179d",
+    "cnn_accel_cnn_accel_Pipeline_DN_OC_DN_IC_d_w_ROM_1P_LUTRAM_1R.v": "db63afc0ef8a4bb85c0eee9a0589f06984724456b5dd931956f0cb46b58a878c",
+    "cnn_accel_cnn_accel_Pipeline_GAP_IC_GAP_H_GAP_W.v": "0b8638aa65380ea04dfc1dd538972d98c3a5b25166e9f2cd3f55ca674b7ba0b7",
+    "cnn_accel_cnn_accel_Pipeline_P1_IC_P1_OH_P1_OW.v": "04d025684ae4c2ba6bf6a45c871d778515db03427112c29e5a294950c5daf7f6",
+    "cnn_accel_cnn_accel_Pipeline_P2_IC_P2_OH_P2_OW.v": "a358b1827622ca6b24fa5fe5ce4160821072ba0060810a34b1b2249a1513099f",
+    "cnn_accel_cnn_accel_Pipeline_RD_ROW_RD_COL.v": "5cf945bf0c6e97c9c484dfbd240396d4bc2f8967ca6a58d9e5be90982ea49e43",
+    "cnn_accel_control_s_axi.v": "6565a8338934d095f80dfcd5dde3cf8faabcf20a57cbc071b5a6fff402c9a9f4",
+    "cnn_accel_CTRL_s_axi.v": "3303949280ded02d687da197dbd3d0d3068b8a4617bfde36229ea26ca4a2b06e",
+    "cnn_accel_flow_control_loop_pipe_sequential_init.v": "c0bd0c973df299ca5f96b3278c947c9b14b3e40f851cbbc7debaa49acad8f72f",
+    "cnn_accel_fm0_RAM_2P_BRAM_1R1W.v": "ef64ce61c6aa4ef5b167561c424bd913bf1d79d640645dff0d31190a00c8a2df",
+    "cnn_accel_fm1_RAM_AUTO_1R1W.v": "6d8092a1a03982868bdf79401b1e160b5e65de3148640f7d40cba524b0c4b68b",
+    "cnn_accel_fm2_RAM_2P_BRAM_1R1W.v": "cbc31f6a2688d4b7fd12fec72973e96daa1ce9e5e4ba8adfb81306058a50272c",
+    "cnn_accel_fm3_RAM_AUTO_1R1W.v": "a1eff32abdaa9f0f168e259d6442ad239ee3fb37b9506fcdb62957759d751c9b",
+    "cnn_accel_fm4_RAM_2P_BRAM_1R1W.v": "215647d9b5573b21030a66933fd61cd0553fd3015e7cb7f1ca474b9af21381c4",
+    "cnn_accel_mac_muladd_8s_8ns_24s_24_4_1.v": "fc6fa2a893f80b0d971b3a4e73e41e9f64e0b87648d3a4d664e1f9a43e6f8e82",
+    "cnn_accel_mac_muladd_8s_8s_19s_19_4_1.v": "d625e83e1ee70785fb0d074b2efd1ad20e0e960ab54566345b90861f7d67b761",
+    "cnn_accel_MBUS_m_axi.v": "b0be6476d54c041844c08168e67296453ecce0752c8ced7352116caa3600aec3",
+    "cnn_accel_mul_32s_8s_32_2_1.v": "7e022635fe5b4d5608540215f4e10e14399d66933fcf106790fcbd9d316a4dc4",
+    "cnn_accel_sparsemux_65_5_32_1_1.v": "307dbae065ae65e7cb74e0b8f55e334e3f81d0ce3c98856e0208edf312fcb41c",
+    "cnn_accel_sparsemux_7_2_32_1_1.v": "04357e4d3aeb08284fa363ba3540ee6414ac40e5d50c3845f9cb1832e846c8a7",
+    "cnn_accel_sparsemux_9_2_8_1_1.v": "fd62924ca46911439e82cf3cb50d7dff6522b52b7cb6a7cc8cd8d319dfb0d19a",
+    "cnn_accel_sparsemux_9_2_8_1_1_x.v": "1bd7884bf3d4935aa948a3bd943b3ae4a4191ad67dcd719c5a42b2db7ec7a8b4"
+  },
+  "packaged_ip_revision": 2114812621,
+  "verification": {
+    "source_tensors_match_selected_avgpool": true,
+    "source_tensors_match_dbwfb2": false,
+    "generated_tensors_match_selected_avgpool": true,
+    "generated_conv_shifts": [
+      9,
+      7
+    ],
+    "vivado_generated_hdl_matches_package": true,
+    "vivado_memory_data_matches_package": true,
+    "xsa_embedded_bitstream_matches_impl_1": true
+  },
+  "programming": {
+    "timestamp_ist": "2026-10-03T22:00:15+05:30",
+    "bitstream_path": "D:\\Avg_pool_as_preprocessor\\Avg_pool_as_preprocessor\\Avg_pool_as_preprocessor.runs\\impl_1\\PL_wrapper.bit",
+    "bitstream_sha256": "1681c4ff3d6763cf23e3d20c2a68659c36e8b0964185630846d43f728e9c3aa4",
+    "log_source": "D:\\Avg_pool_as_preprocessor\\Avg_pool_as_preprocessor\\_ide\\logs\\vitis.log",
+    "record": "Device configured successfully with \"D:/Avg_pool_as_preprocessor/Avg_pool_as_preprocessor/Avg_pool_as_preprocessor.runs/impl_1/PL_wrapper.bit\"",
+    "uart_after_programming": true
+  },
+  "hardware": {
+    "whole_system": {
+      "LUT": 10327,
+      "FF": 11817,
+      "BRAM_tiles": 67,
+      "DSP": 4
+    },
+    "preprocessing_controller_fresh_hierarchy_values": null,
+    "timing": {
+      "target_clock_MHz": 100,
+      "WNS_ns": 0.776,
+      "TNS_ns": 0.0
+    },
+    "power_estimate": {
+      "complete_dynamic_W": 1.736,
+      "device_static_W": 0.154,
+      "total_on_chip_W": 1.889,
+      "preprocessing_dynamic_fresh_W": null,
+      "simulation_activity_file": "---",
+      "overall_confidence": "Medium",
+      "clock_activity_confidence": "High",
+      "input_io_activity_confidence": "High",
+      "internal_activity_confidence": "Medium",
+      "internal_nodes_user_specified": "less than 25%"
+    }
+  },
+  "board500": {
+    "arm": "avgpool",
+    "scope": "four-class STL-10 fixed Board500 independent-test subset",
+    "scheduled": 500,
+    "completed": 500,
+    "hardware_errors": 0,
+    "correct": 416,
+    "accuracy_percent": 83.2,
+    "selected_seed42_software_matches": 498,
+    "selected_seed42_software_agreement_percent": 99.6,
+    "class_correct": {
+      "airplane": 108,
+      "car": 98,
+      "dog": 119,
+      "ship": 91
+    },
+    "class_total": 125,
+    "timing": {
+      "row_write_us": 7241,
+      "row_pl_wall_us": 840,
+      "row_read_us": 3905,
+      "row_pass_us": 11986,
+      "column_reorder_write_us": 3541,
+      "column_pl_wall_us": 419,
+      "column_read_us": 1958,
+      "column_pass_us": 5918,
+      "preprocessing_us": 17904,
+      "quantize_pack_us": 576,
+      "cache_flush_us": 12,
+      "cnn_setup_us": 0,
+      "cnn_start_done_us": 61332,
+      "cnn_system_us": 61920,
+      "explicitly_instrumented_us": 79824,
+      "residual_us": 70,
+      "end_to_end_us": 79894,
+      "throughput_fps": 12.516584474428617
+    },
+    "source_uart": "results/logs/avgpool/uart/avgpool_board500_20261003.txt",
+    "source_uart_sha256": "99e29ba7a1147915d357473f5719fa1657df22bff907ddefebc5f5f05f1a4dde"
+  },
+  "historical_build": {
+    "identity": "August-30 AvgPool preprocessing with DBWFB2 seed-42 CNN tensors and shifts 9/8",
+    "whole_system": {
+      "LUT": 10326,
+      "FF": 11816,
+      "BRAM_tiles": 67,
+      "DSP": 4
+    },
+    "WNS_ns": 0.97,
+    "total_on_chip_W": 1.891,
+    "archive_directory": "diagnostics/provenance/avgpool_historical_20260830",
+    "note": "Repository deployment metadata already selected AvgPool 9/7; the mismatch concerned earlier assembled hardware artifacts, not the frozen software experiment.",
+    "source_header": {
+      "original_build_sha256": "d6d779e8e23907482f3c9d6c3b5995f877a007e7e521fef650e18bd7c4dbefcf",
+      "path": "diagnostics/provenance/avgpool_historical_20260830/source_project/wrong_dbwfb2_weights.h",
+      "sha256": "8171812f3e8ba39100b5dae62e6aa67204f92166906842c81f1d835046523392",
+      "bytes": 22691,
+      "tensor_fingerprint": "46dc83afed3876253cf5cb094e7e221e8c7f806caeb02e9b0f039a9a54faa19d",
+      "note": "Only the protocol-label comment differs from the original working header."
+    }
+  },
+  "limitations": [
+    "Separate preprocessing-controller utilization and dynamic-power reports are unavailable for the October-3 implementation.",
+    "The August-22 development XSA is retained for traceability and is not the reported Board500 platform."
+  ],
+  "repository_artifacts": {
+    "weights": {
+      "path": "hardware/hls/avgpool/weights.h",
+      "sha256": "06c2c7a94ed2b9cb8bc50a1127e929072075a5b174600050fd66deb32726124d",
+      "bytes": 22505
+    },
+    "header": {
+      "path": "hardware/hls/avgpool/cnn_accel.h",
+      "sha256": "bd82a9d431b3206415670c19604db8649e7a9b24bd7b444743cfdca643647390",
+      "bytes": 1751
+    },
+    "cpp": {
+      "path": "hardware/hls/src/cnn_accel.cpp",
+      "sha256": "2bdf51f487eb89efcca2d444c337912a46d39dc040a24cfc51f62c9c92d897ce",
+      "bytes": 11120
+    },
+    "component": {
+      "path": "hardware/hls/avgpool/packaged_ip/component.xml",
+      "sha256": "c645eba9c67504a4811f4b8716b171fe9f06c690fd2c7305d8a7e47f329b3c82",
+      "bytes": 170312
+    },
+    "archive": {
+      "path": "hardware/hls/avgpool/packaged_ip/cnn_accel.zip",
+      "sha256": "e9de8ed160cdcb3d9fe2f7864619d171c7033f316caef8d29a355bf77c9d74ce",
+      "bytes": 224287
+    },
+    "csynth": {
+      "path": "hardware/hls/avgpool/csynth.rpt",
+      "sha256": "db84529c851a719d99eea554903b4322eec059eea0a185ebaaabbd49f08ae6e8",
+      "bytes": 60581
+    },
+    "xsa": {
+      "path": "hardware/vivado/avgpool/xsa/PL_wrapper.xsa",
+      "sha256": "be42e42bdb214ba6dbb764d19ab3bef90dd65393f7bdd1ffb11a52dd30a81ef9",
+      "bytes": 921264
+    },
+    "utilization": {
+      "path": "hardware/vivado/avgpool/reports/PL_wrapper_utilization_placed.rpt",
+      "sha256": "b9657d7b1d8617039e46967daee09a1f3d088b68d0522840354f9bf686cab2bf",
+      "bytes": 12022
+    },
+    "timing": {
+      "path": "hardware/vivado/avgpool/reports/PL_wrapper_timing_summary_routed.rpt",
+      "sha256": "b22d556a73a6fa7343a992364a6eb835370ed44b133e4e31a7630582b44a5e7d",
+      "bytes": 293616
+    },
+    "power": {
+      "path": "hardware/vivado/avgpool/reports/PL_wrapper_power_routed.rpt",
+      "sha256": "a7303bedc62844532fab16c68e03b868f9c82dcc88d00a1f718bf6159f3720a3",
+      "bytes": 10669
+    },
+    "uart": {
+      "path": "results/logs/avgpool/uart/avgpool_board500_20261003.txt",
+      "sha256": "99e29ba7a1147915d357473f5719fa1657df22bff907ddefebc5f5f05f1a4dde",
+      "bytes": 51095
+    },
+    "bd": {
+      "path": "hardware/vivado/avgpool/block_design/PL.bd",
+      "sha256": "0254fd88a9d143b17a7a1a035fa7f82884f59afc5fa056f16a152471bf089f51",
+      "bytes": 81995
+    },
+    "firmware": {
+      "path": "firmware/avgpool/main_500.c",
+      "sha256": "4a1c08ce2e8cc3b29acf05fa996d2593bf46bdd9145e8da7da076c3b3c06168f",
+      "bytes": 40371
+    },
+    "deployment_weights": {
+      "path": "hardware/deployment/avgpool/weights.h",
+      "sha256": "b2a62727abb5d712cc0cb15ddea5eda05b408f94f003cf3f02f8a287029d2e2e",
+      "bytes": 22506
+    },
+    "deployment_manifest": {
+      "path": "hardware/deployment/avgpool/hardware_manifest.json",
+      "sha256": "29e7cda648f9be8feeeaf938ded63ea774a558886a682253fc1f2cc89b35e0f8",
+      "bytes": 357
+    },
+    "selected_package": {
+      "path": "software/int8_packages/avgpool/selected_package.json",
+      "sha256": "29e7cda648f9be8feeeaf938ded63ea774a558886a682253fc1f2cc89b35e0f8",
+      "bytes": 357
+    }
+  },
+  "header_identity_note": "source_artifacts records the original build-time files. Public HLS header comments have been made neutral. repository_artifacts records the published file hashes. Tensor values, dimensions, shifts, and generated IP are unchanged."
+}

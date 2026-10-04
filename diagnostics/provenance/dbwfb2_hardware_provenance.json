@@ -1,0 +1,37 @@
+{
+  "identity": "Reported DBWFB2 implementation: August-30 2026 reports",
+  "tool_version": "Vivado 2025.2",
+  "device": "xc7z020clg484-1",
+  "LUT": 10622,
+  "FF": 12136,
+  "BRAM_tiles": 67,
+  "DSP": 4,
+  "WNS_ns": 1.591,
+  "TNS_ns": 0.0,
+  "dynamic_W": 1.741,
+  "device_static_W": 0.154,
+  "total_on_chip_W": 1.894,
+  "reports": [
+    {
+      "path": "hardware\\vivado\\dbwfb2\\reports\\PL_wrapper_power_routed.rpt",
+      "sha256": "50b82b343b900ac5c1a4452ae8e1775fcbf9294dad55cf03413a86fb2a9b9826",
+      "modified_local": "2026-08-30T10:07:52.290474"
+    },
+    {
+      "path": "hardware\\vivado\\dbwfb2\\reports\\PL_wrapper_timing_summary_routed.rpt",
+      "sha256": "92f326abf0d00a482e7eb05cf701048980ccc02e4373dfe841a38a2cbd6c7c8c",
+      "modified_local": "2026-08-30T10:07:44.233215"
+    },
+    {
+      "path": "hardware\\vivado\\dbwfb2\\reports\\PL_wrapper_utilization_placed.rpt",
+      "sha256": "98906996a28cc344a51d900e4e82ac598c552486936606c9c6c62f191cb099ce",
+      "modified_local": "2026-08-30T10:06:08.657951"
+    }
+  ],
+  "alternative_values_not_in_this_report_set": {
+    "LUT": 10628,
+    "FF": 12138,
+    "WNS_ns": 0.519
+  },
+  "note": "The alternative totals are not values in the reports identified above and are not used for the reported implementation."
+}

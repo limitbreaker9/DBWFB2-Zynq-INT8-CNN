@@ -1,0 +1,5504 @@
+{
+  "generated_utc": "2026-08-31T10:31:53.334131+00:00",
+  "input_definitions": {
+    "frozen_python_primary": "released packed Python-primary CNN inputs",
+    "hardware_equivalent": "verified full-FPGA-state CNN inputs"
+  },
+  "execution_order": [
+    8,
+    107,
+    844,
+    1670,
+    2408,
+    0,
+    1,
+    813,
+    1603,
+    2400
+  ],
+  "instrumentation_prediction_mismatches_vs_released_cnn_accel": 0,
+  "aggregate": [
+    {
+      "shape": [
+        10,
+        64,
+        64
+      ],
+      "python_dtype": "int8",
+      "hls_dtype": "int8",
+      "total_elements": 40960,
+      "exact_matches": 40960,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "checkpoint": "CNN_INPUT"
+    },
+    {
+      "shape": [
+        10,
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 655360,
+      "exact_matches": 655360,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "checkpoint": "CONV1_ACC"
+    },
+    {
+      "shape": [
+        10,
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 655360,
+      "exact_matches": 655360,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "checkpoint": "CONV1_SHIFTED"
+    },
+    {
+      "shape": [
+        10,
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 655360,
+      "exact_matches": 655360,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "checkpoint": "CONV1_ACT"
+    },
+    {
+      "shape": [
+        10,
+        16,
+        32,
+        32
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 163840,
+      "exact_matches": 163840,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "checkpoint": "POOL1"
+    },
+    {
+      "shape": [
+        10,
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 327680,
+      "exact_matches": 327680,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "checkpoint": "CONV2_ACC"
+    },
+    {
+      "shape": [
+        10,
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 327680,
+      "exact_matches": 327680,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "checkpoint": "CONV2_SHIFTED"
+    },
+    {
+      "shape": [
+        10,
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 327680,
+      "exact_matches": 327680,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "checkpoint": "CONV2_ACT"
+    },
+    {
+      "shape": [
+        10,
+        32,
+        16,
+        16
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 81920,
+      "exact_matches": 81920,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "checkpoint": "POOL2"
+    },
+    {
+      "shape": [
+        10,
+        32
+      ],
+      "python_dtype": "uint32",
+      "hls_dtype": "uint32",
+      "total_elements": 320,
+      "exact_matches": 320,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "checkpoint": "GAP_SUM"
+    },
+    {
+      "shape": [
+        10,
+        32
+      ],
+      "python_dtype": "uint32",
+      "hls_dtype": "uint32",
+      "total_elements": 320,
+      "exact_matches": 320,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "checkpoint": "GAP_SHIFTED"
+    },
+    {
+      "shape": [
+        10,
+        4
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 40,
+      "exact_matches": 40,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "checkpoint": "LOGITS"
+    },
+    {
+      "shape": [
+        10
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 10,
+      "exact_matches": 10,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "checkpoint": "PREDICTION"
+    },
+    {
+      "shape": [
+        10,
+        64,
+        64
+      ],
+      "python_dtype": "int8",
+      "hls_dtype": "int8",
+      "total_elements": 40960,
+      "exact_matches": 40960,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "checkpoint": "CNN_INPUT"
+    },
+    {
+      "shape": [
+        10,
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 655360,
+      "exact_matches": 655360,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "checkpoint": "CONV1_ACC"
+    },
+    {
+      "shape": [
+        10,
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 655360,
+      "exact_matches": 655360,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "checkpoint": "CONV1_SHIFTED"
+    },
+    {
+      "shape": [
+        10,
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 655360,
+      "exact_matches": 655360,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "checkpoint": "CONV1_ACT"
+    },
+    {
+      "shape": [
+        10,
+        16,
+        32,
+        32
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 163840,
+      "exact_matches": 163840,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "checkpoint": "POOL1"
+    },
+    {
+      "shape": [
+        10,
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 327680,
+      "exact_matches": 327680,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "checkpoint": "CONV2_ACC"
+    },
+    {
+      "shape": [
+        10,
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 327680,
+      "exact_matches": 327680,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "checkpoint": "CONV2_SHIFTED"
+    },
+    {
+      "shape": [
+        10,
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 327680,
+      "exact_matches": 327680,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "checkpoint": "CONV2_ACT"
+    },
+    {
+      "shape": [
+        10,
+        32,
+        16,
+        16
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 81920,
+      "exact_matches": 81920,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "checkpoint": "POOL2"
+    },
+    {
+      "shape": [
+        10,
+        32
+      ],
+      "python_dtype": "uint32",
+      "hls_dtype": "uint32",
+      "total_elements": 320,
+      "exact_matches": 320,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "checkpoint": "GAP_SUM"
+    },
+    {
+      "shape": [
+        10,
+        32
+      ],
+      "python_dtype": "uint32",
+      "hls_dtype": "uint32",
+      "total_elements": 320,
+      "exact_matches": 320,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "checkpoint": "GAP_SHIFTED"
+    },
+    {
+      "shape": [
+        10,
+        4
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 40,
+      "exact_matches": 40,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "checkpoint": "LOGITS"
+    },
+    {
+      "shape": [
+        10
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 10,
+      "exact_matches": 10,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "checkpoint": "PREDICTION"
+    }
+  ],
+  "per_image": [
+    {
+      "shape": [
+        64,
+        64
+      ],
+      "python_dtype": "int8",
+      "hls_dtype": "int8",
+      "total_elements": 4096,
+      "exact_matches": 4096,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 8,
+      "checkpoint": "CNN_INPUT"
+    },
+    {
+      "shape": [
+        64,
+        64
+      ],
+      "python_dtype": "int8",
+      "hls_dtype": "int8",
+      "total_elements": 4096,
+      "exact_matches": 4096,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 107,
+      "checkpoint": "CNN_INPUT"
+    },
+    {
+      "shape": [
+        64,
+        64
+      ],
+      "python_dtype": "int8",
+      "hls_dtype": "int8",
+      "total_elements": 4096,
+      "exact_matches": 4096,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 844,
+      "checkpoint": "CNN_INPUT"
+    },
+    {
+      "shape": [
+        64,
+        64
+      ],
+      "python_dtype": "int8",
+      "hls_dtype": "int8",
+      "total_elements": 4096,
+      "exact_matches": 4096,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 1670,
+      "checkpoint": "CNN_INPUT"
+    },
+    {
+      "shape": [
+        64,
+        64
+      ],
+      "python_dtype": "int8",
+      "hls_dtype": "int8",
+      "total_elements": 4096,
+      "exact_matches": 4096,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 2408,
+      "checkpoint": "CNN_INPUT"
+    },
+    {
+      "shape": [
+        64,
+        64
+      ],
+      "python_dtype": "int8",
+      "hls_dtype": "int8",
+      "total_elements": 4096,
+      "exact_matches": 4096,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 0,
+      "checkpoint": "CNN_INPUT"
+    },
+    {
+      "shape": [
+        64,
+        64
+      ],
+      "python_dtype": "int8",
+      "hls_dtype": "int8",
+      "total_elements": 4096,
+      "exact_matches": 4096,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 1,
+      "checkpoint": "CNN_INPUT"
+    },
+    {
+      "shape": [
+        64,
+        64
+      ],
+      "python_dtype": "int8",
+      "hls_dtype": "int8",
+      "total_elements": 4096,
+      "exact_matches": 4096,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 813,
+      "checkpoint": "CNN_INPUT"
+    },
+    {
+      "shape": [
+        64,
+        64
+      ],
+      "python_dtype": "int8",
+      "hls_dtype": "int8",
+      "total_elements": 4096,
+      "exact_matches": 4096,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 1603,
+      "checkpoint": "CNN_INPUT"
+    },
+    {
+      "shape": [
+        64,
+        64
+      ],
+      "python_dtype": "int8",
+      "hls_dtype": "int8",
+      "total_elements": 4096,
+      "exact_matches": 4096,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 2400,
+      "checkpoint": "CNN_INPUT"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 8,
+      "checkpoint": "CONV1_ACC"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 107,
+      "checkpoint": "CONV1_ACC"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 844,
+      "checkpoint": "CONV1_ACC"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 1670,
+      "checkpoint": "CONV1_ACC"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 2408,
+      "checkpoint": "CONV1_ACC"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 0,
+      "checkpoint": "CONV1_ACC"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 1,
+      "checkpoint": "CONV1_ACC"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 813,
+      "checkpoint": "CONV1_ACC"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 1603,
+      "checkpoint": "CONV1_ACC"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 2400,
+      "checkpoint": "CONV1_ACC"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 8,
+      "checkpoint": "CONV1_SHIFTED"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 107,
+      "checkpoint": "CONV1_SHIFTED"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 844,
+      "checkpoint": "CONV1_SHIFTED"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 1670,
+      "checkpoint": "CONV1_SHIFTED"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 2408,
+      "checkpoint": "CONV1_SHIFTED"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 0,
+      "checkpoint": "CONV1_SHIFTED"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 1,
+      "checkpoint": "CONV1_SHIFTED"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 813,
+      "checkpoint": "CONV1_SHIFTED"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 1603,
+      "checkpoint": "CONV1_SHIFTED"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 2400,
+      "checkpoint": "CONV1_SHIFTED"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 8,
+      "checkpoint": "CONV1_ACT"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 107,
+      "checkpoint": "CONV1_ACT"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 844,
+      "checkpoint": "CONV1_ACT"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 1670,
+      "checkpoint": "CONV1_ACT"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 2408,
+      "checkpoint": "CONV1_ACT"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 0,
+      "checkpoint": "CONV1_ACT"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 1,
+      "checkpoint": "CONV1_ACT"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 813,
+      "checkpoint": "CONV1_ACT"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 1603,
+      "checkpoint": "CONV1_ACT"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 2400,
+      "checkpoint": "CONV1_ACT"
+    },
+    {
+      "shape": [
+        16,
+        32,
+        32
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 16384,
+      "exact_matches": 16384,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 8,
+      "checkpoint": "POOL1"
+    },
+    {
+      "shape": [
+        16,
+        32,
+        32
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 16384,
+      "exact_matches": 16384,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 107,
+      "checkpoint": "POOL1"
+    },
+    {
+      "shape": [
+        16,
+        32,
+        32
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 16384,
+      "exact_matches": 16384,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 844,
+      "checkpoint": "POOL1"
+    },
+    {
+      "shape": [
+        16,
+        32,
+        32
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 16384,
+      "exact_matches": 16384,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 1670,
+      "checkpoint": "POOL1"
+    },
+    {
+      "shape": [
+        16,
+        32,
+        32
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 16384,
+      "exact_matches": 16384,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 2408,
+      "checkpoint": "POOL1"
+    },
+    {
+      "shape": [
+        16,
+        32,
+        32
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 16384,
+      "exact_matches": 16384,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 0,
+      "checkpoint": "POOL1"
+    },
+    {
+      "shape": [
+        16,
+        32,
+        32
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 16384,
+      "exact_matches": 16384,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 1,
+      "checkpoint": "POOL1"
+    },
+    {
+      "shape": [
+        16,
+        32,
+        32
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 16384,
+      "exact_matches": 16384,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 813,
+      "checkpoint": "POOL1"
+    },
+    {
+      "shape": [
+        16,
+        32,
+        32
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 16384,
+      "exact_matches": 16384,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 1603,
+      "checkpoint": "POOL1"
+    },
+    {
+      "shape": [
+        16,
+        32,
+        32
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 16384,
+      "exact_matches": 16384,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 2400,
+      "checkpoint": "POOL1"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 8,
+      "checkpoint": "CONV2_ACC"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 107,
+      "checkpoint": "CONV2_ACC"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 844,
+      "checkpoint": "CONV2_ACC"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 1670,
+      "checkpoint": "CONV2_ACC"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 2408,
+      "checkpoint": "CONV2_ACC"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 0,
+      "checkpoint": "CONV2_ACC"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 1,
+      "checkpoint": "CONV2_ACC"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 813,
+      "checkpoint": "CONV2_ACC"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 1603,
+      "checkpoint": "CONV2_ACC"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 2400,
+      "checkpoint": "CONV2_ACC"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 8,
+      "checkpoint": "CONV2_SHIFTED"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 107,
+      "checkpoint": "CONV2_SHIFTED"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 844,
+      "checkpoint": "CONV2_SHIFTED"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 1670,
+      "checkpoint": "CONV2_SHIFTED"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 2408,
+      "checkpoint": "CONV2_SHIFTED"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 0,
+      "checkpoint": "CONV2_SHIFTED"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 1,
+      "checkpoint": "CONV2_SHIFTED"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 813,
+      "checkpoint": "CONV2_SHIFTED"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 1603,
+      "checkpoint": "CONV2_SHIFTED"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 2400,
+      "checkpoint": "CONV2_SHIFTED"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 8,
+      "checkpoint": "CONV2_ACT"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 107,
+      "checkpoint": "CONV2_ACT"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 844,
+      "checkpoint": "CONV2_ACT"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 1670,
+      "checkpoint": "CONV2_ACT"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 2408,
+      "checkpoint": "CONV2_ACT"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 0,
+      "checkpoint": "CONV2_ACT"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 1,
+      "checkpoint": "CONV2_ACT"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 813,
+      "checkpoint": "CONV2_ACT"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 1603,
+      "checkpoint": "CONV2_ACT"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 2400,
+      "checkpoint": "CONV2_ACT"
+    },
+    {
+      "shape": [
+        32,
+        16,
+        16
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 8192,
+      "exact_matches": 8192,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 8,
+      "checkpoint": "POOL2"
+    },
+    {
+      "shape": [
+        32,
+        16,
+        16
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 8192,
+      "exact_matches": 8192,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 107,
+      "checkpoint": "POOL2"
+    },
+    {
+      "shape": [
+        32,
+        16,
+        16
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 8192,
+      "exact_matches": 8192,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 844,
+      "checkpoint": "POOL2"
+    },
+    {
+      "shape": [
+        32,
+        16,
+        16
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 8192,
+      "exact_matches": 8192,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 1670,
+      "checkpoint": "POOL2"
+    },
+    {
+      "shape": [
+        32,
+        16,
+        16
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 8192,
+      "exact_matches": 8192,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 2408,
+      "checkpoint": "POOL2"
+    },
+    {
+      "shape": [
+        32,
+        16,
+        16
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 8192,
+      "exact_matches": 8192,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 0,
+      "checkpoint": "POOL2"
+    },
+    {
+      "shape": [
+        32,
+        16,
+        16
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 8192,
+      "exact_matches": 8192,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 1,
+      "checkpoint": "POOL2"
+    },
+    {
+      "shape": [
+        32,
+        16,
+        16
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 8192,
+      "exact_matches": 8192,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 813,
+      "checkpoint": "POOL2"
+    },
+    {
+      "shape": [
+        32,
+        16,
+        16
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 8192,
+      "exact_matches": 8192,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 1603,
+      "checkpoint": "POOL2"
+    },
+    {
+      "shape": [
+        32,
+        16,
+        16
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 8192,
+      "exact_matches": 8192,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 2400,
+      "checkpoint": "POOL2"
+    },
+    {
+      "shape": [
+        32
+      ],
+      "python_dtype": "uint32",
+      "hls_dtype": "uint32",
+      "total_elements": 32,
+      "exact_matches": 32,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 8,
+      "checkpoint": "GAP_SUM"
+    },
+    {
+      "shape": [
+        32
+      ],
+      "python_dtype": "uint32",
+      "hls_dtype": "uint32",
+      "total_elements": 32,
+      "exact_matches": 32,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 107,
+      "checkpoint": "GAP_SUM"
+    },
+    {
+      "shape": [
+        32
+      ],
+      "python_dtype": "uint32",
+      "hls_dtype": "uint32",
+      "total_elements": 32,
+      "exact_matches": 32,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 844,
+      "checkpoint": "GAP_SUM"
+    },
+    {
+      "shape": [
+        32
+      ],
+      "python_dtype": "uint32",
+      "hls_dtype": "uint32",
+      "total_elements": 32,
+      "exact_matches": 32,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 1670,
+      "checkpoint": "GAP_SUM"
+    },
+    {
+      "shape": [
+        32
+      ],
+      "python_dtype": "uint32",
+      "hls_dtype": "uint32",
+      "total_elements": 32,
+      "exact_matches": 32,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 2408,
+      "checkpoint": "GAP_SUM"
+    },
+    {
+      "shape": [
+        32
+      ],
+      "python_dtype": "uint32",
+      "hls_dtype": "uint32",
+      "total_elements": 32,
+      "exact_matches": 32,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 0,
+      "checkpoint": "GAP_SUM"
+    },
+    {
+      "shape": [
+        32
+      ],
+      "python_dtype": "uint32",
+      "hls_dtype": "uint32",
+      "total_elements": 32,
+      "exact_matches": 32,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 1,
+      "checkpoint": "GAP_SUM"
+    },
+    {
+      "shape": [
+        32
+      ],
+      "python_dtype": "uint32",
+      "hls_dtype": "uint32",
+      "total_elements": 32,
+      "exact_matches": 32,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 813,
+      "checkpoint": "GAP_SUM"
+    },
+    {
+      "shape": [
+        32
+      ],
+      "python_dtype": "uint32",
+      "hls_dtype": "uint32",
+      "total_elements": 32,
+      "exact_matches": 32,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 1603,
+      "checkpoint": "GAP_SUM"
+    },
+    {
+      "shape": [
+        32
+      ],
+      "python_dtype": "uint32",
+      "hls_dtype": "uint32",
+      "total_elements": 32,
+      "exact_matches": 32,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 2400,
+      "checkpoint": "GAP_SUM"
+    },
+    {
+      "shape": [
+        32
+      ],
+      "python_dtype": "uint32",
+      "hls_dtype": "uint32",
+      "total_elements": 32,
+      "exact_matches": 32,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 8,
+      "checkpoint": "GAP_SHIFTED"
+    },
+    {
+      "shape": [
+        32
+      ],
+      "python_dtype": "uint32",
+      "hls_dtype": "uint32",
+      "total_elements": 32,
+      "exact_matches": 32,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 107,
+      "checkpoint": "GAP_SHIFTED"
+    },
+    {
+      "shape": [
+        32
+      ],
+      "python_dtype": "uint32",
+      "hls_dtype": "uint32",
+      "total_elements": 32,
+      "exact_matches": 32,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 844,
+      "checkpoint": "GAP_SHIFTED"
+    },
+    {
+      "shape": [
+        32
+      ],
+      "python_dtype": "uint32",
+      "hls_dtype": "uint32",
+      "total_elements": 32,
+      "exact_matches": 32,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 1670,
+      "checkpoint": "GAP_SHIFTED"
+    },
+    {
+      "shape": [
+        32
+      ],
+      "python_dtype": "uint32",
+      "hls_dtype": "uint32",
+      "total_elements": 32,
+      "exact_matches": 32,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 2408,
+      "checkpoint": "GAP_SHIFTED"
+    },
+    {
+      "shape": [
+        32
+      ],
+      "python_dtype": "uint32",
+      "hls_dtype": "uint32",
+      "total_elements": 32,
+      "exact_matches": 32,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 0,
+      "checkpoint": "GAP_SHIFTED"
+    },
+    {
+      "shape": [
+        32
+      ],
+      "python_dtype": "uint32",
+      "hls_dtype": "uint32",
+      "total_elements": 32,
+      "exact_matches": 32,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 1,
+      "checkpoint": "GAP_SHIFTED"
+    },
+    {
+      "shape": [
+        32
+      ],
+      "python_dtype": "uint32",
+      "hls_dtype": "uint32",
+      "total_elements": 32,
+      "exact_matches": 32,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 813,
+      "checkpoint": "GAP_SHIFTED"
+    },
+    {
+      "shape": [
+        32
+      ],
+      "python_dtype": "uint32",
+      "hls_dtype": "uint32",
+      "total_elements": 32,
+      "exact_matches": 32,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 1603,
+      "checkpoint": "GAP_SHIFTED"
+    },
+    {
+      "shape": [
+        32
+      ],
+      "python_dtype": "uint32",
+      "hls_dtype": "uint32",
+      "total_elements": 32,
+      "exact_matches": 32,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 2400,
+      "checkpoint": "GAP_SHIFTED"
+    },
+    {
+      "shape": [
+        4
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 4,
+      "exact_matches": 4,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 8,
+      "checkpoint": "LOGITS"
+    },
+    {
+      "shape": [
+        4
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 4,
+      "exact_matches": 4,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 107,
+      "checkpoint": "LOGITS"
+    },
+    {
+      "shape": [
+        4
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 4,
+      "exact_matches": 4,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 844,
+      "checkpoint": "LOGITS"
+    },
+    {
+      "shape": [
+        4
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 4,
+      "exact_matches": 4,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 1670,
+      "checkpoint": "LOGITS"
+    },
+    {
+      "shape": [
+        4
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 4,
+      "exact_matches": 4,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 2408,
+      "checkpoint": "LOGITS"
+    },
+    {
+      "shape": [
+        4
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 4,
+      "exact_matches": 4,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 0,
+      "checkpoint": "LOGITS"
+    },
+    {
+      "shape": [
+        4
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 4,
+      "exact_matches": 4,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 1,
+      "checkpoint": "LOGITS"
+    },
+    {
+      "shape": [
+        4
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 4,
+      "exact_matches": 4,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 813,
+      "checkpoint": "LOGITS"
+    },
+    {
+      "shape": [
+        4
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 4,
+      "exact_matches": 4,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 1603,
+      "checkpoint": "LOGITS"
+    },
+    {
+      "shape": [
+        4
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 4,
+      "exact_matches": 4,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 2400,
+      "checkpoint": "LOGITS"
+    },
+    {
+      "shape": [],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 1,
+      "exact_matches": 1,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 8,
+      "checkpoint": "PREDICTION"
+    },
+    {
+      "shape": [],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 1,
+      "exact_matches": 1,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 107,
+      "checkpoint": "PREDICTION"
+    },
+    {
+      "shape": [],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 1,
+      "exact_matches": 1,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 844,
+      "checkpoint": "PREDICTION"
+    },
+    {
+      "shape": [],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 1,
+      "exact_matches": 1,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 1670,
+      "checkpoint": "PREDICTION"
+    },
+    {
+      "shape": [],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 1,
+      "exact_matches": 1,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 2408,
+      "checkpoint": "PREDICTION"
+    },
+    {
+      "shape": [],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 1,
+      "exact_matches": 1,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 0,
+      "checkpoint": "PREDICTION"
+    },
+    {
+      "shape": [],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 1,
+      "exact_matches": 1,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 1,
+      "checkpoint": "PREDICTION"
+    },
+    {
+      "shape": [],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 1,
+      "exact_matches": 1,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 813,
+      "checkpoint": "PREDICTION"
+    },
+    {
+      "shape": [],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 1,
+      "exact_matches": 1,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 1603,
+      "checkpoint": "PREDICTION"
+    },
+    {
+      "shape": [],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 1,
+      "exact_matches": 1,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "frozen_python_primary",
+      "global_index": 2400,
+      "checkpoint": "PREDICTION"
+    },
+    {
+      "shape": [
+        64,
+        64
+      ],
+      "python_dtype": "int8",
+      "hls_dtype": "int8",
+      "total_elements": 4096,
+      "exact_matches": 4096,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 8,
+      "checkpoint": "CNN_INPUT"
+    },
+    {
+      "shape": [
+        64,
+        64
+      ],
+      "python_dtype": "int8",
+      "hls_dtype": "int8",
+      "total_elements": 4096,
+      "exact_matches": 4096,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 107,
+      "checkpoint": "CNN_INPUT"
+    },
+    {
+      "shape": [
+        64,
+        64
+      ],
+      "python_dtype": "int8",
+      "hls_dtype": "int8",
+      "total_elements": 4096,
+      "exact_matches": 4096,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 844,
+      "checkpoint": "CNN_INPUT"
+    },
+    {
+      "shape": [
+        64,
+        64
+      ],
+      "python_dtype": "int8",
+      "hls_dtype": "int8",
+      "total_elements": 4096,
+      "exact_matches": 4096,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 1670,
+      "checkpoint": "CNN_INPUT"
+    },
+    {
+      "shape": [
+        64,
+        64
+      ],
+      "python_dtype": "int8",
+      "hls_dtype": "int8",
+      "total_elements": 4096,
+      "exact_matches": 4096,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 2408,
+      "checkpoint": "CNN_INPUT"
+    },
+    {
+      "shape": [
+        64,
+        64
+      ],
+      "python_dtype": "int8",
+      "hls_dtype": "int8",
+      "total_elements": 4096,
+      "exact_matches": 4096,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 0,
+      "checkpoint": "CNN_INPUT"
+    },
+    {
+      "shape": [
+        64,
+        64
+      ],
+      "python_dtype": "int8",
+      "hls_dtype": "int8",
+      "total_elements": 4096,
+      "exact_matches": 4096,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 1,
+      "checkpoint": "CNN_INPUT"
+    },
+    {
+      "shape": [
+        64,
+        64
+      ],
+      "python_dtype": "int8",
+      "hls_dtype": "int8",
+      "total_elements": 4096,
+      "exact_matches": 4096,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 813,
+      "checkpoint": "CNN_INPUT"
+    },
+    {
+      "shape": [
+        64,
+        64
+      ],
+      "python_dtype": "int8",
+      "hls_dtype": "int8",
+      "total_elements": 4096,
+      "exact_matches": 4096,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 1603,
+      "checkpoint": "CNN_INPUT"
+    },
+    {
+      "shape": [
+        64,
+        64
+      ],
+      "python_dtype": "int8",
+      "hls_dtype": "int8",
+      "total_elements": 4096,
+      "exact_matches": 4096,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 2400,
+      "checkpoint": "CNN_INPUT"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 8,
+      "checkpoint": "CONV1_ACC"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 107,
+      "checkpoint": "CONV1_ACC"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 844,
+      "checkpoint": "CONV1_ACC"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 1670,
+      "checkpoint": "CONV1_ACC"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 2408,
+      "checkpoint": "CONV1_ACC"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 0,
+      "checkpoint": "CONV1_ACC"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 1,
+      "checkpoint": "CONV1_ACC"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 813,
+      "checkpoint": "CONV1_ACC"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 1603,
+      "checkpoint": "CONV1_ACC"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 2400,
+      "checkpoint": "CONV1_ACC"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 8,
+      "checkpoint": "CONV1_SHIFTED"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 107,
+      "checkpoint": "CONV1_SHIFTED"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 844,
+      "checkpoint": "CONV1_SHIFTED"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 1670,
+      "checkpoint": "CONV1_SHIFTED"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 2408,
+      "checkpoint": "CONV1_SHIFTED"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 0,
+      "checkpoint": "CONV1_SHIFTED"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 1,
+      "checkpoint": "CONV1_SHIFTED"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 813,
+      "checkpoint": "CONV1_SHIFTED"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 1603,
+      "checkpoint": "CONV1_SHIFTED"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 2400,
+      "checkpoint": "CONV1_SHIFTED"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 8,
+      "checkpoint": "CONV1_ACT"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 107,
+      "checkpoint": "CONV1_ACT"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 844,
+      "checkpoint": "CONV1_ACT"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 1670,
+      "checkpoint": "CONV1_ACT"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 2408,
+      "checkpoint": "CONV1_ACT"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 0,
+      "checkpoint": "CONV1_ACT"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 1,
+      "checkpoint": "CONV1_ACT"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 813,
+      "checkpoint": "CONV1_ACT"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 1603,
+      "checkpoint": "CONV1_ACT"
+    },
+    {
+      "shape": [
+        16,
+        64,
+        64
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 65536,
+      "exact_matches": 65536,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 2400,
+      "checkpoint": "CONV1_ACT"
+    },
+    {
+      "shape": [
+        16,
+        32,
+        32
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 16384,
+      "exact_matches": 16384,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 8,
+      "checkpoint": "POOL1"
+    },
+    {
+      "shape": [
+        16,
+        32,
+        32
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 16384,
+      "exact_matches": 16384,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 107,
+      "checkpoint": "POOL1"
+    },
+    {
+      "shape": [
+        16,
+        32,
+        32
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 16384,
+      "exact_matches": 16384,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 844,
+      "checkpoint": "POOL1"
+    },
+    {
+      "shape": [
+        16,
+        32,
+        32
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 16384,
+      "exact_matches": 16384,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 1670,
+      "checkpoint": "POOL1"
+    },
+    {
+      "shape": [
+        16,
+        32,
+        32
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 16384,
+      "exact_matches": 16384,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 2408,
+      "checkpoint": "POOL1"
+    },
+    {
+      "shape": [
+        16,
+        32,
+        32
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 16384,
+      "exact_matches": 16384,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 0,
+      "checkpoint": "POOL1"
+    },
+    {
+      "shape": [
+        16,
+        32,
+        32
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 16384,
+      "exact_matches": 16384,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 1,
+      "checkpoint": "POOL1"
+    },
+    {
+      "shape": [
+        16,
+        32,
+        32
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 16384,
+      "exact_matches": 16384,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 813,
+      "checkpoint": "POOL1"
+    },
+    {
+      "shape": [
+        16,
+        32,
+        32
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 16384,
+      "exact_matches": 16384,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 1603,
+      "checkpoint": "POOL1"
+    },
+    {
+      "shape": [
+        16,
+        32,
+        32
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 16384,
+      "exact_matches": 16384,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 2400,
+      "checkpoint": "POOL1"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 8,
+      "checkpoint": "CONV2_ACC"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 107,
+      "checkpoint": "CONV2_ACC"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 844,
+      "checkpoint": "CONV2_ACC"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 1670,
+      "checkpoint": "CONV2_ACC"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 2408,
+      "checkpoint": "CONV2_ACC"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 0,
+      "checkpoint": "CONV2_ACC"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 1,
+      "checkpoint": "CONV2_ACC"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 813,
+      "checkpoint": "CONV2_ACC"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 1603,
+      "checkpoint": "CONV2_ACC"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 2400,
+      "checkpoint": "CONV2_ACC"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 8,
+      "checkpoint": "CONV2_SHIFTED"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 107,
+      "checkpoint": "CONV2_SHIFTED"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 844,
+      "checkpoint": "CONV2_SHIFTED"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 1670,
+      "checkpoint": "CONV2_SHIFTED"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 2408,
+      "checkpoint": "CONV2_SHIFTED"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 0,
+      "checkpoint": "CONV2_SHIFTED"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 1,
+      "checkpoint": "CONV2_SHIFTED"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 813,
+      "checkpoint": "CONV2_SHIFTED"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 1603,
+      "checkpoint": "CONV2_SHIFTED"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 2400,
+      "checkpoint": "CONV2_SHIFTED"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 8,
+      "checkpoint": "CONV2_ACT"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 107,
+      "checkpoint": "CONV2_ACT"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 844,
+      "checkpoint": "CONV2_ACT"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 1670,
+      "checkpoint": "CONV2_ACT"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 2408,
+      "checkpoint": "CONV2_ACT"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 0,
+      "checkpoint": "CONV2_ACT"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 1,
+      "checkpoint": "CONV2_ACT"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 813,
+      "checkpoint": "CONV2_ACT"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 1603,
+      "checkpoint": "CONV2_ACT"
+    },
+    {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 32768,
+      "exact_matches": 32768,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 2400,
+      "checkpoint": "CONV2_ACT"
+    },
+    {
+      "shape": [
+        32,
+        16,
+        16
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 8192,
+      "exact_matches": 8192,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 8,
+      "checkpoint": "POOL2"
+    },
+    {
+      "shape": [
+        32,
+        16,
+        16
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 8192,
+      "exact_matches": 8192,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 107,
+      "checkpoint": "POOL2"
+    },
+    {
+      "shape": [
+        32,
+        16,
+        16
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 8192,
+      "exact_matches": 8192,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 844,
+      "checkpoint": "POOL2"
+    },
+    {
+      "shape": [
+        32,
+        16,
+        16
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 8192,
+      "exact_matches": 8192,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 1670,
+      "checkpoint": "POOL2"
+    },
+    {
+      "shape": [
+        32,
+        16,
+        16
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 8192,
+      "exact_matches": 8192,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 2408,
+      "checkpoint": "POOL2"
+    },
+    {
+      "shape": [
+        32,
+        16,
+        16
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 8192,
+      "exact_matches": 8192,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 0,
+      "checkpoint": "POOL2"
+    },
+    {
+      "shape": [
+        32,
+        16,
+        16
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 8192,
+      "exact_matches": 8192,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 1,
+      "checkpoint": "POOL2"
+    },
+    {
+      "shape": [
+        32,
+        16,
+        16
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 8192,
+      "exact_matches": 8192,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 813,
+      "checkpoint": "POOL2"
+    },
+    {
+      "shape": [
+        32,
+        16,
+        16
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 8192,
+      "exact_matches": 8192,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 1603,
+      "checkpoint": "POOL2"
+    },
+    {
+      "shape": [
+        32,
+        16,
+        16
+      ],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 8192,
+      "exact_matches": 8192,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 2400,
+      "checkpoint": "POOL2"
+    },
+    {
+      "shape": [
+        32
+      ],
+      "python_dtype": "uint32",
+      "hls_dtype": "uint32",
+      "total_elements": 32,
+      "exact_matches": 32,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 8,
+      "checkpoint": "GAP_SUM"
+    },
+    {
+      "shape": [
+        32
+      ],
+      "python_dtype": "uint32",
+      "hls_dtype": "uint32",
+      "total_elements": 32,
+      "exact_matches": 32,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 107,
+      "checkpoint": "GAP_SUM"
+    },
+    {
+      "shape": [
+        32
+      ],
+      "python_dtype": "uint32",
+      "hls_dtype": "uint32",
+      "total_elements": 32,
+      "exact_matches": 32,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 844,
+      "checkpoint": "GAP_SUM"
+    },
+    {
+      "shape": [
+        32
+      ],
+      "python_dtype": "uint32",
+      "hls_dtype": "uint32",
+      "total_elements": 32,
+      "exact_matches": 32,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 1670,
+      "checkpoint": "GAP_SUM"
+    },
+    {
+      "shape": [
+        32
+      ],
+      "python_dtype": "uint32",
+      "hls_dtype": "uint32",
+      "total_elements": 32,
+      "exact_matches": 32,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 2408,
+      "checkpoint": "GAP_SUM"
+    },
+    {
+      "shape": [
+        32
+      ],
+      "python_dtype": "uint32",
+      "hls_dtype": "uint32",
+      "total_elements": 32,
+      "exact_matches": 32,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 0,
+      "checkpoint": "GAP_SUM"
+    },
+    {
+      "shape": [
+        32
+      ],
+      "python_dtype": "uint32",
+      "hls_dtype": "uint32",
+      "total_elements": 32,
+      "exact_matches": 32,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 1,
+      "checkpoint": "GAP_SUM"
+    },
+    {
+      "shape": [
+        32
+      ],
+      "python_dtype": "uint32",
+      "hls_dtype": "uint32",
+      "total_elements": 32,
+      "exact_matches": 32,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 813,
+      "checkpoint": "GAP_SUM"
+    },
+    {
+      "shape": [
+        32
+      ],
+      "python_dtype": "uint32",
+      "hls_dtype": "uint32",
+      "total_elements": 32,
+      "exact_matches": 32,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 1603,
+      "checkpoint": "GAP_SUM"
+    },
+    {
+      "shape": [
+        32
+      ],
+      "python_dtype": "uint32",
+      "hls_dtype": "uint32",
+      "total_elements": 32,
+      "exact_matches": 32,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 2400,
+      "checkpoint": "GAP_SUM"
+    },
+    {
+      "shape": [
+        32
+      ],
+      "python_dtype": "uint32",
+      "hls_dtype": "uint32",
+      "total_elements": 32,
+      "exact_matches": 32,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 8,
+      "checkpoint": "GAP_SHIFTED"
+    },
+    {
+      "shape": [
+        32
+      ],
+      "python_dtype": "uint32",
+      "hls_dtype": "uint32",
+      "total_elements": 32,
+      "exact_matches": 32,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 107,
+      "checkpoint": "GAP_SHIFTED"
+    },
+    {
+      "shape": [
+        32
+      ],
+      "python_dtype": "uint32",
+      "hls_dtype": "uint32",
+      "total_elements": 32,
+      "exact_matches": 32,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 844,
+      "checkpoint": "GAP_SHIFTED"
+    },
+    {
+      "shape": [
+        32
+      ],
+      "python_dtype": "uint32",
+      "hls_dtype": "uint32",
+      "total_elements": 32,
+      "exact_matches": 32,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 1670,
+      "checkpoint": "GAP_SHIFTED"
+    },
+    {
+      "shape": [
+        32
+      ],
+      "python_dtype": "uint32",
+      "hls_dtype": "uint32",
+      "total_elements": 32,
+      "exact_matches": 32,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 2408,
+      "checkpoint": "GAP_SHIFTED"
+    },
+    {
+      "shape": [
+        32
+      ],
+      "python_dtype": "uint32",
+      "hls_dtype": "uint32",
+      "total_elements": 32,
+      "exact_matches": 32,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 0,
+      "checkpoint": "GAP_SHIFTED"
+    },
+    {
+      "shape": [
+        32
+      ],
+      "python_dtype": "uint32",
+      "hls_dtype": "uint32",
+      "total_elements": 32,
+      "exact_matches": 32,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 1,
+      "checkpoint": "GAP_SHIFTED"
+    },
+    {
+      "shape": [
+        32
+      ],
+      "python_dtype": "uint32",
+      "hls_dtype": "uint32",
+      "total_elements": 32,
+      "exact_matches": 32,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 813,
+      "checkpoint": "GAP_SHIFTED"
+    },
+    {
+      "shape": [
+        32
+      ],
+      "python_dtype": "uint32",
+      "hls_dtype": "uint32",
+      "total_elements": 32,
+      "exact_matches": 32,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 1603,
+      "checkpoint": "GAP_SHIFTED"
+    },
+    {
+      "shape": [
+        32
+      ],
+      "python_dtype": "uint32",
+      "hls_dtype": "uint32",
+      "total_elements": 32,
+      "exact_matches": 32,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 2400,
+      "checkpoint": "GAP_SHIFTED"
+    },
+    {
+      "shape": [
+        4
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 4,
+      "exact_matches": 4,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 8,
+      "checkpoint": "LOGITS"
+    },
+    {
+      "shape": [
+        4
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 4,
+      "exact_matches": 4,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 107,
+      "checkpoint": "LOGITS"
+    },
+    {
+      "shape": [
+        4
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 4,
+      "exact_matches": 4,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 844,
+      "checkpoint": "LOGITS"
+    },
+    {
+      "shape": [
+        4
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 4,
+      "exact_matches": 4,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 1670,
+      "checkpoint": "LOGITS"
+    },
+    {
+      "shape": [
+        4
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 4,
+      "exact_matches": 4,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 2408,
+      "checkpoint": "LOGITS"
+    },
+    {
+      "shape": [
+        4
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 4,
+      "exact_matches": 4,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 0,
+      "checkpoint": "LOGITS"
+    },
+    {
+      "shape": [
+        4
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 4,
+      "exact_matches": 4,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 1,
+      "checkpoint": "LOGITS"
+    },
+    {
+      "shape": [
+        4
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 4,
+      "exact_matches": 4,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 813,
+      "checkpoint": "LOGITS"
+    },
+    {
+      "shape": [
+        4
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 4,
+      "exact_matches": 4,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 1603,
+      "checkpoint": "LOGITS"
+    },
+    {
+      "shape": [
+        4
+      ],
+      "python_dtype": "int32",
+      "hls_dtype": "int32",
+      "total_elements": 4,
+      "exact_matches": 4,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 2400,
+      "checkpoint": "LOGITS"
+    },
+    {
+      "shape": [],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 1,
+      "exact_matches": 1,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 8,
+      "checkpoint": "PREDICTION"
+    },
+    {
+      "shape": [],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 1,
+      "exact_matches": 1,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 107,
+      "checkpoint": "PREDICTION"
+    },
+    {
+      "shape": [],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 1,
+      "exact_matches": 1,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 844,
+      "checkpoint": "PREDICTION"
+    },
+    {
+      "shape": [],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 1,
+      "exact_matches": 1,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 1670,
+      "checkpoint": "PREDICTION"
+    },
+    {
+      "shape": [],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 1,
+      "exact_matches": 1,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 2408,
+      "checkpoint": "PREDICTION"
+    },
+    {
+      "shape": [],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 1,
+      "exact_matches": 1,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 0,
+      "checkpoint": "PREDICTION"
+    },
+    {
+      "shape": [],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 1,
+      "exact_matches": 1,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 1,
+      "checkpoint": "PREDICTION"
+    },
+    {
+      "shape": [],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 1,
+      "exact_matches": 1,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 813,
+      "checkpoint": "PREDICTION"
+    },
+    {
+      "shape": [],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 1,
+      "exact_matches": 1,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 1603,
+      "checkpoint": "PREDICTION"
+    },
+    {
+      "shape": [],
+      "python_dtype": "uint8",
+      "hls_dtype": "uint8",
+      "total_elements": 1,
+      "exact_matches": 1,
+      "mismatches": 0,
+      "exact_match_fraction": 1.0,
+      "maximum_absolute_difference": 0,
+      "first_mismatch_coordinate": null,
+      "python_at_first_mismatch": null,
+      "hls_at_first_mismatch": null,
+      "input_variant": "hardware_equivalent",
+      "global_index": 2400,
+      "checkpoint": "PREDICTION"
+    }
+  ]
+}

@@ -2489,7 +2489,7 @@
       },
       "cnn_accel_0": {
         "vlnv": "xilinx.com:hls:cnn_accel:1.0",
-        "ip_revision": "2114764022",
+        "ip_revision": "2114812621",
         "xci_name": "PL_cnn_accel_0_6",
         "xci_path": "ip\\PL_cnn_accel_0_6\\PL_cnn_accel_0_6.xci",
         "inst_hier_path": "cnn_accel_0",

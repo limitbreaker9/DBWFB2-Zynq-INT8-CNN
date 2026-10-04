@@ -1,0 +1,275 @@
+{
+  "purpose": "first-divergence diagnostic source-of-truth; publication files unchanged",
+  "generated_utc": "2026-08-30T16:07:55.243158+00:00",
+  "protocol_version": "STL10_HW_MATCHED_DEPLOYMENT_V1",
+  "selected_package": {
+    "arm": "dbwfb2",
+    "seed": 42,
+    "gain": 1,
+    "C1_SHIFT": 9,
+    "C2_SHIFT": 8,
+    "identity_sha256": "5d2f71eaa5c9ff927b24e33c2fb925f9159861e9dfab45513edbb23f115ff2ec",
+    "components": [
+      {
+        "path": "software/int8_packages/dbwfb2/selected_package.json",
+        "sha256": "893a5eeeabacdfbfa55aee54fa998f522635960b0e0965b14063139bc2ca907b"
+      },
+      {
+        "path": "hardware/deployment/dbwfb2/weights.h",
+        "sha256": "9d555e43f8c2cefe5fdc33bfe8cc02a870e07608798f5b13c3ac3361175d6a60"
+      },
+      {
+        "path": "hardware/deployment/dbwfb2/cnn_accel_shifts.txt",
+        "sha256": "111b146332d480f9e401a3c0d5a3f91f6bb4e8b9ebe43b57b92415675970b534"
+      }
+    ]
+  },
+  "authoritative_raw_headers": [
+    {
+      "part": 0,
+      "start": 0,
+      "end": 799,
+      "source_header": "hardware/deployment/dbwfb2/raw3200_parts/test_vectors_raw_3200_part0_dbwfb2.h",
+      "sha256": "9f2db4fb34685411f92c15c5a2dd6e49d330927bf5b2bd97c41060dc4767ed4a"
+    },
+    {
+      "part": 1,
+      "start": 800,
+      "end": 1599,
+      "source_header": "hardware/deployment/dbwfb2/raw3200_parts/test_vectors_raw_3200_part1_dbwfb2.h",
+      "sha256": "a49a1eff0dba3eb24c91b7cdef1baeee45d3c8f9d129c2684f8ad3ef3b193c29"
+    },
+    {
+      "part": 2,
+      "start": 1600,
+      "end": 2399,
+      "source_header": "hardware/deployment/dbwfb2/raw3200_parts/test_vectors_raw_3200_part2_dbwfb2.h",
+      "sha256": "de3434487f71a57254fa9b397667e25c068aadeabfe76c2789e858e334f7bb44"
+    },
+    {
+      "part": 3,
+      "start": 2400,
+      "end": 3199,
+      "source_header": "hardware/deployment/dbwfb2/raw3200_parts/test_vectors_raw_3200_part3_dbwfb2.h",
+      "sha256": "fa75d3db4481a081d672b8e84cfc62183318d06ae7f15d095ba88ddb135d7d3d"
+    }
+  ],
+  "authoritative_python_prediction_source": {
+    "description": "expected_labels arrays in the four raw headers; byte-for-byte label sequence also present in HLS expected_int8_3200.h",
+    "hls_expected_path": "hardware/hls/dbwfb2/expected_int8_3200.h",
+    "hls_expected_sha256": "ff97cbaf612f541ea0cf9bfc6b4e68703a462c7c599d0527af1b71793c2551a6"
+  },
+  "authoritative_fpga_uart_parts": [
+    {
+      "part": 0,
+      "start": 0,
+      "end": 799,
+      "records": 800,
+      "fpga_correct_from_pred": 639,
+      "python_matches_from_pred": 759,
+      "hardware_errors": 0,
+      "source_log": "results/logs/dbwfb2/uart/dbwfb2_full3200_part0_0000_0799.txt",
+      "sha256": "8173e0128c67fd4c65324c805371afcdba180b157e2a8a64128a2b62f2e1cb62"
+    },
+    {
+      "part": 1,
+      "start": 800,
+      "end": 1599,
+      "records": 800,
+      "fpga_correct_from_pred": 617,
+      "python_matches_from_pred": 749,
+      "hardware_errors": 0,
+      "source_log": "results/logs/dbwfb2/uart/dbwfb2_full3200_part1_0800_1599.txt",
+      "sha256": "986738df0e4388f3aa97bc7126206656d6269675a515dda6ab10dba0ebf3b798"
+    },
+    {
+      "part": 2,
+      "start": 1600,
+      "end": 2399,
+      "records": 800,
+      "fpga_correct_from_pred": 628,
+      "python_matches_from_pred": 748,
+      "hardware_errors": 0,
+      "source_log": "results/logs/dbwfb2/uart/dbwfb2_full3200_part2_1600_2399.txt",
+      "sha256": "7c9bfef2dd02a3b65d290a7381c9452877957bbba0f8cc0c5423516c38de1602"
+    },
+    {
+      "part": 3,
+      "start": 2400,
+      "end": 3199,
+      "records": 800,
+      "fpga_correct_from_pred": 613,
+      "python_matches_from_pred": 750,
+      "hardware_errors": 0,
+      "source_log": "results/logs/dbwfb2/uart/dbwfb2_full3200_part3_2400_3199.txt",
+      "sha256": "37dd8481cc1366b13bce79ae0dc17e4e52c29c4e030a57f6670145789b954100"
+    }
+  ],
+  "current_chain_recomputed_from_primary_records": {
+    "images": 3200,
+    "python_true_int8_correct_from_header_arrays": 2488,
+    "python_true_int8_accuracy_percent": 77.75,
+    "fpga_correct_from_3200_pred_records": 2497,
+    "fpga_accuracy_percent": 78.03125,
+    "fpga_python_matches_from_3200_pred_records": 3006,
+    "fpga_python_agreement_percent": 93.9375,
+    "fpga_python_mismatches": 194,
+    "hardware_errors_from_four_uart_summaries": 0
+  },
+  "hls_c_simulation_recomputed_from_3200_per_image_lines": {
+    "images": 3200,
+    "correct_from_per_image_log": 2488,
+    "accuracy_percent": 77.75,
+    "python_matches_from_per_image_log": 3200,
+    "python_agreement_percent": 100.0,
+    "source_log": "results/logs/dbwfb2/hls/dbwfb2_hls_csim_3200.txt",
+    "sha256": "badaa775c6d526c681d8ed8ce67d5978366d2e43301d9cbcf74d97f47f621364"
+  },
+  "meaning_of_2488_over_3200": {
+    "python_true_int8_accuracy": "2488/3200 = 77.75%",
+    "hls_c_simulation_accuracy": "2488/3200 = 77.75%",
+    "python_hls_prediction_agreement": "3200/3200 = 100%",
+    "note": "2488/3200 is an accuracy count against true labels, not an agreement count"
+  },
+  "selection_algorithm": {
+    "mismatch": "earliest mismatch for (part,true_class)=(0,0),(1,1),(2,2),(3,3), then earliest remaining mismatch with a new Python-to-FPGA transition",
+    "match": "earliest match for (part,true_class)=(0,0),(1,1),(2,2),(3,3), then earliest remaining match with a new (true,Python,FPGA) triple"
+  },
+  "selected_indices": [
+    {
+      "global_index": 8,
+      "true_label": 1,
+      "python_prediction": 3,
+      "alt_prediction": 3,
+      "fpga_prediction": 1,
+      "match": false,
+      "part": 0,
+      "source_log": "results/logs/dbwfb2/uart/dbwfb2_full3200_part0_0000_0799.txt",
+      "local_index": 8,
+      "source_header": "hardware/deployment/dbwfb2/raw3200_parts/test_vectors_raw_3200_part0_dbwfb2.h",
+      "selection_group": "mismatch"
+    },
+    {
+      "global_index": 107,
+      "true_label": 0,
+      "python_prediction": 0,
+      "alt_prediction": 3,
+      "fpga_prediction": 3,
+      "match": false,
+      "part": 0,
+      "source_log": "results/logs/dbwfb2/uart/dbwfb2_full3200_part0_0000_0799.txt",
+      "local_index": 107,
+      "source_header": "hardware/deployment/dbwfb2/raw3200_parts/test_vectors_raw_3200_part0_dbwfb2.h",
+      "selection_group": "mismatch"
+    },
+    {
+      "global_index": 844,
+      "true_label": 1,
+      "python_prediction": 1,
+      "alt_prediction": 3,
+      "fpga_prediction": 3,
+      "match": false,
+      "part": 1,
+      "source_log": "results/logs/dbwfb2/uart/dbwfb2_full3200_part1_0800_1599.txt",
+      "local_index": 44,
+      "source_header": "hardware/deployment/dbwfb2/raw3200_parts/test_vectors_raw_3200_part1_dbwfb2.h",
+      "selection_group": "mismatch"
+    },
+    {
+      "global_index": 1670,
+      "true_label": 2,
+      "python_prediction": 0,
+      "alt_prediction": 0,
+      "fpga_prediction": 2,
+      "match": false,
+      "part": 2,
+      "source_log": "results/logs/dbwfb2/uart/dbwfb2_full3200_part2_1600_2399.txt",
+      "local_index": 70,
+      "source_header": "hardware/deployment/dbwfb2/raw3200_parts/test_vectors_raw_3200_part2_dbwfb2.h",
+      "selection_group": "mismatch"
+    },
+    {
+      "global_index": 2408,
+      "true_label": 3,
+      "python_prediction": 3,
+      "alt_prediction": 3,
+      "fpga_prediction": 2,
+      "match": false,
+      "part": 3,
+      "source_log": "results/logs/dbwfb2/uart/dbwfb2_full3200_part3_2400_3199.txt",
+      "local_index": 8,
+      "source_header": "hardware/deployment/dbwfb2/raw3200_parts/test_vectors_raw_3200_part3_dbwfb2.h",
+      "selection_group": "mismatch"
+    },
+    {
+      "global_index": 0,
+      "true_label": 2,
+      "python_prediction": 0,
+      "alt_prediction": 0,
+      "fpga_prediction": 0,
+      "match": true,
+      "part": 0,
+      "source_log": "results/logs/dbwfb2/uart/dbwfb2_full3200_part0_0000_0799.txt",
+      "local_index": 0,
+      "source_header": "hardware/deployment/dbwfb2/raw3200_parts/test_vectors_raw_3200_part0_dbwfb2.h",
+      "selection_group": "match"
+    },
+    {
+      "global_index": 1,
+      "true_label": 0,
+      "python_prediction": 0,
+      "alt_prediction": 0,
+      "fpga_prediction": 0,
+      "match": true,
+      "part": 0,
+      "source_log": "results/logs/dbwfb2/uart/dbwfb2_full3200_part0_0000_0799.txt",
+      "local_index": 1,
+      "source_header": "hardware/deployment/dbwfb2/raw3200_parts/test_vectors_raw_3200_part0_dbwfb2.h",
+      "selection_group": "match"
+    },
+    {
+      "global_index": 813,
+      "true_label": 1,
+      "python_prediction": 1,
+      "alt_prediction": 1,
+      "fpga_prediction": 1,
+      "match": true,
+      "part": 1,
+      "source_log": "results/logs/dbwfb2/uart/dbwfb2_full3200_part1_0800_1599.txt",
+      "local_index": 13,
+      "source_header": "hardware/deployment/dbwfb2/raw3200_parts/test_vectors_raw_3200_part1_dbwfb2.h",
+      "selection_group": "match"
+    },
+    {
+      "global_index": 1603,
+      "true_label": 2,
+      "python_prediction": 2,
+      "alt_prediction": 2,
+      "fpga_prediction": 2,
+      "match": true,
+      "part": 2,
+      "source_log": "results/logs/dbwfb2/uart/dbwfb2_full3200_part2_1600_2399.txt",
+      "local_index": 3,
+      "source_header": "hardware/deployment/dbwfb2/raw3200_parts/test_vectors_raw_3200_part2_dbwfb2.h",
+      "selection_group": "match"
+    },
+    {
+      "global_index": 2400,
+      "true_label": 3,
+      "python_prediction": 2,
+      "alt_prediction": 2,
+      "fpga_prediction": 2,
+      "match": true,
+      "part": 3,
+      "source_log": "results/logs/dbwfb2/uart/dbwfb2_full3200_part3_2400_3199.txt",
+      "local_index": 0,
+      "source_header": "hardware/deployment/dbwfb2/raw3200_parts/test_vectors_raw_3200_part3_dbwfb2.h",
+      "selection_group": "match"
+    }
+  ],
+  "generated_artifacts": {
+    "header": "diagnostics/first_divergence/generated/first_divergence_vectors.h",
+    "header_sha256": "a25e4c2fb00198bb9121f80692c27e5743dd901448b4f622970f585daa4cb2d2",
+    "expected_npz": "diagnostics/first_divergence/generated/expected_first_divergence.npz"
+  }
+}

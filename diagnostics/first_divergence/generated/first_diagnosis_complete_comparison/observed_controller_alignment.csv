@@ -1,0 +1,11 @@
+execution_position,global_index,primary_reference_first_difference,row_phase_offset,row_phase_valid_exact,row_phase_valid_elements,column_phase_offset,column_phase_valid_exact,column_phase_valid_elements,ps_pack_exact,ps_pack_elements,observed_model_row_exact,observed_model_row_elements,observed_model_ll_exact,observed_model_ll_elements,row_max_abs_error,ll_max_abs_error
+0,8,ROW,-4,7936,7936,-4,3968,3968,4096,4096,8192,8192,4096,4096,0,0
+1,107,ROW,-4,7936,7936,-4,3968,3968,4096,4096,8192,8192,4096,4096,0,0
+2,844,ROW,-4,7936,7936,-4,3968,3968,4096,4096,8192,8192,4096,4096,0,0
+3,1670,ROW,-4,7936,7936,-4,3968,3968,4096,4096,8192,8192,4096,4096,0,0
+4,2408,ROW,-4,7936,7936,-4,3968,3968,4096,4096,8192,8192,4096,4096,0,0
+5,0,ROW,-4,7936,7936,-4,3968,3968,4096,4096,8192,8192,4096,4096,0,0
+6,1,ROW,-4,7936,7936,-4,3968,3968,4096,4096,8192,8192,4096,4096,0,0
+7,813,ROW,-4,7936,7936,-4,3968,3968,4096,4096,8192,8192,4096,4096,0,0
+8,1603,ROW,-4,7936,7936,-4,3968,3968,4096,4096,8192,8192,4096,4096,0,0
+9,2400,ROW,-4,7936,7936,-4,3968,3968,4096,4096,8192,8192,4096,4096,0,0

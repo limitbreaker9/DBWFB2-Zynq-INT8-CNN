@@ -1,4 +1,4 @@
 scope,metric,dbwfb2,avgpool,unit,source
 whole_implemented_system,target_clock,100,100,MHz,hardware/vivado/*/reports/PL_wrapper_timing_summary_routed.rpt
-whole_implemented_system,WNS,1.591,0.970,ns,hardware/vivado/*/reports/PL_wrapper_timing_summary_routed.rpt
+whole_implemented_system,WNS,1.591,0.776,ns,hardware/vivado/*/reports/PL_wrapper_timing_summary_routed.rpt
 whole_implemented_system,TNS,0.000,0.000,ns,hardware/vivado/*/reports/PL_wrapper_timing_summary_routed.rpt

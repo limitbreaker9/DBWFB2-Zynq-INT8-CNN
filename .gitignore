@@ -53,3 +53,27 @@ tmp/
 temp/
 *.tmp
 *.temp
+
+# Local document working files and helper binaries
+/final_surgical/
+/publication_final_work/
+/publication_fix/
+/pdf_qa/
+/.equation_fix_test/
+/*.tex
+/*.docx
+/*.pdf
+/*.exe
+/*.dll
+/Response*.md
+/final_response*.md
+/sync_fix_response.md
+/manuscript_current.txt
+/response_download.txt
+/powershell
+/DONE
+/8
+/9
+/10
+*.vvp
+diagnostics/**/generated/*.exe

@@ -1,151 +1,190 @@
 # A Zero-DSP Wavelet Preprocessing Integration for Resource-Constrained INT8 CNNs on Edge FPGAs
 
-This repository provides the software, HLS, RTL, firmware, deployment inputs, implementation reports, and raw final logs for a multiplier-free DBWFB2-9/7 LL preprocessing front end integrated with a compact true-INT8 CNN on a Zynq-7000 ZedBoard (`xc7z020clg484-1`). A same-flow 2x2 AvgPool implementation provides the hardware baseline.
+## Project overview
 
-The project is an integration and hardware-characterization study. It does not claim that DBWFB2 universally improves accuracy, total resource use, or power.
-
-## System architecture
+This repository provides the software, RTL, HLS CNN, firmware, reports and captured results for a multiplier-free DBWFB2-9/7 low-low (LL) front end on a Zynq-7000 ZedBoard (`xc7z020clg484-1`). It includes a compact true-INT8 CNN, a same-flow 2x2 average-pooling (AvgPool) hardware baseline, a five-seed software evaluation and a separate hardware-equivalent DBWFB2 replay. The study characterizes an integrated edge-FPGA system and does not establish universal accuracy, resource or power superiority for DBWFB2.
 
 ![Zynq-7000 DBWFB2 and INT8 CNN architecture](hardware/vivado/dbwfb2/documentation/vivado_block_diagram.png)
 
-Raw 128x128 images are written by the Arm processor to input BRAM. The multiplier-free programmable-logic controller performs one separable DBWFB2 pass at a time; the processor performs the row/column transpose and reorder between passes. The 64x64 LL output is quantized and packed, then read from DDR by the HLS CNN through its `m_axi` interface. AXI GPIO carries start/done control.
+The Arm processor writes raw 128x128 grayscale images to input BRAM. The programmable-logic controller filters one dimension at a time, and the processor reorders/transposes the row-pass result for the column pass. The 64x64 LL output is quantized and packed in DDR for the CNN. AXI GPIO provides preprocessing start/done control, and the HLS CNN reads DDR through its AXI master interface.
 
-## Dataset and selection protocol
+## Experimental scope
 
-The experiment uses the airplane, car, dog, and ship classes from STL-10:
+The main classification experiment uses the airplane, car, dog and ship classes of STL-10.
 
-- training pool: 2,000 images, 500 per class;
-- training split: 1,600 images, 400 per class;
-- validation split: 400 images, 100 per class;
-- independent test: 3,200 images, 800 per class;
-- Board500: a fixed stratified 500-image subset of the independent test set, 125 per class;
-- training seeds: 42, 100, 123, 777, and 2024.
+| Partition | Images | Images per class |
+|---|---:|---:|
+| Training | 1,600 | 400 |
+| Validation | 400 | 100 |
+| Independent test | 3,200 | 800 |
+| Board500 test subset | 500 | 125 |
 
-Validation alone controls early stopping, checkpoint selection, input gain, quantization shifts, and deployment-seed selection. The frozen indices are in [`results/split_manifest.json`](results/split_manifest.json) and [`results/board500_indices.csv`](results/board500_indices.csv).
+Board500 is a fixed stratified subset of the independent test partition, not a second independent test set. The main accuracies apply to this four-class scope and do not establish general performance across broader datasets or tasks. The separate ten-class analysis is exploratory. Split and subset records are [split_manifest.json](results/split_manifest.json) and [board500_indices.csv](results/board500_indices.csv).
 
-## Hardware-matched DBWFB2 preprocessing
+## Frozen software protocol
 
-The deployed structural path uses:
+Training seeds are **42, 100, 123, 777 and 2024**. Training and validation alone determine early stopping, checkpoint selection, gain, shifts and deployment-seed selection.
 
-- causal 9-tap analysis;
-- trailing-edge replicate extension;
-- even-index decimation;
-- integer coefficients `[27, -17, -78, 273, 614, 273, -78, -17, 27]`;
-- arithmetic right shift by 10 after each 1-D pass;
-- input gain 1;
-- CNN shifts `C1_SHIFT=9` and `C2_SHIFT=8`.
+| Arm | Selected seed |
+|---|---:|
+| Full | 777 |
+| AvgPool | 42 |
+| Haar | 42 |
+| DBWFB2 | 42 |
 
-The final executed notebook is [`notebooks/DBWFB2_STL10_REPRODUCIBILITY_HW_MATCHED.ipynb`](notebooks/DBWFB2_STL10_REPRODUCIBILITY_HW_MATCHED.ipynb). It contains the four-arm five-seed experiment, true-INT8 inference, selected deployment package generation, Board500 generation, and four-part full-test header generation.
+DBWFB2 uses gain 1, `C1_SHIFT=9` and `C2_SHIFT=8`. AvgPool uses gain 1, `C1_SHIFT=9` and `C2_SHIFT=7`. The per-arm records are under [software/int8_packages/](software/int8_packages/).
 
-## Software results
-
-Independent-test results over five frozen seeds are reported as mean +/- sample standard deviation.
+Independent-test results are mean +/- sample standard deviation over five seeds:
 
 | Arm | Float accuracy (%) | True-INT8 accuracy (%) | True-INT8 macro-F1 (%) |
 |---|---:|---:|---:|
-| Full | 78.119 +/- 0.305 | 77.788 +/- 0.795 | 77.696 +/- 0.704 |
-| AvgPool | 80.300 +/- 0.225 | 79.156 +/- 0.767 | 79.134 +/- 0.757 |
-| Haar | 80.300 +/- 0.225 | 79.156 +/- 0.767 | 79.134 +/- 0.757 |
-| DBWFB2 | 79.1625 +/- 0.8302 | 78.3125 +/- 0.6914 | 78.3365 +/- 0.6633 |
+| Full | 78.12 +/- 0.30 | 77.79 +/- 0.80 | 77.70 +/- 0.70 |
+| AvgPool | 80.30 +/- 0.22 | 79.16 +/- 0.77 | 79.13 +/- 0.76 |
+| Haar | 80.30 +/- 0.22 | 79.16 +/- 0.77 | 79.13 +/- 0.76 |
+| DBWFB2 | 79.16 +/- 0.83 | 78.31 +/- 0.69 | 78.34 +/- 0.66 |
 
-The selected DBWFB2 seed-42 true-INT8 result is **2,488/3,200 (77.75%)**. Exact seed-level values are in [`results/software_five_seed_results.csv`](results/software_five_seed_results.csv); aggregate and paired-statistical tables are beside it.
+The [executed notebook](notebooks/DBWFB2_STL10_REPRODUCIBILITY.ipynb) preserves the code and saved outputs. Seed-level results, aggregates and paired statistics are in [results/](results/). None of the paired DBWFB2 comparisons reaches the prespecified significance threshold, and TOST does not establish equivalence. Aligned Haar LL and non-overlapping 2x2 AvgPool produce identical main-experiment software inputs. Haar is a software control, not a separately routed hardware design.
 
-Aligned Haar LL and non-overlapping 2x2 AvgPool are identical in the main software input experiment. Haar is retained as a named software control; no separately routed Haar hardware design is claimed.
+## Software comparison versus hardware-equivalent replay
 
-## HLS verification
+The five-seed software comparison uses trailing replicate extension with forward complete-window sampling. Hardware-equivalent DBWFB2 replay additionally reproduces centered even-phase alignment, an effective -4 input-position offset, retained cross-transaction state and deployed integer arithmetic, clipping and packing.
 
-The archived C-simulation log contains all 3,200 predictions:
-
-- Python true-INT8: 2,488/3,200 (77.75%);
-- HLS C-simulation: 2,488/3,200 (77.75%);
-- Python-to-HLS final-prediction agreement: 3,200/3,200 (100%);
-- C-simulation errors: 0.
-
-The final HLS `csynth.rpt` records 6,329,660 cycles, corresponding to 63.2966 ms nominal latency at 100 MHz, with HLS estimates of 70 BRAM resources, 4 DSP, 5,037 FF, and 6,131 LUT. This HLS BRAM estimate is kept distinct from the whole-design Block RAM tile count reported by Vivado implementation. Final-prediction identity does not by itself establish intermediate-tensor bit exactness.
-
-## ZedBoard DBWFB2 results
-
-### Independent 3,200-image FPGA test
-
-The complete test was run as four 800-image parts. The archived `PRED` and summary records cover every global test index exactly once.
-
-| Part | Global indices | FPGA correct | Primary software-reference matches | Hardware errors |
-|---:|---:|---:|---:|---:|
-| 0 | 0-799 | 639/800 | 759/800 | 0 |
-| 1 | 800-1599 | 617/800 | 749/800 | 0 |
-| 2 | 1600-2399 | 628/800 | 748/800 | 0 |
-| 3 | 2400-3199 | 613/800 | 750/800 | 0 |
-| **Total** | **0-3199** | **2,497/3,200 (78.03%)** | **3,006/3,200 (93.94%)** | **0** |
-
-Per-class recall is 677/800 (84.625%) for airplane, 559/800 (69.875%) for car, 745/800 (93.125%) for dog, and 516/800 (64.500%) for ship. The recomputed confusion matrix and class metrics are in [`results/`](results/).
-
-### Board500
-
-The final rebuilt Board500 application completed all 500 images with zero hardware errors:
-
-- airplane: 108/125 (86.4%);
-- car: 91/125 (72.8%);
-- dog: 120/125 (96.0%);
-- ship: 85/125 (68.0%);
-- FPGA accuracy: **404/500 (80.8%)**;
-- primary software-reference agreement: **473/500 (94.6%)**.
-
-## Same-flow hardware comparison
-
-The tables below use the current Vivado 2025.2 placed/routed reports at a 100 MHz target. Controller-hierarchy and whole-system values are kept separate.
-
-| Scope | Metric | DBWFB2 | AvgPool |
-|---|---|---:|---:|
-| Preprocessing controller | LUT | 354 | 68 |
-| Preprocessing controller | FF | 400 | 82 |
-| Preprocessing controller | Block RAM tiles (Vivado) | 0 | 0 |
-| Preprocessing controller | DSP | 0 | 0 |
-| CNN hierarchy | LUT / FF / Block RAM tiles / DSP (Vivado) | 3,620 / 4,113 / 35 / 4 | 3,620 / 4,113 / 35 / 4 |
-| Whole implemented system | LUT | 10,622 | 10,326 |
-| Whole implemented system | FF | 12,136 | 11,816 |
-| Whole implemented system | Block RAM tiles (Vivado) | 67 | 67 |
-| Whole implemented system | DSP | 4 | 4 |
-
-| Whole-system timing | DBWFB2 | AvgPool |
+| Selected DBWFB2 result | Count | Accuracy/agreement |
 |---|---:|---:|
-| WNS at 100 MHz | +1.591 ns | +0.970 ns |
-| TNS | 0.000 ns | 0.000 ns |
+| Seed-42 software accuracy | 2488/3200 | 77.75% |
+| Physical FPGA accuracy | 2497/3200 | 78.03% |
+| Selected software/FPGA agreement | 3006/3200 | 93.94% |
+| Hardware-equivalent replay/FPGA agreement | 3200/3200 | 100% |
+
+The selected software reference and FPGA differ on 194 predictions, with an accuracy difference of +0.28 percentage points. The replay is separate from the five-seed aggregates. **Full, Haar and AvgPool were not evaluated under the DBWFB2 hardware-equivalent stream convention.** Retained state describes this implementation, not a property of the wavelet itself.
+
+Changing only trailing replicate extension to zero extension changes 55 predictions but leaves accuracy at 2497/3200 for both settings. Replicate extension is not claimed to improve accuracy. The 64x64 paths perform GAP over 16x16 Pool2 maps using `>>8`. The Full 128x128 software control uses 32x32 maps and `>>10`. Only the 64x64 CNN is physically deployed.
+
+## Verified AvgPool hardware configuration
+
+The reported AvgPool implementation uses the selected seed-42 weights, gain 1 and shifts 9/7. Its selected software test accuracy is 2558/3200 (79.9375%).
+
+| Whole-system quantity | Value |
+|---|---:|
+| LUTs | 10,327 |
+| FFs | 11,817 |
+| Block RAM tiles | 67 |
+| DSPs | 4 |
+| WNS at 100 MHz | +0.776 ns |
+| TNS | 0.000 ns |
+| Complete dynamic estimate | 1.736 W |
+| Device-static estimate | 0.154 W |
+| Total on-chip estimate | 1.889 W |
+
+Board500 completed 500/500 scheduled images with **416/500 (83.20%)** correct, **498/500 (99.60%)** selected software-reference agreement and **zero hardware errors**. Class-correct counts are 108/125 airplane, 98/125 car, 119/125 dog and 91/125 ship.
+
+| ARM-observed timing | Value |
+|---|---:|
+| Complete preprocessing | 17.90 ms |
+| CNN system | 61.92 ms |
+| End-to-end | 79.89 ms |
+| Throughput | 12.52 images/s |
+| Residual timer/control/loop overhead | 0.07 ms |
+
+The [UART capture](results/logs/avgpool/uart/avgpool_board500_20261003.txt), [metrics](results/avgpool_board500_metrics.json) and [provenance manifest](diagnostics/provenance/avgpool_hardware_provenance.json) identify the programmed hardware. Raw timing is 17,904 us preprocessing, 61,920 us CNN-system time and 79,894 us end-to-end, including a 70 us residual. CNN-system timing includes quantization/packing, cache flush, setup and accelerator execution. The residual is accounting overhead and integer-microsecond timing quantization, not another inference stage.
+
+A separate AvgPool preprocessing-hierarchy attribution is unavailable in the saved reports. Historical hierarchy values are not substituted for the reported implementation.
+
+## DBWFB2 hardware results
+
+| Whole-system quantity | Value |
+|---|---:|
+| LUTs | 10,622 |
+| FFs | 12,136 |
+| Block RAM tiles | 67 |
+| DSPs | 4 |
+| WNS at 100 MHz | +1.591 ns |
+| TNS | 0.000 ns |
+
+The DBWFB2 controller uses 354 LUTs, 400 FFs, no BRAM tiles and no DSPs. Relative to AvgPool, the whole system uses 295 more LUTs and 319 more FFs, with unchanged BRAM and DSP counts.
+
+Board500 gives **404/500 (80.80%)** accuracy, **473/500 (94.60%)** selected software-reference agreement and **500/500** hardware-equivalent agreement, with zero errors. Its 95% Wilson interval is 77.12-84.01%.
+
+The complete independent FPGA test gives **2497/3200 (78.03%)** accuracy with a **95% Wilson interval of 76.56-79.43%**, **3006/3200 (93.94%)** selected software-reference agreement and **3200/3200** hardware-equivalent agreement. The four 800-image UART captures cover every test index exactly once. Metrics and the confusion matrix are in [results/](results/).
+
+Representative timing is 17.09 ms preprocessing, 61.59 ms CNN-system time and 78.75 ms end-to-end, with approximately 0.07 ms residual and 12.70 images/s throughput. Complete ARM-observed preprocessing is distinct from 26,688 active PL filtering cycles, or 266.88 us at 100 MHz. The [DBWFB2 manifest](diagnostics/provenance/dbwfb2_hardware_provenance.json) identifies the implementation reports.
+
+## Power-estimation scope
+
+No simulation activity file was supplied for the reported Vivado post-route power analysis. Vivado reports Medium overall confidence. These are tool estimates, **not physical board-power measurements**. No exact default toggle rate is assumed here.
 
 | Power scope | DBWFB2 | AvgPool |
 |---|---:|---:|
-| Preprocessing-controller hierarchical dynamic estimate | 0.008 W | 0.001 W |
-| Complete-design dynamic estimate | 1.741 W | 1.737 W |
+| Preprocessing-hierarchy dynamic estimate | 8.00 mW | N/A |
+| Complete-design dynamic estimate | 1.741 W | 1.736 W |
 | Device-static estimate | 0.154 W | 0.154 W |
-| Complete-design total on-chip estimate | 1.894 W | 1.891 W |
+| Total on-chip estimate | 1.894 W | 1.889 W |
 
-Power values are Vivado post-route tool estimates, not physical board measurements. The controller values are module-attributed hierarchy estimates and must not be compared directly with complete-system totals.
+Hierarchy dynamic and complete-system power have different scopes. Complete-system total estimates differ by 5.00 mW, approximately 0.26%. The DBWFB2 power/latency combination gives a post-route-power-based energy estimate of 149.15 mJ/image, not measured energy.
 
-## ARM-observed DBWFB2 latency
+## Reproducibility map
 
-The four-part mean end-to-end time is 78.748 ms. Mean component times are 7.239 ms row write, 0.485 ms row PL wall time, 3.699 ms row read, 3.580 ms column reorder/write, 0.242 ms column PL wall time, 1.849 ms column read, 0.243 ms quantization/packing, 0.012 ms cache flush, and 61.332 ms CNN start-to-done. Exact per-part records are in [`results/dbwfb2_latency.csv`](results/dbwfb2_latency.csv).
+| Path | Contents |
+|---|---|
+| [notebooks/](notebooks/) | Executed software experiment, calibration and package export |
+| [software/int8_packages/](software/int8_packages/) | Selected seed/gain/shift records |
+| [hardware/deployment/](hardware/deployment/) | Weights, shifts and raw board vectors |
+| [hardware/hls/](hardware/hls/) | CNN source/testbench, per-arm headers, reports and AvgPool packaged IP |
+| [hardware/rtl/](hardware/rtl/) | DBWFB2 and AvgPool RTL |
+| [firmware/](firmware/) | Full-test and Board500 applications |
+| [hardware/vivado/](hardware/vivado/) | Block designs, XDCs, placed/routed reports and XSAs |
+| [results/logs/](results/logs/) | HLS C-simulation and UART captures |
+| [results/](results/) | Software/paired-statistic tables, full-test results, hardware resource/timing/power CSVs |
+| [diagnostics/first_divergence/](diagnostics/first_divergence/) | Preprocessing trace, stream models and prediction comparisons |
+| [diagnostics/cnn_numerical_consistency/](diagnostics/cnn_numerical_consistency/) | CNN checkpoints, GAP and boundary-only results |
+| [diagnostics/lena_reproduction/](diagnostics/lena_reproduction/) | Lena input, subbands, arithmetic and energy reproduction |
+| [diagnostics/provenance/](diagnostics/provenance/) | Artifact identities, hashes and development records |
 
-These ARM-observed wall times are distinct from RTL initiation interval and HLS synthesis-cycle estimates.
+## How to reproduce
 
-## Repository structure
+These are separate workflows. No single script recreates every result.
 
-```text
-notebooks/                 executed training, quantization, and packaging workflow
-software/int8_packages/    selected configuration manifests
-firmware/                  DBWFB2 full-test/Board500 and AvgPool Board500 sources
-hardware/rtl/              active preprocessing RTL
-hardware/hls/              CNN source, testbench, weights, vectors, and reports
-hardware/deployment/       raw board inputs, weights, shifts, and manifests
-hardware/vivado/           block designs, XDCs, XSAs, reports, and images
-results/                   frozen software tables, derived metrics, and final logs
-```
+### A. Software experiment
 
-## Reproduction entry points
+Open [the executed notebook](notebooks/DBWFB2_STL10_REPRODUCIBILITY.ipynb) with a compatible Python environment using [requirements.txt](requirements.txt). Its training run used TensorFlow 2.20.0 on an NVIDIA T4 GPU in Google Colab. Saved outputs can be inspected without executing cells. Running the experiment loads STL-10, creates fixed splits and trains four arms over five seeds.
 
-1. Run the executed notebook from a compatible Python environment described by [`requirements.txt`](requirements.txt) to reproduce training, quantization, and deployment-package generation.
-2. Use [`hardware/hls/src/`](hardware/hls/src/) with the matching per-arm configuration and weights to reproduce CNN HLS synthesis and C-simulation.
-3. Package the RTL and HLS IP, then import the matching `PL.bd` and XDC under [`hardware/vivado/`](hardware/vivado/). Generated Vivado/Vitis caches and intermediate products are intentionally excluded; no unavailable one-command recreation Tcl is claimed.
-4. Build the appropriate source under [`firmware/`](firmware/) with its archived deployment header. The full DBWFB2 test selects one of four 800-image parts at build time.
-5. Compare the archived HLS/UART records under [`results/logs/`](results/logs/) with the machine-readable summaries documented in [`results/README.md`](results/README.md).
+### B. Selected INT8 packages
+
+The notebook's validation, calibration and export cells select deployments and generate `int8_packages` and `hardware_packages`. Compare with [software/int8_packages/](software/int8_packages/) and [hardware/deployment/](hardware/deployment/). Do not interchange DBWFB2 9/8 and AvgPool 9/7 packages.
+
+### C. HLS verification
+
+Use Vivado/Vitis HLS 2025.2. Add [cnn_accel.cpp](hardware/hls/src/cnn_accel.cpp) with the matching per-arm header and weights, and set `cnn_accel` as the top function. The [DBWFB2 testbench](hardware/hls/src/cnn_accel_tb.cpp) uses packed inputs and expected predictions from [hardware/hls/dbwfb2/](hardware/hls/dbwfb2/). It tests the CNN only, not preprocessing. The saved C-simulation gives 2488/3200 correct and 3200/3200 software agreement. HLS synthesis latency is not system latency.
+
+### D. Vivado implementation and report verification
+
+Use Vivado 2025.2 for `xc7z020clg484-1` at 100 MHz. Package the RTL, make the matching CNN IP available, import the block design and XDC from [hardware/vivado/](hardware/vivado/), generate output products and implement. [AvgPool packaged IP](hardware/hls/avgpool/packaged_ip/) is included. Generated project caches and a one-command recreation script are not supplied. Saved text reports and manifest hashes allow verification without rebuilding.
+
+### E. ZedBoard execution
+
+Use a ZedBoard and Vitis 2025.2 with the matching platform. Build the appropriate [firmware](firmware/) with its raw input header from [hardware/deployment/](hardware/deployment/). DBWFB2 full-test firmware selects one of four 800-image parts at build time. Program the intended bitstream before executing the application and capture the full UART session. Diagnostic printing is not latency evidence.
+
+### F. Hardware-equivalent DBWFB2 replay
+
+The stream model is [fpga_intent_preprocess.py](diagnostics/first_divergence/fpga_intent_preprocess.py). [run_full3200_variants.py](diagnostics/first_divergence/run_full3200_variants.py) compares the software convention, alignment-only control and retained-state model using the raw headers and CNN source. It requires NumPy and a compatible C++ compiler. Saved per-image outputs are under `diagnostics/first_divergence/generated/`. [CNN consistency scripts](diagnostics/cnn_numerical_consistency/) provide operation-level and boundary-only analyses.
+
+### G. Result tables and Lena energy
+
+The notebook produces the software CSVs, and diagnostic scripts build operation/class-metric tables. Hardware comparison CSVs reference implementation reports and are not generated by one universal script. The [Lena README](diagnostics/lena_reproduction/README.md) documents its separate Icarus Verilog workflow. Saved subband samples also permit direct recomputation of normalized sum-of-squares energies.
+
+## Artifact identity
+
+The [AvgPool manifest](diagnostics/provenance/avgpool_hardware_provenance.json) lists HLS source, generated ROM/IP, reports, programming and Board500 identities.
+
+| Original build artifact | SHA256 |
+|---|---|
+| AvgPool bitstream | `1681c4ff3d6763cf23e3d20c2a68659c36e8b0964185630846d43f728e9c3aa4` |
+| AvgPool XSA | `be42e42bdb214ba6dbb764d19ab3bef90dd65393f7bdd1ffb11a52dd30a81ef9` |
+| Selected AvgPool weights export | `3d47b7382ad15c7d9f5c68c3198076900cd96a2d0be62bc711c1e3d550dc738a` |
+
+The original export hash identifies the header used by the build. The public HLS header has the same six tensors with a neutral protocol comment. Its separate hash and unchanged tensor fingerprint are recorded in the manifest. Neither the packaged IP nor XSA has been modified.
+
+[Earlier AvgPool development artifacts](diagnostics/provenance/avgpool_historical_20260830/) are retained for traceability, not used as current results. [implementation_manifest.json](diagnostics/provenance/implementation_manifest.json) lists public artifact paths and hashes.
 
 ## License
 

@@ -1,0 +1,198 @@
+{
+  "generated_utc": "2026-08-31T10:31:53.849280+00:00",
+  "scope": "DBWFB2 intermediate-tensor and numerical-operation diagnostics",
+  "frozen_configuration": {
+    "seed": 42,
+    "input_gain": 1,
+    "C1_SHIFT": 9,
+    "C2_SHIFT": 8,
+    "dbwfb2_integer_coefficients": [
+      27,
+      -17,
+      -78,
+      273,
+      614,
+      273,
+      -78,
+      -17,
+      27
+    ]
+  },
+  "artifacts": [
+    {
+      "repository_path": "software/int8_packages/dbwfb2/selected_package.json",
+      "size_bytes": 478,
+      "sha256": "893a5eeeabacdfbfa55aee54fa998f522635960b0e0965b14063139bc2ca907b",
+      "purpose": "frozen selected package metadata"
+    },
+    {
+      "repository_path": "hardware/deployment/dbwfb2/hardware_manifest.json",
+      "size_bytes": 478,
+      "sha256": "893a5eeeabacdfbfa55aee54fa998f522635960b0e0965b14063139bc2ca907b",
+      "purpose": "frozen deployment metadata"
+    },
+    {
+      "repository_path": "hardware/hls/dbwfb2/test_vectors_3200_cnn_only.h",
+      "size_bytes": 41507966,
+      "sha256": "2e20782ce364b348e5c7669c6ce2d937d62b454142e59918c47c7e7ca3da3b8c",
+      "purpose": "frozen packed Python-primary CNN inputs"
+    },
+    {
+      "repository_path": "hardware/hls/dbwfb2/expected_int8_3200.h",
+      "size_bytes": 10337,
+      "sha256": "ff97cbaf612f541ea0cf9bfc6b4e68703a462c7c599d0527af1b71793c2551a6",
+      "purpose": "frozen Python-primary predictions used by HLS C-simulation"
+    },
+    {
+      "repository_path": "hardware/hls/dbwfb2/weights.h",
+      "size_bytes": 22692,
+      "sha256": "9d555e43f8c2cefe5fdc33bfe8cc02a870e07608798f5b13c3ac3361175d6a60",
+      "purpose": "frozen deployed weights and biases"
+    },
+    {
+      "repository_path": "hardware/hls/src/cnn_accel.cpp",
+      "size_bytes": 11120,
+      "sha256": "2bdf51f487eb89efcca2d444c337912a46d39dc040a24cfc51f62c9c92d897ce",
+      "purpose": "released CNN arithmetic implementation"
+    },
+    {
+      "repository_path": "hardware/hls/src/cnn_accel.h",
+      "size_bytes": 884,
+      "sha256": "a3cc7511e9b07505f003f9aea6bbf881d4b386679211c28729431df5422027c7",
+      "purpose": "released CNN dimensions and shifts"
+    },
+    {
+      "repository_path": "results/logs/dbwfb2/hls/dbwfb2_hls_csim_3200.txt",
+      "size_bytes": 276217,
+      "sha256": "badaa775c6d526c681d8ed8ce67d5978366d2e43301d9cbcf74d97f47f621364",
+      "purpose": "authoritative 3,200-image HLS C-simulation log"
+    },
+    {
+      "repository_path": "hardware/deployment/dbwfb2/test_vectors_raw_500_dbwfb2.h",
+      "size_bytes": 39453122,
+      "sha256": "2fbc6bb8334f3be99b28790bde95b05ca2bf6d315c76e5cedb34ac2d7f68d3c8",
+      "purpose": "authoritative Board500 raw vectors and Python predictions"
+    },
+    {
+      "repository_path": "results/board500_indices.csv",
+      "size_bytes": 7193,
+      "sha256": "df41c50b4392e52b09e1b1cde25160104588134e451925dafb80c7358bf4356c",
+      "purpose": "Board500 order to four-class-test global-index map"
+    },
+    {
+      "repository_path": "results/logs/dbwfb2/uart/dbwfb2_board500.txt",
+      "size_bytes": 66243,
+      "sha256": "624d465385f90e1aa2f8f78e856228b3659a8b9c2ce83dc42b0e3e561e34a0fa",
+      "purpose": "authoritative Board500 FPGA predictions"
+    },
+    {
+      "repository_path": "diagnostics/first_divergence/captures/first_diagnosis_uart_complete.log",
+      "size_bytes": 1199121,
+      "sha256": "05b2d6a770433c3f770935d8eb3010afc1522b517fd0908e3155715df6a00ce4",
+      "purpose": "complete ten-image RAW/ROW/LL/CNN-input physical trace"
+    },
+    {
+      "repository_path": "diagnostics/first_divergence/generated/first_diagnosis_complete_comparison/observed_controller_alignment.json",
+      "size_bytes": 7360,
+      "sha256": "1f6904cb3cf1fa7d35f888b63dfcd95a55463e4cbbccbf876bbd657e2b15cae4",
+      "purpose": "verified ten-image stream-alignment analysis"
+    },
+    {
+      "repository_path": "diagnostics/first_divergence/generated/first_diagnosis_complete_comparison/observed_controller_expected.npz",
+      "size_bytes": 153218,
+      "sha256": "88c6f4aefb61d9a9d6878ee8f984d1466511a8ece3b027ae3c09fd0370b6c474",
+      "purpose": "verified hardware-equivalent expected tensors for ten images"
+    },
+    {
+      "repository_path": "diagnostics/first_divergence/generated/full3200_variant_analysis/full3200_variant_analysis.json",
+      "size_bytes": 9190,
+      "sha256": "a73fae39ae8fb99a35e837c613e5a02df7c34a854f603830984d7d2744ed24b2",
+      "purpose": "full-3,200 three-variant analysis"
+    },
+    {
+      "repository_path": "diagnostics/first_divergence/generated/full3200_variant_analysis/full3200_variant_predictions.csv",
+      "size_bytes": 56627,
+      "sha256": "3e5c286535742f5001e5735f7ec40de01fba4e2f2623399c37fe1829559b8cf2",
+      "purpose": "full-3,200 primary/hardware-equivalent/FPGA predictions"
+    },
+    {
+      "repository_path": "diagnostics/cnn_numerical_consistency/cnn_intermediate_trace.cpp",
+      "size_bytes": 15215,
+      "sha256": "57d9ca9b9efbef75b1ca4f99a6646e751947ddf03b7b6222416aad5041ae7c4b",
+      "purpose": "diagnostic-only operation-for-operation HLS CNN trace"
+    },
+    {
+      "repository_path": "diagnostics/cnn_numerical_consistency/cnn_trace_python.py",
+      "size_bytes": 4781,
+      "sha256": "52f027f78efc58e81672dbffc78b453ce40d050aad1db5a29e4703a4fb2ee108",
+      "purpose": "independent Python true-INT8 CNN trace"
+    },
+    {
+      "repository_path": "diagnostics/cnn_numerical_consistency/build_cnn_trace_comparison.py",
+      "size_bytes": 10380,
+      "sha256": "f3ee50e534875ff44516d31fac9555a489673f82df3a2ad318bd6603f89c311f",
+      "purpose": "ten-image Python/HLS checkpoint comparator"
+    },
+    {
+      "repository_path": "diagnostics/cnn_numerical_consistency/build_operation_metrics.py",
+      "size_bytes": 18297,
+      "sha256": "228c3fe16f61f1d75be55344f50e9dc14f341a9f35da38496bec941645f548bf",
+      "purpose": "full-test operation and class-metric builder"
+    },
+    {
+      "repository_path": "diagnostics/cnn_numerical_consistency/verify_board500_raw_identity.py",
+      "size_bytes": 3036,
+      "sha256": "9bd9c0c96a85a05cbe501feb5143956461469a4d7ce13248cdf5f1eec1c146f3",
+      "purpose": "Board500/full-test raw-vector identity check"
+    },
+    {
+      "repository_path": "hardware/deployment/dbwfb2/raw3200_parts/test_vectors_raw_3200_part0_dbwfb2.h",
+      "size_bytes": 63266809,
+      "sha256": "9f2db4fb34685411f92c15c5a2dd6e49d330927bf5b2bd97c41060dc4767ed4a",
+      "purpose": "authoritative raw vectors and Python predictions, global part 0"
+    },
+    {
+      "repository_path": "results/logs/dbwfb2/uart/dbwfb2_full3200_part0_0000_0799.txt",
+      "size_bytes": 103907,
+      "sha256": "8173e0128c67fd4c65324c805371afcdba180b157e2a8a64128a2b62f2e1cb62",
+      "purpose": "authoritative FPGA UART predictions, global indices 0-799"
+    },
+    {
+      "repository_path": "hardware/deployment/dbwfb2/raw3200_parts/test_vectors_raw_3200_part1_dbwfb2.h",
+      "size_bytes": 63214395,
+      "sha256": "a49a1eff0dba3eb24c91b7cdef1baeee45d3c8f9d129c2684f8ad3ef3b193c29",
+      "purpose": "authoritative raw vectors and Python predictions, global part 1"
+    },
+    {
+      "repository_path": "results/logs/dbwfb2/uart/dbwfb2_full3200_part1_0800_1599.txt",
+      "size_bytes": 104686,
+      "sha256": "986738df0e4388f3aa97bc7126206656d6269675a515dda6ab10dba0ebf3b798",
+      "purpose": "authoritative FPGA UART predictions, global indices 800-1599"
+    },
+    {
+      "repository_path": "hardware/deployment/dbwfb2/raw3200_parts/test_vectors_raw_3200_part2_dbwfb2.h",
+      "size_bytes": 63229909,
+      "sha256": "de3434487f71a57254fa9b397667e25c068aadeabfe76c2789e858e334f7bb44",
+      "purpose": "authoritative raw vectors and Python predictions, global part 2"
+    },
+    {
+      "repository_path": "results/logs/dbwfb2/uart/dbwfb2_full3200_part2_1600_2399.txt",
+      "size_bytes": 104892,
+      "sha256": "7c9bfef2dd02a3b65d290a7381c9452877957bbba0f8cc0c5423516c38de1602",
+      "purpose": "authoritative FPGA UART predictions, global indices 1600-2399"
+    },
+    {
+      "repository_path": "hardware/deployment/dbwfb2/raw3200_parts/test_vectors_raw_3200_part3_dbwfb2.h",
+      "size_bytes": 63161910,
+      "sha256": "fa75d3db4481a081d672b8e84cfc62183318d06ae7f15d095ba88ddb135d7d3d",
+      "purpose": "authoritative raw vectors and Python predictions, global part 3"
+    },
+    {
+      "repository_path": "results/logs/dbwfb2/uart/dbwfb2_full3200_part3_2400_3199.txt",
+      "size_bytes": 104885,
+      "sha256": "37dd8481cc1366b13bce79ae0dc17e4e52c29c4e030a57f6670145789b954100",
+      "purpose": "authoritative FPGA UART predictions, global indices 2400-3199"
+    }
+  ],
+  "path_metadata_updated_utc": "2026-10-04T04:48:36.557018+00:00"
+}
