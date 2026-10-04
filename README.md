@@ -88,7 +88,7 @@ Board500 completed 500/500 scheduled images with **416/500 (83.20%)** correct, *
 
 The [UART capture](results/logs/avgpool/uart/avgpool_board500_20261003.txt), [metrics](results/avgpool_board500_metrics.json) and [provenance manifest](diagnostics/provenance/avgpool_hardware_provenance.json) identify the programmed hardware. Raw timing is 17,904 us preprocessing, 61,920 us CNN-system time and 79,894 us end-to-end, including a 70 us residual. CNN-system timing includes quantization/packing, cache flush, setup and accelerator execution. The residual is accounting overhead and integer-microsecond timing quantization, not another inference stage.
 
-A separate AvgPool preprocessing-hierarchy attribution is unavailable in the saved reports. Historical hierarchy values are not substituted for the reported implementation.
+The AvgPool resource hierarchy is recorded in the [utilization summary](hardware/vivado/avgpool/documentation/utilization_hierarchy_20261003.png) and [resource comparison CSV](results/hardware_resource_comparison.csv). A separate AvgPool preprocessing-hierarchy dynamic-power attribution remains unavailable.
 
 ## DBWFB2 hardware results
 

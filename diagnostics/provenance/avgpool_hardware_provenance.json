@@ -185,7 +185,30 @@
       "BRAM_tiles": 67,
       "DSP": 4
     },
-    "preprocessing_controller_fresh_hierarchy_values": null,
+    "resource_hierarchy": {
+      "preprocessing_controller": {
+        "lut": 68,
+        "ff": 82,
+        "bram_tiles": 0,
+        "dsp": 0
+      },
+      "cnn_hierarchy": {
+        "lut": 3622,
+        "ff": 4114,
+        "bram_tiles": 35,
+        "dsp": 4
+      },
+      "residual_platform_interconnect": {
+        "lut": 6637,
+        "ff": 7621,
+        "bram_tiles": 32,
+        "dsp": 0,
+        "calculation": "whole_system - preprocessing_controller - cnn_hierarchy"
+      },
+      "evidence": "hardware/vivado/avgpool/documentation/utilization_hierarchy_20261003.png",
+      "implementation_date": "2026-10-03",
+      "capture_date": "2026-10-04"
+    },
     "timing": {
       "target_clock_MHz": 100,
       "WNS_ns": 0.776,
@@ -262,7 +285,7 @@
     }
   },
   "limitations": [
-    "Separate preprocessing-controller utilization and dynamic-power reports are unavailable for the October-3 implementation.",
+    "Separate preprocessing-hierarchy dynamic-power attribution is unavailable for the October-3 implementation.",
     "The August-22 development XSA is retained for traceability and is not the reported Board500 platform."
   ],
   "repository_artifacts": {
@@ -297,6 +320,10 @@
     "utilization": {
       "path": "hardware/vivado/avgpool/reports/PL_wrapper_utilization_placed.rpt",
       "bytes": 12022
+    },
+    "utilization_hierarchy": {
+      "path": "hardware/vivado/avgpool/documentation/utilization_hierarchy_20261003.png",
+      "bytes": 48272
     },
     "timing": {
       "path": "hardware/vivado/avgpool/reports/PL_wrapper_timing_summary_routed.rpt",

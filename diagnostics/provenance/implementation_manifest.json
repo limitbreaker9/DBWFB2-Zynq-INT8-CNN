@@ -409,7 +409,7 @@
     },
     {
       "path": "diagnostics/provenance/avgpool_hardware_provenance.json",
-      "bytes": 12218
+      "bytes": 12956
     },
     {
       "path": "diagnostics/provenance/avgpool_historical_20260830/firmware/avgpool/main_500.c",
@@ -513,7 +513,7 @@
     },
     {
       "path": "diagnostics/provenance/README.md",
-      "bytes": 1181
+      "bytes": 1346
     },
     {
       "path": "diagnostics/README.md",
@@ -865,7 +865,7 @@
     },
     {
       "path": "hardware/vivado/avgpool/README.md",
-      "bytes": 1216
+      "bytes": 1694
     },
     {
       "path": "hardware/vivado/avgpool/reports/PL_wrapper_power_routed.rpt",
@@ -953,7 +953,7 @@
     },
     {
       "path": "README.md",
-      "bytes": 13888
+      "bytes": 14024
     },
     {
       "path": "requirements.txt",
@@ -1017,7 +1017,7 @@
     },
     {
       "path": "results/hardware_resource_comparison.csv",
-      "bytes": 1683
+      "bytes": 2387
     },
     {
       "path": "results/hardware_timing_comparison.csv",
@@ -1090,6 +1090,10 @@
     {
       "path": "software/int8_packages/README.md",
       "bytes": 669
+    },
+    {
+      "path": "hardware/vivado/avgpool/documentation/utilization_hierarchy_20261003.png",
+      "bytes": 48272
     }
   ]
 }

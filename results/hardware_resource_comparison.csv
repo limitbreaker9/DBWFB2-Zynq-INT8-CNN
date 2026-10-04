@@ -1,12 +1,16 @@
 scope,metric,dbwfb2,avgpool,dbwfb2_minus_avgpool,source
-preprocessing_controller,LUT,354,N/A,N/A,hardware/vivado/dbwfb2/documentation/utilization_hierarchy.png; separate AvgPool hierarchy report unavailable
-preprocessing_controller,FF,400,N/A,N/A,hardware/vivado/dbwfb2/documentation/utilization_hierarchy.png; separate AvgPool hierarchy report unavailable
-preprocessing_controller,BRAM_tiles,0,N/A,N/A,hardware/vivado/dbwfb2/documentation/utilization_hierarchy.png; separate AvgPool hierarchy report unavailable
-preprocessing_controller,DSP,0,N/A,N/A,hardware/vivado/dbwfb2/documentation/utilization_hierarchy.png; separate AvgPool hierarchy report unavailable
-cnn_accelerator_hierarchy,LUT,3620,N/A,N/A,hardware/vivado/dbwfb2/documentation/utilization_hierarchy.png; separate AvgPool hierarchy report unavailable
-cnn_accelerator_hierarchy,FF,4113,N/A,N/A,hardware/vivado/dbwfb2/documentation/utilization_hierarchy.png; separate AvgPool hierarchy report unavailable
-cnn_accelerator_hierarchy,BRAM_tiles,35,N/A,N/A,hardware/vivado/dbwfb2/documentation/utilization_hierarchy.png; separate AvgPool hierarchy report unavailable
-cnn_accelerator_hierarchy,DSP,4,N/A,N/A,hardware/vivado/dbwfb2/documentation/utilization_hierarchy.png; separate AvgPool hierarchy report unavailable
+preprocessing_controller,LUT,354,68,286,hardware/vivado/dbwfb2/documentation/utilization_hierarchy.png; hardware/vivado/avgpool/documentation/utilization_hierarchy_20261003.png
+preprocessing_controller,FF,400,82,318,hardware/vivado/dbwfb2/documentation/utilization_hierarchy.png; hardware/vivado/avgpool/documentation/utilization_hierarchy_20261003.png
+preprocessing_controller,BRAM_tiles,0,0,0,hardware/vivado/dbwfb2/documentation/utilization_hierarchy.png; hardware/vivado/avgpool/documentation/utilization_hierarchy_20261003.png
+preprocessing_controller,DSP,0,0,0,hardware/vivado/dbwfb2/documentation/utilization_hierarchy.png; hardware/vivado/avgpool/documentation/utilization_hierarchy_20261003.png
+cnn_accelerator_hierarchy,LUT,3620,3622,-2,hardware/vivado/dbwfb2/documentation/utilization_hierarchy.png; hardware/vivado/avgpool/documentation/utilization_hierarchy_20261003.png
+cnn_accelerator_hierarchy,FF,4113,4114,-1,hardware/vivado/dbwfb2/documentation/utilization_hierarchy.png; hardware/vivado/avgpool/documentation/utilization_hierarchy_20261003.png
+cnn_accelerator_hierarchy,BRAM_tiles,35,35,0,hardware/vivado/dbwfb2/documentation/utilization_hierarchy.png; hardware/vivado/avgpool/documentation/utilization_hierarchy_20261003.png
+cnn_accelerator_hierarchy,DSP,4,4,0,hardware/vivado/dbwfb2/documentation/utilization_hierarchy.png; hardware/vivado/avgpool/documentation/utilization_hierarchy_20261003.png
+residual_platform_interconnect,LUT,6648,6637,11,whole_implemented_system - preprocessing_controller - cnn_accelerator_hierarchy
+residual_platform_interconnect,FF,7623,7621,2,whole_implemented_system - preprocessing_controller - cnn_accelerator_hierarchy
+residual_platform_interconnect,BRAM_tiles,32,32,0,whole_implemented_system - preprocessing_controller - cnn_accelerator_hierarchy
+residual_platform_interconnect,DSP,0,0,0,whole_implemented_system - preprocessing_controller - cnn_accelerator_hierarchy
 whole_implemented_system,LUT,10622,10327,295,hardware/vivado/*/reports/PL_wrapper_utilization_placed.rpt
 whole_implemented_system,FF,12136,11817,319,hardware/vivado/*/reports/PL_wrapper_utilization_placed.rpt
 whole_implemented_system,BRAM_tiles,67,67,0,hardware/vivado/*/reports/PL_wrapper_utilization_placed.rpt
