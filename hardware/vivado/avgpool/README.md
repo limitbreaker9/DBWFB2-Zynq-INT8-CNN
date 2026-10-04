@@ -6,7 +6,7 @@ The current Vivado 2025.2 reports target `xc7z020clg484-1` at 100 MHz and record
 - WNS +0.776 ns and TNS 0.000 ns after routing;
 - 1.736 W dynamic, 0.154 W device-static, and 1.889 W total on-chip power estimates.
 
-The reported build uses selected AvgPool seed-42 tensors and shifts 9/7. The XSA SHA256 is `be42e42bdb214ba6dbb764d19ab3bef90dd65393f7bdd1ffb11a52dd30a81ef9`; its embedded bitstream matches `1681c4ff3d6763cf23e3d20c2a68659c36e8b0964185630846d43f728e9c3aa4`. That bitstream was programmed before the reported Board500 capture.
+The reported build uses selected AvgPool seed-42 tensors and shifts 9/7. The XSA contains the bitstream programmed before the reported Board500 capture.
 
 Separate controller-level utilization and dynamic-power reports are unavailable for this build. The images in `documentation/` show the August-30 development implementation, not the October-3 implementation. Earlier development artifacts are preserved under `diagnostics/provenance/avgpool_historical_20260830/`. Use the text reports and [manifest](../../../diagnostics/provenance/avgpool_hardware_provenance.json) for the reported numerical results.
 

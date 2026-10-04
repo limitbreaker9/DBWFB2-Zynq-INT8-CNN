@@ -1,6 +1,6 @@
 # HISTORICAL: superseded AvgPool hardware evidence
 
-All files below this directory describe earlier development artifacts, not the reported October-3 AvgPool build. Nested documents apply only to those development artifacts. Numeric data and generated artifacts are preserved. A protocol-label comment in `source_project/wrong_dbwfb2_weights.h` has been made neutral without changing any tensor. The manifest records both the original build-time hash and the published header hash.
+All files below this directory describe earlier development artifacts, not the reported October-3 AvgPool build. Nested documents apply only to those development artifacts. Numeric data and generated artifacts are preserved.
 
 The August-30 hardware assembly combined AvgPool preprocessing with the selected DBWFB2 CNN weights and shifts 9/8. An older August-22 platform export and later intermediate package generations are also retained for provenance. The software experiment itself had already selected AvgPool seed 42, gain 1, and shifts 9/7; it was not changed by the hardware correction. Some repository source headers already matched the software package even though the assembled/generated hardware did not.
 

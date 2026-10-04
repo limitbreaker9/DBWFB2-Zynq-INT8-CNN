@@ -1,6 +1,6 @@
 # Hardware implementation provenance
 
-`avgpool_hardware_provenance.json` identifies the reported AvgPool seed-42, gain-1, shifts-9/7 source, generated tensors/IP, Vivado implementation, XSA, programmed bitstream and Board500 UART capture. The original build-file hashes and public-file hashes are recorded separately where comments or documentation differ. Tensor values and generated IP remain unchanged.
+`avgpool_hardware_provenance.json` identifies the reported AvgPool seed-42, gain-1, shifts-9/7 source, generated tensors/IP, Vivado implementation, XSA, programmed bitstream and Board500 UART capture.
 
 `dbwfb2_hardware_provenance.json` identifies the DBWFB2 reports that support 10,622 LUT, 12,136 FF and +1.591 ns WNS. Other numerical totals are not values from this report set.
 
@@ -8,4 +8,4 @@
 
 Whole-system AvgPool values are 10,327 LUT, 11,817 FF, 67 BRAM tiles, 4 DSP, WNS +0.776 ns, TNS 0.000 ns and a 1.889 W Vivado total on-chip estimate. A separate preprocessing-controller utilization or dynamic-power attribution is unavailable for this build.
 
-`implementation_manifest.json` lists public artifact paths and SHA256 hashes. The IP core revision is a hardware-package version identifier.
+`implementation_manifest.json` lists repository file paths and sizes. The IP core revision is a hardware-package version identifier.

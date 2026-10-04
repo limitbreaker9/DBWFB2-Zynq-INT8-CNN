@@ -14,17 +14,14 @@
   "reports": [
     {
       "path": "hardware\\vivado\\dbwfb2\\reports\\PL_wrapper_power_routed.rpt",
-      "sha256": "50b82b343b900ac5c1a4452ae8e1775fcbf9294dad55cf03413a86fb2a9b9826",
       "modified_local": "2026-08-30T10:07:52.290474"
     },
     {
       "path": "hardware\\vivado\\dbwfb2\\reports\\PL_wrapper_timing_summary_routed.rpt",
-      "sha256": "92f326abf0d00a482e7eb05cf701048980ccc02e4373dfe841a38a2cbd6c7c8c",
       "modified_local": "2026-08-30T10:07:44.233215"
     },
     {
       "path": "hardware\\vivado\\dbwfb2\\reports\\PL_wrapper_utilization_placed.rpt",
-      "sha256": "98906996a28cc344a51d900e4e82ac598c552486936606c9c6c62f191cb099ce",
       "modified_local": "2026-08-30T10:06:08.657951"
     }
   ],

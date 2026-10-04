@@ -41,8 +41,6 @@ The deterministic diagnostic order is:
 | 1603 | 2 | 2 | 2 | match control |
 | 2400 | 3 | 2 | 2 | match control |
 
-The complete UART trace has SHA-256
-`05b2d6a770433c3f770935d8eb3010afc1522b517fd0908e3155715df6a00ce4`.
 RAW readback is exact for all 163,840 values. Relative to the frozen
 Python-primary forward complete-window convention, the first difference is
 ROW/Matrix_L for all ten images.

@@ -20,7 +20,7 @@ calibration, gain, CNN shifts, RTL, publication files, or the released firmware.
 - Python/FPGA final-prediction mismatches: 194
 - FPGA hardware errors: 0
 
-`current_chain_source_of_truth.json` records the source paths, hashes, and
+`current_chain_source_of_truth.json` records the source paths and
 independent per-image recomputation. The 2488 count is accuracy against true
 labels; it is not the Python/HLS agreement count.
 
@@ -80,7 +80,7 @@ prevents the frozen Python prediction source from being silently reinterpreted.
 
 1. Regenerate the files and confirm every header identity row says `PASS`.
 2. Use the ready-to-copy pair in `firmware_package/`: `main_diagnostic.c` and
-   `first_divergence_vectors.h`. The latter is hash-identical to the generated
+   `first_divergence_vectors.h`. The latter is byte-identical to the generated
    header. `FIRST_DIVERGENCE_FIRMWARE_CHANGES.md` documents every difference
    from the released full-test firmware.
 3. Copy both files into the active Vitis application source directory. Compile
@@ -132,8 +132,7 @@ and begin/end marker.
 ## Completed trace
 
 The complete trace is preserved at
-`captures/first_diagnosis_uart_complete.log`. Its SHA-256 is
-`05b2d6a770433c3f770935d8eb3010afc1522b517fd0908e3155715df6a00ce4`.
+`captures/first_diagnosis_uart_complete.log`.
 The result and its conservative interpretation are recorded in
 `FIRST_DIVERGENCE_RESULT.md`. In summary, RAW is exact and ROW is the first
 difference from the frozen Python-primary convention. A phase/state model

@@ -139,40 +139,31 @@
   },
   "sources": [
     {
-      "path": "diagnostics/first_divergence/generated/full3200_variant_analysis/full3200_variant_predictions.csv",
-      "sha256": "3e5c286535742f5001e5735f7ec40de01fba4e2f2623399c37fe1829559b8cf2"
+      "path": "diagnostics/first_divergence/generated/full3200_variant_analysis/full3200_variant_predictions.csv"
     },
     {
-      "path": "diagnostics/first_divergence/generated/full3200_variant_analysis/full3200_variant_analysis.json",
-      "sha256": "a73fae39ae8fb99a35e837c613e5a02df7c34a854f603830984d7d2744ed24b2"
+      "path": "diagnostics/first_divergence/generated/full3200_variant_analysis/full3200_variant_analysis.json"
     },
     {
-      "path": "results/logs/dbwfb2/uart/dbwfb2_board500.txt",
-      "sha256": "624d465385f90e1aa2f8f78e856228b3659a8b9c2ce83dc42b0e3e561e34a0fa"
+      "path": "results/logs/dbwfb2/uart/dbwfb2_board500.txt"
     },
     {
-      "path": "results/board500_indices.csv",
-      "sha256": "df41c50b4392e52b09e1b1cde25160104588134e451925dafb80c7358bf4356c"
+      "path": "results/board500_indices.csv"
     },
     {
-      "path": "results/logs/dbwfb2/hls/dbwfb2_hls_csim_3200.txt",
-      "sha256": "badaa775c6d526c681d8ed8ce67d5978366d2e43301d9cbcf74d97f47f621364"
+      "path": "results/logs/dbwfb2/hls/dbwfb2_hls_csim_3200.txt"
     },
     {
-      "path": "hardware/hls/src/cnn_accel.cpp",
-      "sha256": "2bdf51f487eb89efcca2d444c337912a46d39dc040a24cfc51f62c9c92d897ce"
+      "path": "hardware/hls/src/cnn_accel.cpp"
     },
     {
-      "path": "hardware/hls/src/cnn_accel.h",
-      "sha256": "a3cc7511e9b07505f003f9aea6bbf881d4b386679211c28729431df5422027c7"
+      "path": "hardware/hls/src/cnn_accel.h"
     },
     {
-      "path": "hardware/hls/dbwfb2/weights.h",
-      "sha256": "9d555e43f8c2cefe5fdc33bfe8cc02a870e07608798f5b13c3ac3361175d6a60"
+      "path": "hardware/hls/dbwfb2/weights.h"
     },
     {
-      "path": "diagnostics/cnn_numerical_consistency/cnn_intermediate_trace.cpp",
-      "sha256": "57d9ca9b9efbef75b1ca4f99a6646e751947ddf03b7b6222416aad5041ae7c4b"
+      "path": "diagnostics/cnn_numerical_consistency/cnn_intermediate_trace.cpp"
     }
   ]
 }

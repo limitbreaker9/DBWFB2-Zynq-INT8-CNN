@@ -1,7 +1,6 @@
 {
   "generated_utc": "2026-08-30T17:07:35.408803+00:00",
   "uart_trace": "C:\\Users\\yaduv\\Desktop\\DBWFB2-Zynq-INT8-CNN\\diagnostics\\first_divergence\\captures\\first_diagnosis_uart_complete.log",
-  "uart_trace_sha256": "05b2d6a770433c3f770935d8eb3010afc1522b517fd0908e3155715df6a00ce4",
   "execution_order": [
     8,
     107,

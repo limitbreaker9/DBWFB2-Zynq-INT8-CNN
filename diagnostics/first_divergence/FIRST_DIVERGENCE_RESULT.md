@@ -3,8 +3,6 @@
 ## Evidence
 
 - UART capture: `captures/first_diagnosis_uart_complete.log`
-- Capture SHA-256:
-  `05b2d6a770433c3f770935d8eb3010afc1522b517fd0908e3155715df6a00ce4`
 - Capture size: 1,199,121 bytes
 - Images: 10 complete traces, with 10 occurrences of every required begin/end
   marker

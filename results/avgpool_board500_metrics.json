@@ -35,6 +35,5 @@
     "end_to_end_us": 79894,
     "throughput_fps": 12.516584474428617
   },
-  "source_uart": "results/logs/avgpool/uart/avgpool_board500_20261003.txt",
-  "source_uart_sha256": "99e29ba7a1147915d357473f5719fa1657df22bff907ddefebc5f5f05f1a4dde"
+  "source_uart": "results/logs/avgpool/uart/avgpool_board500_20261003.txt"
 }

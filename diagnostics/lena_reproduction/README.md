@@ -3,8 +3,7 @@
 This offline replay follows the 256x256 Lena firmware transaction order.
 It does not run any CNN, training, calibration, or physical FPGA experiment.
 The original firmware, input header, six RTL modules, and two BRAM configuration
-files are included in `source/`, `rtl/`, and `configuration/`. Their bytes match
-the source hashes recorded with the captured results.
+files are included in `source/`, `rtl/`, and `configuration/`.
 
 The original six RTL modules are simulated using Icarus Verilog. The BRAM
 read latency is one clock, as explicitly configured in both historical XCIs.
@@ -45,7 +44,7 @@ Total energy: 283714305. The two idle-gap simulations produce identical
 subband samples and energies. Reproduction is near-exact, not identical at
 every sixth decimal. All four results match the original firmware's five-
 decimal display precision and the manuscript's two-decimal display precision.
-The saved JSON records source hashes, input-pixel hash, BRAM settings, commands,
+The saved JSON records BRAM settings, commands,
 energies, target differences, and simulator output. `subbands.txt` contains
 16384 rows in LL/LH/HL/HH order. `lena_pixels.hex` is derived from the original
 header, which is included in `source/`. The saved records identify the original
