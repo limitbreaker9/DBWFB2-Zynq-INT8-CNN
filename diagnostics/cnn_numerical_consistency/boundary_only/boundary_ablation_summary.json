@@ -1,0 +1,68 @@
+{
+  "replicate": {
+    "variant": "replicate",
+    "correct": 2497,
+    "total": 3200,
+    "accuracy_percent": 78.03125,
+    "macro_f1_percent": 77.92173848773416,
+    "low_clipped": 21694,
+    "high_clipped": 19077,
+    "low_endpoint": 46674,
+    "high_endpoint": 36681,
+    "actual_clipping_count": 40771,
+    "actual_clipping_fraction": 0.0031105804443359373,
+    "actual_clipping_percent": 0.31105804443359375,
+    "endpoint_count": 83355,
+    "endpoint_fraction": 0.006359481811523437,
+    "endpoint_percent": 0.6359481811523438
+  },
+  "zero": {
+    "variant": "zero",
+    "correct": 2497,
+    "total": 3200,
+    "accuracy_percent": 78.03125,
+    "macro_f1_percent": 77.9471159341778,
+    "low_clipped": 21818,
+    "high_clipped": 25339,
+    "low_endpoint": 46819,
+    "high_endpoint": 42167,
+    "actual_clipping_count": 47157,
+    "actual_clipping_fraction": 0.0035977935791015624,
+    "actual_clipping_percent": 0.35977935791015625,
+    "endpoint_count": 88986,
+    "endpoint_fraction": 0.006789093017578125,
+    "endpoint_percent": 0.6789093017578125
+  },
+  "replicate_vs_zero": {
+    "prediction_matches": 3145,
+    "total": 3200,
+    "agreement_percent": 98.28125,
+    "changed_predictions": 55
+  },
+  "replicate_vs_physical_fpga": {
+    "prediction_matches": 3200,
+    "total": 3200,
+    "agreement_percent": 100.0,
+    "mismatches": 0,
+    "fpga_correct": 2497,
+    "fpga_accuracy_percent": 78.03125
+  },
+  "tensor_differences": {
+    "LL": {
+      "elements": 13107200,
+      "changed_elements": 634049,
+      "changed_fraction": 0.04837409973144531,
+      "changed_percent": 4.837409973144531,
+      "mean_absolute_difference": 0.28270309448242187,
+      "maximum_absolute_difference": 35
+    },
+    "CNN_INPUT": {
+      "elements": 13107200,
+      "changed_elements": 632404,
+      "changed_fraction": 0.04824859619140625,
+      "changed_percent": 4.824859619140625,
+      "mean_absolute_difference": 0.2768064880371094,
+      "maximum_absolute_difference": 31
+    }
+  }
+}

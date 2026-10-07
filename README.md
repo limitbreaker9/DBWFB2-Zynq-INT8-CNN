@@ -58,7 +58,7 @@ The five-seed software comparison uses trailing replicate extension with forward
 
 The selected software reference and FPGA differ on 194 predictions, with an accuracy difference of +0.28 percentage points. The replay is separate from the five-seed aggregates. **Full, Haar and AvgPool were not evaluated under the DBWFB2 hardware-equivalent stream convention.** Retained state describes this implementation, not a property of the wavelet itself.
 
-Changing only trailing replicate extension to zero extension changes 55 predictions but leaves accuracy at 2497/3200 for both settings. Replicate extension is not claimed to improve accuracy. The 64x64 paths perform GAP over 16x16 Pool2 maps using `>>8`. The Full 128x128 software control uses 32x32 maps and `>>10`. Only the 64x64 CNN is physically deployed.
+Changing only trailing replicate extension to zero extension changes 55 predictions but leaves accuracy at 2497/3200 for both settings. The [saved controlled boundary-only comparison](diagnostics/cnn_numerical_consistency/boundary_only/) provides the result records. Replicate extension is not claimed to improve accuracy. The 64x64 paths perform GAP over 16x16 Pool2 maps using `>>8`. The Full 128x128 software control uses 32x32 maps and `>>10`. Only the 64x64 CNN is physically deployed.
 
 ## Verified AvgPool hardware configuration
 
@@ -136,7 +136,7 @@ Hierarchy dynamic and complete-system power have different scopes. Complete-syst
 | [results/logs/](results/logs/) | HLS C-simulation and UART captures |
 | [results/](results/) | Software/paired-statistic tables, full-test results, hardware resource/timing/power CSVs |
 | [diagnostics/first_divergence/](diagnostics/first_divergence/) | Preprocessing trace, stream models and prediction comparisons |
-| [diagnostics/cnn_numerical_consistency/](diagnostics/cnn_numerical_consistency/) | CNN checkpoints, GAP and boundary-only results |
+| [diagnostics/cnn_numerical_consistency/](diagnostics/cnn_numerical_consistency/) | CNN checkpoints, GAP and [boundary-only results](diagnostics/cnn_numerical_consistency/boundary_only/) |
 | [diagnostics/lena_reproduction/](diagnostics/lena_reproduction/) | Lena input, subbands, arithmetic and energy reproduction |
 | [diagnostics/provenance/](diagnostics/provenance/) | Implementation records and development provenance |
 
@@ -166,7 +166,7 @@ Use a ZedBoard and Vitis 2025.2 with the matching platform. Build the appropriat
 
 ### F. Hardware-equivalent DBWFB2 replay
 
-The stream model is [fpga_intent_preprocess.py](diagnostics/first_divergence/fpga_intent_preprocess.py). [run_full3200_variants.py](diagnostics/first_divergence/run_full3200_variants.py) compares the software convention, alignment-only control and retained-state model using the raw headers and CNN source. It requires NumPy and a compatible C++ compiler. Saved per-image outputs are under `diagnostics/first_divergence/generated/`. [CNN consistency scripts](diagnostics/cnn_numerical_consistency/) provide operation-level and boundary-only analyses.
+The stream model is [fpga_intent_preprocess.py](diagnostics/first_divergence/fpga_intent_preprocess.py). [run_full3200_variants.py](diagnostics/first_divergence/run_full3200_variants.py) compares the software convention, alignment-only control and retained-state model using the raw headers and CNN source. It requires NumPy and a compatible C++ compiler. Saved per-image outputs are under `diagnostics/first_divergence/generated/`. [CNN consistency scripts](diagnostics/cnn_numerical_consistency/) provide operation-level analyses. The [saved controlled boundary-only comparison](diagnostics/cnn_numerical_consistency/boundary_only/) provides the retained result records.
 
 ### G. Result tables and Lena energy
 

@@ -324,6 +324,15 @@ changed to enforce independent row/column boundaries, all FPGA results and
 implementation reports affected by that RTL change must be rerun; no such
 change was made in this diagnostic.
 
+## Controlled boundary-only comparison
+
+The [saved comparison](boundary_only/) holds the selected DBWFB2 seed-42 CNN,
+integer arithmetic and implemented stream convention fixed. Only trailing
+replicate versus zero extension changes. Both variants give 2,497/3,200 correct
+(78.03%), with 55 differing predicted labels. These records are separate from
+the five-seed software comparison and show no accuracy advantage for replicate
+extension.
+
 ## Machine-readable evidence
 
 - `diagnostic_indices.csv`
@@ -336,3 +345,6 @@ change was made in this diagnostic.
 - `board500_fpga_confusion_matrix.csv`
 - `full3200_class_metrics.csv`
 - `provenance.json`
+- [boundary_only/boundary_ablation_metrics.csv](boundary_only/boundary_ablation_metrics.csv)
+- [boundary_only/boundary_ablation_summary.json](boundary_only/boundary_ablation_summary.json)
+- [boundary_only/changed_prediction_indices.csv](boundary_only/changed_prediction_indices.csv)
