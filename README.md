@@ -122,6 +122,46 @@ No simulation activity file was supplied for the reported Vivado post-route powe
 
 Hierarchy dynamic and complete-system power have different scopes. Complete-system total estimates differ by 5.00 mW, approximately 0.26%. The DBWFB2 power/latency combination gives a post-route-power-based energy estimate of 149.15 mJ/image, not measured energy.
 
+## Hardware implementation evidence and report provenance
+
+This index identifies the report sets underlying the manuscript's hardware results. Links open the files at the repository revision being viewed.
+
+```text
+hardware/
+└── vivado/
+    ├── dbwfb2/
+    │   └── reports/
+    │       ├── PL_wrapper_utilization_placed.rpt
+    │       ├── PL_wrapper_timing_summary_routed.rpt
+    │       └── PL_wrapper_power_routed.rpt
+    └── avgpool/
+        └── reports/
+            ├── PL_wrapper_utilization_placed.rpt
+            ├── PL_wrapper_timing_summary_routed.rpt
+            └── PL_wrapper_power_routed.rpt
+
+diagnostics/
+└── provenance/
+    ├── dbwfb2_hardware_provenance.json
+    ├── avgpool_hardware_provenance.json
+    └── implementation_manifest.json
+```
+
+| Evidence / scope | DBWFB2 | AvgPool |
+|---|---|---|
+| LUT, FF, BRAM-tile and DSP utilization | [Placed-utilization report](hardware/vivado/dbwfb2/reports/PL_wrapper_utilization_placed.rpt) | [Placed-utilization report](hardware/vivado/avgpool/reports/PL_wrapper_utilization_placed.rpt) |
+| WNS and TNS at 100 MHz | [Routed-timing report](hardware/vivado/dbwfb2/reports/PL_wrapper_timing_summary_routed.rpt) | [Routed-timing report](hardware/vivado/avgpool/reports/PL_wrapper_timing_summary_routed.rpt) |
+| Post-route power estimates | [Power report](hardware/vivado/dbwfb2/reports/PL_wrapper_power_routed.rpt) | [Power report](hardware/vivado/avgpool/reports/PL_wrapper_power_routed.rpt) |
+| Reported implementation identity | [DBWFB2 provenance manifest](diagnostics/provenance/dbwfb2_hardware_provenance.json) | [AvgPool provenance manifest](diagnostics/provenance/avgpool_hardware_provenance.json) |
+| Implementation-report date | 30 August 2026 | 3 October 2026 |
+| Selected deployment | Seed 42, gain 1, shifts 9/8 | Seed 42, gain 1, shifts 9/7 |
+
+The [implementation manifest](diagnostics/provenance/implementation_manifest.json) indexes the archived files. The per-design manifests identify each build and distinguish it from historical artifacts.
+
+DBWFB2 preprocessing-hierarchy dynamic power is an **8.00 mW Vivado post-route estimate**. Separate AvgPool preprocessing-hierarchy dynamic-power attribution is unavailable; its resource hierarchy is available. All whole-system power values are also Vivado estimates, not measured board power.
+
+The reported AvgPool baseline uses the verified October 3 deployment, not the [historical AvgPool assembly](diagnostics/provenance/avgpool_historical_20260830/). Archived source files, implementation reports and relevant deployment artifacts are available. Generated Vivado/Vitis project caches and tool-specific intermediate files are intentionally excluded.
+
 ## Reproducibility map
 
 | Path | Contents |
